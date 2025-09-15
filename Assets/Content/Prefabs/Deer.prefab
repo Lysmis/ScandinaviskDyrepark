@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8577970384609362320, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+      propertyPath: jumpHeigth
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
