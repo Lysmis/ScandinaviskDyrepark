@@ -52,9 +52,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4488857869908878870, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+      propertyPath: m_Constraints
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5170552099404172476, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_Name
       value: Deer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -74,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.48
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.51
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
@@ -95,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 5486087885464178121, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1218537356494205671, guid: 70d1e5a979014114c84e3acc6d3c054e, type: 3}
+      objectReference: {fileID: -3330021271005279825, guid: 5022c7fd2c460ab4e9fd6dfb14766de6, type: 3}
     - target: {fileID: 5486087885464178121, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -103,5 +115,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5170552099404172476, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4221129825823851969}
   m_SourcePrefab: {fileID: 100100000, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+--- !u!1 &8546891083996888997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5170552099404172476, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+  m_PrefabInstance: {fileID: 3557234116790629145}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4221129825823851969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8546891083996888997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2cec8a09e78f541b38a814f5151855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorScript
+  animations: {fileID: 11400000, guid: d5e8718a6bc2ec9409992e46b7cbf2af, type: 2}
+  sprite: {fileID: -3330021271005279825, guid: 5022c7fd2c460ab4e9fd6dfb14766de6, type: 3}
