@@ -63,10 +63,10 @@ public class AnimalBehaviour : MonoBehaviour
     {
         inputActions.FindActionMap("Player").Disable();
 
-        jumpInput.Disable();
-
         //Ending jump
         jumpInput.performed -= ctx => isJumping = false;
+
+        jumpInput.Disable();
     }
 
     private void Jumping()
