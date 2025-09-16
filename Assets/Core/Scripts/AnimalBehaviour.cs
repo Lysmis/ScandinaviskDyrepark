@@ -21,14 +21,24 @@ public class AnimalBehaviour : MonoBehaviour
 
     //The Player can dobbel jump, to make sure it is max 2 times
     protected int dobbelJump = 0;
+
+    //Player needs to be with in the camera wiewpoint
+    private Camera mainCamera;
+    private float topBound;
+
+    //Player sprite heigth
+    private float playerHeight;
     #endregion
 
 
+    #region Properties
 
+    #endregion
+
+    #region Method
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -46,6 +56,7 @@ public class AnimalBehaviour : MonoBehaviour
         //Tap on touch screen and "Space" on keyboard
         jumpInput = inputActions.FindActionMap("Player").FindAction("Jump");
 
+        CameraBounds();
     }
 
     private void OnEnable()
@@ -71,21 +82,36 @@ public class AnimalBehaviour : MonoBehaviour
 
     private void Jumping()
     {
+        //The Rigidbodys velocity
         rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
+        //Adding force to make the jump
         rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
     }
 
     private void FixedUpdate()
     {
+        //The player can only jump if the isJumping is true and haven't jet dobbeljumped
         if (isJumping == true && dobbelJump < 2)
         {
             Jumping();
 
+            //Resetting isJumping to false
             isJumping = false;
 
+            //Adding a jump to dobbelJump
             dobbelJump++;
+        }
 
+        //The player can't move out of the top of the screen
+        //The players temporary position
+        Vector2 pos = rb.position;
+
+        //The players position-Y is rigth under the top of the screen (minus the player heigth) it will limets the position-Y
+        if (rb.position.y > (topBound - playerHeight))
+        {
+            pos.y = topBound - playerHeight;
+            rb.position = new Vector2(pos.x, pos.y);
         }
     }
 
@@ -94,5 +120,29 @@ public class AnimalBehaviour : MonoBehaviour
         //Resetting to 0 so the player can start dobbel jumping again
         dobbelJump = 0;
     }
+
+    /// <summary>
+    /// Getting the screenBounds and SpriteRenderer size
+    /// </summary>
+    private void CameraBounds()
+    {
+        //Findung the camera scrren bounds
+        mainCamera = Camera.main;
+
+        Vector2 screenBounds = mainCamera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+
+        //The top bound 
+        topBound = screenBounds.y;
+
+        //Getting the player heigth with the SpriteRenderer
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        if (sr != null)
+        {
+            playerHeight = sr.bounds.extents.y;
+        }
+    }
+
+    #endregion
 }
 
