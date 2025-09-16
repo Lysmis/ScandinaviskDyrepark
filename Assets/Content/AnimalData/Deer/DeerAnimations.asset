@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171049449d9946d438d3aac59b2a72b6, type: 3}
+  m_Name: DeerAnimations
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalAnimations
+  Running: {fileID: 7400000, guid: d30a4d182f778394fb096196688050e7, type: 2}
+  Jumping: {fileID: 7400000, guid: 685bf2ee763f718419a6b4ce1c8a0315, type: 2}
+  Flying: {fileID: 7400000, guid: 6db2d9b55db11c64199a2ca74183348c, type: 2}
+  Falling: {fileID: 7400000, guid: e60f039ddd6383143abb1aa65e64708a, type: 2}
+  Landing: {fileID: 7400000, guid: 5de95ed92f58db44e9bc8ad3a085c2ff, type: 2}
+  Sprite: {fileID: -3330021271005279825, guid: 5022c7fd2c460ab4e9fd6dfb14766de6, type: 3}
