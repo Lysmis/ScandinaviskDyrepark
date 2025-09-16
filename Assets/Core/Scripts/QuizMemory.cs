@@ -1,5 +1,6 @@
-using UnityEngine;
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// Carries persistant data for which Quiz's have been displayed
@@ -9,6 +10,7 @@ public class QuizMemory : ScriptableObject
 {
     
     public List<int> previousQuestions;
+    public Action<float> OnQuizAnswered; // passes bonus time
 
     /// <summary>
     /// Method to instantiate a new List<int>

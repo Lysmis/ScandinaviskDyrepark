@@ -1,9 +1,9 @@
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 
 public class Quiz_Script : MonoBehaviour
 {
@@ -14,7 +14,6 @@ public class Quiz_Script : MonoBehaviour
     [SerializeField, Tooltip("Default difficulty option")] QuizDifficulty difficulty;
     [SerializeField, Range(-4f, 10f), Tooltip("Time to close resultwindow is 5 seconds minus this parameter to a minimum of 1 second and a maximum of 15 seconds")] private float closeTimeParameter = 0f;
     [SerializeField, Tooltip("Reward time to add"), Min(5)] private float timeReward = 5f;
-    public System.Action<float> OnQuizAnswered; // passes bonus time
     private Dictionary<(LanguageOptions, QuizDifficulty), Quiz_SO> quizs;
     private Quiz_SO quiz;
     private Label question;
@@ -100,7 +99,7 @@ public class Quiz_Script : MonoBehaviour
                 break;
         }
 
-        OnQuizAnswered?.Invoke(timeReward);
+        quizMemory.OnQuizAnswered?.Invoke(timeReward);
 
         StartCoroutine(CloseQuiz());
 

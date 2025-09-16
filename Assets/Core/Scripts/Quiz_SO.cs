@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +24,7 @@ public class Quiz_SO : ScriptableObject
 
 }
 
-[System.Serializable]
+[Serializable]
 public class QuestionEntry
 {
 
@@ -54,7 +55,7 @@ public class QuestionEntry
     #endregion
 }
 
-[System.Serializable]
+[Serializable]
 public class AnswerArray
 {
 
