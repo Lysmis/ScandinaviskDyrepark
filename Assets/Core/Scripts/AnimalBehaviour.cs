@@ -21,6 +21,20 @@ public class AnimalBehaviour : MonoBehaviour
 
     //The Player can dobbel jump, to make sure it is max 2 times
     protected int dobbelJump = 0;
+
+    //The HUDManager object, that shows the HUD in the HUD scene. 
+    public HUDManager hud;
+
+    //The time lift before the gme stops
+    [SerializeField, Tooltip("The default time remaining when the player starts a level")]
+    protected int timeRemaining = 60;
+
+    //A counter to use ofr things happening every second
+    protected float secondsCounter = 0;
+
+    //The number of items picked up by the player in the current level
+    [SerializeField, Tooltip("The default starting number of items picked up")]
+    protected int pickUps;
     #endregion
 
 
@@ -28,13 +42,28 @@ public class AnimalBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-
+        secondsCounter += Time.deltaTime;
+        if (secondsCounter > 1)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= 1;
+                if (hud != null)
+                {
+                    hud.SetTime(timeRemaining);
+                }
+            }
+            else
+            {
+                //Quiz method should be called here
+            }
+            secondsCounter = 0;
+        }
     }
 
     private void Awake()
