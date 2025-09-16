@@ -67,7 +67,7 @@ public class AnimalBehaviour : MonoBehaviour
     {
         Debug.Log("Hi");
 
-        Vector2 moveJump = transform.up * jumpHeigth * Time.deltaTime;
+        Vector2 moveJump = Vector2.up * jumpHeigth * Time.deltaTime;
 
         //Jump to new position
         rb.MovePosition(rb.position + moveJump);
@@ -76,5 +76,10 @@ public class AnimalBehaviour : MonoBehaviour
     //private void FixedUpdate()
     //{
     //    Jumping();
+    //}
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+
     //}
 }
