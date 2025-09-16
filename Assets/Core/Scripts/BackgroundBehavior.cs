@@ -1,48 +1,42 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class BackgroundBehavior : MonoBehaviour
 {
-    //private float startPos;
-    //[SerializeField] private GameObject cam;
-    //[SerializeField] private float parallaxSpeed;
-
-
-    //// Start is called once before the first execution of Update after the MonoBehaviour is created
-    //void Start()
-    //{
-    //    startPos = transform.position.x;
-    //}
-
-    //// Update is called once per frame
-    //void FixedUpdate()
-    //{
-    //    float distance = cam.transform.position.x * parallaxSpeed;
-
-    //    transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
-    //}
-
-    private BoxCollider2D collider;
+    private new BoxCollider2D collider;
     private Rigidbody2D rb;
+    private float startPosX;
 
     private float width;
-    private float scrollSpeed = -2f;
+    [Tooltip("Backgroundlayer speed, 0 = stopped, -5 = pretty fast")]
+    [SerializeField]private float scrollSpeed = -2f;
 
-    private void Start()
+    void Start()
     {
         collider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
-        width = collider.size.x;
+        width = GetComponent<SpriteRenderer>().bounds.size.x;
+        //width = collider.size.x;
+
+        startPosX = transform.position.x;
         collider.enabled = false;
 
         rb.linearVelocity = new Vector2(scrollSpeed, 0);
     }
 
-    private void Update()
+    void FixedUpdate()
     {
-        if (transform.position.x < -width)
+        rb.MovePosition(rb.position + Vector2.right * scrollSpeed * Time.deltaTime);
+
+        if (rb.position.x <= startPosX - width)
         {
-            Vector2 resetPosition = new Vector2(width * 2f, 0);
-            transform.position = (Vector2)transform.position + resetPosition;
+            rb.position = rb.position + new Vector2(width, 0f);
         }
     }
+
+
+
+
+
 }
