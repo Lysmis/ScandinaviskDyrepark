@@ -138,4 +138,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorScript
   animations: {fileID: 11400000, guid: d5e8718a6bc2ec9409992e46b7cbf2af, type: 2}
-  sprite: {fileID: -3330021271005279825, guid: 5022c7fd2c460ab4e9fd6dfb14766de6, type: 3}
