@@ -282,6 +282,9 @@ public class Quiz_Script : MonoBehaviour
     private void AssignLabelAndButtons()
     {
 
+        if (question != null)
+            return;
+
         var root = GetComponent<UIDocument>().rootVisualElement;
 
         if (root != null)
