@@ -15,6 +15,12 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Jump values
     private InputAction jumpInput;
+
+    //Bool to tjek if the Player is jumping
+    private bool isJumping = false;
+
+    //The Player can dobbel jump, to make sure it is max 2 times
+    private int dobbelJump = 0;
     #endregion
 
 
@@ -22,13 +28,13 @@ public class AnimalBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void Awake()
@@ -50,7 +56,7 @@ public class AnimalBehaviour : MonoBehaviour
         jumpInput.Enable();
 
         //Staring jump
-        jumpInput.performed += ctx => Jumping();
+        jumpInput.performed += ctx => isJumping = true;
     }
 
     private void OnDisable()
@@ -60,26 +66,32 @@ public class AnimalBehaviour : MonoBehaviour
         jumpInput.Disable();
 
         //Ending jump
-        jumpInput.performed -= ctx => Jumping();
+        jumpInput.performed -= ctx => isJumping = false;
     }
 
     private void Jumping()
     {
-        Debug.Log("Hi");
+        rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
-        Vector2 moveJump = Vector2.up * jumpHeigth * Time.deltaTime;
-
-        //Jump to new position
-        rb.MovePosition(rb.position + moveJump);
+        rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
     }
 
-    //private void FixedUpdate()
-    //{
-    //    Jumping();
-    //}
+    private void FixedUpdate()
+    {
+        if (isJumping == true && dobbelJump < 2)
+        {
+            Jumping();
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
+            isJumping = false;
 
-    //}
+            dobbelJump++;
+
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        dobbelJump = 0;
+    }
 }
+
