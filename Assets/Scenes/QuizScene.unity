@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &805896787
 AudioListener:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 956076504}
   m_Layer: 5
   m_Name: Quiz
-  m_TagString: Untagged
+  m_TagString: Quiz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,8 +286,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a3eef3045b8b445a7750c3f7bd1506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Quiz_Script
-  quiz: {fileID: 11400000, guid: 61a8f0d9717a375488f51fa80266eaaa, type: 2}
   quizMemory: {fileID: 11400000, guid: 4594ac27c14474d4b8401488aab35f9c, type: 2}
+  addedQuizes:
+  - {fileID: 11400000, guid: 61a8f0d9717a375488f51fa80266eaaa, type: 2}
+  language: 0
+  difficulty: 0
+  closeTimeParameter: 0
+  timeReward: 5
 --- !u!114 &956076505
 MonoBehaviour:
   m_ObjectHideFlags: 0

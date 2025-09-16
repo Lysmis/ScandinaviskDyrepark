@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13db980c46872304a8ffd42529f77843, type: 3}
   m_Name: QuizMemory_SO
   m_EditorClassIdentifier: Assembly-CSharp::QuizMemory
-  previousQuestions: 
+  previousQuestions: 00000000

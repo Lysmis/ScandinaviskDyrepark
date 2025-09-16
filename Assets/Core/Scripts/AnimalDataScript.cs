@@ -5,11 +5,13 @@ public class AnimalDataScript : MonoBehaviour
 {
 
     private Animator animator;
-    [SerializeField] private AnimalAnimations animations;
+    [SerializeField, Tooltip("Object containing standard sprite and animations")] private AnimalAnimations animations;
     private AnimatorOverrideController overrideController;
     private SpriteRenderer spriteRenderer;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    /// <summary>
+    /// Overrides standard animations with those from scriptable object
+    /// </summary>
     void Start()
     {
 
@@ -26,6 +28,9 @@ public class AnimalDataScript : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Updates sprite from scriptable object
+    /// </summary>
     void OnValidate()
     {
 
