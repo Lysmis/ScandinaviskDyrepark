@@ -20,7 +20,7 @@ public class AnimalBehaviour : MonoBehaviour
     private bool isJumping = false;
 
     //The Player can dobbel jump, to make sure it is max 2 times
-    private int dobbelJump = 0;
+    protected int dobbelJump = 0;
     #endregion
 
 
@@ -91,6 +91,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Resetting to 0 so the player can start dobbel jumping again
         dobbelJump = 0;
     }
 }
