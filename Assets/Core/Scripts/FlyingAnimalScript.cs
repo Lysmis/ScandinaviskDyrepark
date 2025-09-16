@@ -11,6 +11,13 @@ public class FlyingAnimalScript : AnimalBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Set dobbelJump to always 0
+        dobbelJump = 0;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         
     }
+
 }
