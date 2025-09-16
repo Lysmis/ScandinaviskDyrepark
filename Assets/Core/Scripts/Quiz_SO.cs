@@ -43,7 +43,7 @@ public class AnswerArray
     [SerializeField] private string option1;
     [SerializeField] private string option2;
     [SerializeField] private string option3;
-    private string[] options;
+    //private string[] options;
 
     #endregion
     #region Properties
@@ -53,10 +53,11 @@ public class AnswerArray
         get
         {
 
-            if (options == null)
-                options = new string[3] { option1, option2, option3 };
+            //if (options == null || options[0] == string.Empty)
+            //    options = new string[3] { option1, option2, option3 };
 
-            return options;
+            //return options;
+            return new string[3] { option1, option2, option3 };
 
         }
     }
