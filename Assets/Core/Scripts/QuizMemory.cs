@@ -10,15 +10,21 @@ public class QuizMemory : ScriptableObject
 {
     
     public List<int> previousQuestions;
-    public Action<float> OnQuizAnswered; // passes bonus time
-    public GameObject Quiz { get; set; }
+    public Action<float> CorrectAnswer; //Rewards time bonus
+
+    /// <summary>
+    /// Remote access to reactivate Quiz
+    /// </summary>
+    public GameObject Quiz { get; set; } 
 
     /// <summary>
     /// Method to instantiate a new List<int>
     /// </summary>
     public void InitializeList()
     {
+
         previousQuestions = new List<int>();
+
     }
 
 }
@@ -35,12 +41,12 @@ public class Startup
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void InitOnPlay()
     {
+
         QuizMemory so = Resources.Load<QuizMemory>("QuizMemory_SO");
+
         if (so != null)
-        {
-            Debug.Log("QuizMemory_SO initialized from Startup-class (In QuizMemory)");
             so.InitializeList();
-        }
+
     }
 
 }

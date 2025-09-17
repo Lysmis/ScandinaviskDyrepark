@@ -3,18 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
 
 public class Quiz_Script : MonoBehaviour
 {
 
-    [SerializeField, Tooltip("DO NOT TOUCH!!! - Scriptable Object that stores persistant data - DO NOT TOUCH!!!")] private QuizMemory quizMemory;
     [SerializeField, Tooltip("Array of quizs to be added, do not add more than one of each language or difficulty to a total of 9")] private Quiz_SO[] addedQuizes;
     [SerializeField, Tooltip("Default language option")] LanguageOptions language;
     [SerializeField, Tooltip("Default difficulty option")] QuizDifficulty difficulty;
     [SerializeField, Range(-4f, 10f), Tooltip("Time to close resultwindow is 5 seconds minus this parameter to a minimum of 1 second and a maximum of 15 seconds")] private float closeTimeParameter = 0f;
     [SerializeField, Tooltip("Reward time to add"), Min(5)] private float timeReward = 5f;
     private Dictionary<(LanguageOptions, QuizDifficulty), Quiz_SO> quizs;
+    private QuizMemory quizMemory;
     private Quiz_SO quiz;
     private Label question;
     private Button option1, option2, option3;
@@ -44,8 +43,13 @@ public class Quiz_Script : MonoBehaviour
     private void OnEnable()
     {
 
-        if (quizMemory.Quiz == null)
+        if (quizMemory == null)
+        {
+
+            quizMemory = Resources.Load<QuizMemory>("QuizMemory_SO");
             quizMemory.Quiz = gameObject;
+
+        }
 
         CheckQuizAndMemory();
 
@@ -75,7 +79,7 @@ public class Quiz_Script : MonoBehaviour
         if (closingQuiz)
         {
             closingIn -= Time.deltaTime;
-            question.text = result + $"\n\n {(int)closingIn}";
+            question.text = result + $"\n\n{(int)closingIn}s";
         }
 
     }
@@ -102,7 +106,7 @@ public class Quiz_Script : MonoBehaviour
                 break;
         }
 
-        quizMemory.OnQuizAnswered?.Invoke(timeReward);
+        quizMemory.CorrectAnswer?.Invoke(timeReward);
 
         StartCoroutine(CloseQuiz());
 
@@ -155,16 +159,11 @@ public class Quiz_Script : MonoBehaviour
         closingQuiz = false;
         closingIn = CloseTime;
 
+        if (quiz.questions.Count == quizMemory.previousQuestions.Count) //Resets memory if all questions have been answered
+            quizMemory.previousQuestions.Clear();
+
         do
         {
-
-            if (quiz.questions.Count == quizMemory.previousQuestions.Count) //Resets memory if all questions have been answered
-            {
-
-                Debug.Log("QuizMemory cleared, answered all available questions");
-                quizMemory.previousQuestions.Clear();
-
-            }
 
             questionIndex = Random.Range(0, quiz.questions.Count); //Gives a random index number inside bounds
 
@@ -255,13 +254,17 @@ public class Quiz_Script : MonoBehaviour
 
         if (quizs == null || quizs.Count == 0) //Populates quizs as needed
         {
+
             quizs = new Dictionary<(LanguageOptions, QuizDifficulty), Quiz_SO>();
             foreach (Quiz_SO entry in addedQuizes)
             {
+
                 if (entry != null && quizs.TryAdd((entry.language, entry.difficulty), entry)) { }
                 else
                     Debug.Log("Multiple same language and difficulty quizs");
+
             }
+
         }
 
         if (quizs.TryGetValue((Language, Difficulty), out Quiz_SO foundQuiz))
@@ -285,17 +288,19 @@ public class Quiz_Script : MonoBehaviour
     private void AssignLabelAndButtons()
     {
 
-        if (question != null)
+        if (question != null && option1 != null && option2 != null && option3 != null)
             return;
 
         var root = GetComponent<UIDocument>().rootVisualElement;
 
         if (root != null)
         {
+
             question = root.Q<Label>("textbox");
             option1 = root.Q<Button>("option1");
             option2 = root.Q<Button>("option2");
             option3 = root.Q<Button>("option3");
+
         }
         else
             Debug.Log("No quiz-element found");

@@ -286,7 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a3eef3045b8b445a7750c3f7bd1506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Quiz_Script
-  quizMemory: {fileID: 11400000, guid: 4594ac27c14474d4b8401488aab35f9c, type: 2}
   addedQuizes:
   - {fileID: 11400000, guid: 61a8f0d9717a375488f51fa80266eaaa, type: 2}
   language: 0
