@@ -44,6 +44,9 @@ public class Quiz_Script : MonoBehaviour
     private void OnEnable()
     {
 
+        if (quizMemory.Quiz == null)
+            quizMemory.Quiz = gameObject;
+
         CheckQuizAndMemory();
 
         AssignLabelAndButtons();

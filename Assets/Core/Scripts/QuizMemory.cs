@@ -11,6 +11,7 @@ public class QuizMemory : ScriptableObject
     
     public List<int> previousQuestions;
     public Action<float> OnQuizAnswered; // passes bonus time
+    public GameObject Quiz { get; set; }
 
     /// <summary>
     /// Method to instantiate a new List<int>
