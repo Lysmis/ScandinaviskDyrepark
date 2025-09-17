@@ -7,6 +7,9 @@ public class AnimalBehaviour : MonoBehaviour
     //The jumping heigth - is public so it can bechanged in Unity
     public float jumpHeigth = 5f;
 
+    //Moving speed
+    public float movingSpeed = 5f;
+
     //Input System Asset
     public InputActionAsset inputActions;
 
@@ -103,16 +106,24 @@ public class AnimalBehaviour : MonoBehaviour
             dobbelJump++;
         }
 
-        //The player can't move out of the top of the screen
         //The players temporary position
         Vector2 pos = rb.position;
 
+
+        //The player can't move out of the top of the screen
         //The players position-Y is rigth under the top of the screen (minus the player heigth) it will limets the position-Y
         if (rb.position.y > (topBound - playerHeight))
         {
             pos.y = topBound - playerHeight;
             rb.position = new Vector2(pos.x, pos.y);
         }
+
+        //Moving horizontal with fixed speed
+        Vector2 movePos = Vector2.right * movingSpeed * Time.fixedDeltaTime;
+
+        //Players new position 
+        rb.position = pos + movePos;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
