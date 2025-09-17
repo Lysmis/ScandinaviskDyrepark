@@ -31,6 +31,9 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Player sprite heigth
     private float playerHeight;
+
+    //Player start position
+    private Vector2 startPos;
     #endregion
 
 
@@ -54,6 +57,9 @@ public class AnimalBehaviour : MonoBehaviour
     {
         //Rigidbody
         rb = GetComponent<Rigidbody2D>();
+
+        //Start position
+        startPos = rb.position;
 
         //Jumping input under the action "Player/Jump"
         //Tap on touch screen and "Space" on keyboard
@@ -109,7 +115,6 @@ public class AnimalBehaviour : MonoBehaviour
         //The players temporary position
         Vector2 pos = rb.position;
 
-
         //The player can't move out of the top of the screen
         //The players position-Y is rigth under the top of the screen (minus the player heigth) it will limets the position-Y
         if (rb.position.y > (topBound - playerHeight))
@@ -121,9 +126,14 @@ public class AnimalBehaviour : MonoBehaviour
         //Moving horizontal with fixed speed
         Vector2 movePos = Vector2.right * movingSpeed * Time.fixedDeltaTime;
 
+        //To respawn back to start position 
+        if (rb.position.x > 5)
+        {
+            pos.x = startPos.x;
+        }
+
         //Players new position 
         rb.position = pos + movePos;
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
