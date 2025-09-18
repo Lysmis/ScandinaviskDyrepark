@@ -300,6 +300,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.53
       objectReference: {fileID: 0}
+    - target: {fileID: 6674580388691154255, guid: 14120fd35aecddc4fbf74e1379a81fe0, type: 3}
+      propertyPath: backgroundEndX
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674580388691154255, guid: 14120fd35aecddc4fbf74e1379a81fe0, type: 3}
+      propertyPath: loopBackground
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

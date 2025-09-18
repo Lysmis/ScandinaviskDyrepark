@@ -81,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1879931597
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 3e964a0e8b8b89740af172778f614c4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -202,6 +202,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3912a8ae9dce2154c81d7132630b8755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmallAnimalScript
+  jumpHeigth: 5
+  movingSpeed: 5
+  loopBackground: 0
+  backgroundEndX: 5
+  inputActions: {fileID: 0}
+  hud: {fileID: 0}
+  timeRemaining: 60
+  pickUps: 0
 --- !u!82 &155875450692361694
 AudioSource:
   m_ObjectHideFlags: 0

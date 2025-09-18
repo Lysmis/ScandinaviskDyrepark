@@ -57,6 +57,15 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Bool to show wether a HUDManager has ben sucesfully added/defined
     private bool hudAdded = false;
+
+    //Animalsoundeffects
+    private AudioSource animalSoundEffect;
+
+    //Soundeffects timer
+    private float lastTimeAudio;
+    private float gjkerdgtr;
+
+
     #endregion
 
 
@@ -140,6 +149,7 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Adding force to make the jump
         rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
+
     }
 
     protected virtual void FixedUpdate()
