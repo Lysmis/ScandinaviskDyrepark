@@ -22,7 +22,7 @@ public class BackgroundBehavior : MonoBehaviour
         startPosX = transform.position.x;
 
         //The background shouldn't collide with player
-        collider.enabled = false;
+        collider.enabled = true;
 
         //Making 
         rb.linearVelocity = new Vector2(scrollSpeed, 0);
