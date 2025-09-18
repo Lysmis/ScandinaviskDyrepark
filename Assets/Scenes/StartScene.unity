@@ -187,6 +187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb61b36978e8b8b45803e4e6d37403c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  OpacityWhenSelected: 1
+  OpacityWhenNotSelected: 0.5
+  scenes:
+  - LevelSelectionScene
 --- !u!1 &667875448
 GameObject:
   m_ObjectHideFlags: 0

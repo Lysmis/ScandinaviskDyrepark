@@ -13,6 +13,7 @@ public class StartMenuScript : MonoBehaviour
     private float OpacityWhenSelected = 1f;
     [SerializeField, Tooltip("The opacity a button should have, when it is NOT selected."), Range(0f, 1f)]
     private float OpacityWhenNotSelected = 0.5f;
+    [SerializeField, Tooltip("The name of the next scene(s) to be loaded\nBeware that both a level scene and HUD/UI scene might be needed")] string[] scenes;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,8 +48,10 @@ public class StartMenuScript : MonoBehaviour
 
     private void OnStartPressed()
     {
-        SceneManager.LoadSceneAsync("Background_TEST", LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync("HUD", LoadSceneMode.Additive);
+        foreach (string scene in scenes)
+        {
+            SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+        }
         SceneManager.UnloadSceneAsync("StartScene");
 
     }
