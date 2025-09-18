@@ -51,4 +51,6 @@ public class ParallaxTilemap : MonoBehaviour
             }
         }
     }
+
+    //https://www.youtube.com/watch?v=QAmcDlsdCK0 about parallaxing and tilemaps
 }
