@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6cf951c42ffcd46b2cb6496f5daa12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlyingAnimalScript
-  jumpHeigth: 2
+  jumpHeigth: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!82 &-5029387213453367685
 AudioSource:

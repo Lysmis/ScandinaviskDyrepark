@@ -189,7 +189,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 1
+  m_Constraints: 0
 --- !u!114 &8577970384609362320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LargeAnimalScript
   jumpHeigth: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  hud: {fileID: 0}
+  timeRemaining: 60
+  pickUps: 0
 --- !u!82 &6301612655783393471
 AudioSource:
   m_ObjectHideFlags: 0
