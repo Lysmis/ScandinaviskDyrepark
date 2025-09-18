@@ -62,8 +62,8 @@ public class AnimalBehaviour : MonoBehaviour
     private AudioSource animalSoundEffect;
 
     //Soundeffects timer
-    private float lastTimeAudio;
-    private float gjkerdgtr;
+    private float lastTimeAudio = 0f;
+    private float playAudioTime = 5f;
 
 
     #endregion
@@ -118,7 +118,11 @@ public class AnimalBehaviour : MonoBehaviour
         //Tap on touch screen and "Space" on keyboard
         jumpInput = inputActions.FindActionMap("Player").FindAction("Jump");
 
+        //Camera bounds
         CameraBounds();
+
+        //Soundeffect
+        animalSoundEffect = GetComponent<AudioSource>();
     }
 
     protected virtual void OnEnable()
@@ -188,6 +192,17 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Players new position 
         rb.position = pos + movePos;
+
+        //Sound prut
+        lastTimeAudio= lastTimeAudio + Time.fixedDeltaTime;
+
+        if (lastTimeAudio > playAudioTime)
+        {
+            animalSoundEffect.Play();
+            
+            lastTimeAudio = 0;
+        }
+
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
