@@ -60,6 +60,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Animalsoundeffects
     private AudioSource animalSoundEffect;
+    public float soundEffectLength = 0f;
 
     //Soundeffects timer
     private float lastTimeAudio = 0f;
@@ -123,6 +124,8 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Soundeffect
         animalSoundEffect = GetComponent<AudioSource>();
+
+
     }
 
     protected virtual void OnEnable()
@@ -196,7 +199,7 @@ public class AnimalBehaviour : MonoBehaviour
         //Sound prut
         lastTimeAudio= lastTimeAudio + Time.fixedDeltaTime;
 
-        if (lastTimeAudio > playAudioTime)
+        if (lastTimeAudio > playAudioTime + soundEffectLength)
         {
             animalSoundEffect.Play();
             
