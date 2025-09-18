@@ -3,21 +3,22 @@ using UnityEngine;
 public class FlyingAnimalScript : AnimalBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         //Set dobbelJump to always 0
         dobbelJump = 0;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        base.OnCollisionEnter2D(collision);
     }
 
 }
