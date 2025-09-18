@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class StartMenuScript : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class StartMenuScript : MonoBehaviour
     private Button englishLanguageButton;
     private Button germanLanguageButton;
     private Quiz_Script script;
+    [SerializeField, Tooltip("The opacity a button should have, when it is selected."), Range(0f, 1f)]
+    private float OpacityWhenSelected = 1f;
+    [SerializeField, Tooltip("The opacity a button should have, when it is NOT selected."), Range(0f, 1f)]
+    private float OpacityWhenNotSelected = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,6 +34,8 @@ public class StartMenuScript : MonoBehaviour
         danishLanguageButton.clicked += OnDanishPressed;
         englishLanguageButton.clicked += OnEnglishPressed;
         germanLanguageButton.clicked += OnGermanPressed;
+
+        SetLanguage(LanguageOptions.Dansk);
     }
 
     // Update is called once per frame
@@ -40,7 +47,9 @@ public class StartMenuScript : MonoBehaviour
 
     private void OnStartPressed()
     {
-        //Load LevelSelection Scene
+        SceneManager.LoadSceneAsync("Background_TEST", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("StartScene");
+
     }
 
     private void OnDanishPressed()
@@ -64,19 +73,19 @@ public class StartMenuScript : MonoBehaviour
         switch (language)
         {
             case LanguageOptions.Dansk:
-                danishLanguageButton.style.opacity = 100;
-                englishLanguageButton.style.opacity = 50;
-                germanLanguageButton.style.opacity= 50;
+                danishLanguageButton.style.opacity = OpacityWhenSelected;
+                englishLanguageButton.style.opacity = OpacityWhenNotSelected;
+                germanLanguageButton.style.opacity = OpacityWhenNotSelected;
                 break;
             case LanguageOptions.English:
-                danishLanguageButton.style.opacity = 50;
-                englishLanguageButton.style.opacity = 100;
-                germanLanguageButton.style.opacity = 50;
+                danishLanguageButton.style.opacity = OpacityWhenNotSelected;
+                englishLanguageButton.style.opacity = OpacityWhenSelected;
+                germanLanguageButton.style.opacity = OpacityWhenNotSelected;
                 break;
             case LanguageOptions.Deutsch:
-                danishLanguageButton.style.opacity = 50;
-                englishLanguageButton.style.opacity = 50;
-                germanLanguageButton.style.opacity = 100;
+                danishLanguageButton.style.opacity = OpacityWhenNotSelected;
+                englishLanguageButton.style.opacity = OpacityWhenNotSelected;
+                germanLanguageButton.style.opacity = OpacityWhenSelected;
                 break;
             default: return;
 

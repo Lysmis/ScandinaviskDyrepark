@@ -3,7 +3,7 @@
     <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
         <ui:Button text="Start" name="StartButton" style="top: auto; bottom: auto; width: 20%; height: 20%; align-self: center; background-image: url(&quot;project://database/Assets/Content/Sprites/GUI/GUI.png?fileID=21300034&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_17&quot;); background-color: rgba(140, 140, 140, 0); margin-top: 10%;" />
         <ui:Button text="Dansk" name="DanishLanguageButton" style="width: 85px;" />
-        <ui:Button text="English" name="EnglishLanguageButton" style="width: 85px; opacity: 0.5;" />
-        <ui:Button text="Deutsch" name="GermanLanguageButton" style="width: 85px; opacity: 0.5;" />
+        <ui:Button text="English" name="EnglishLanguageButton" style="width: 85px; opacity: 1;" />
+        <ui:Button text="Deutsch" name="GermanLanguageButton" style="width: 85px; opacity: 1;" />
     </ui:VisualElement>
 </ui:UXML>
