@@ -18,7 +18,9 @@ public class AnimalDataScript : MonoBehaviour
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
 
-        if (animator != null)
+        if (animations == null)
+            return;
+        else if (animator != null)
         {
 
             overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
@@ -26,16 +28,19 @@ public class AnimalDataScript : MonoBehaviour
 
         }
 
-        if (animations.Running != null)
-            overrideController["Running"] = animations.Running;
-        if (animations.Jumping != null)
-            overrideController["Jumping"] = animations.Jumping;
-        if (animations.Flying != null)
-            overrideController["Flying"] = animations.Flying;
-        if (animations.Falling != null)
-            overrideController["Falling"] = animations.Falling;
-        if (animations.Landing != null)
-            overrideController["Landing"] = animations.Landing;
+        if (overrideController != null)
+        {
+            if (animations.Running != null && animations.Running != null)
+                overrideController["Running"] = animations.Running;
+            if (animations.Jumping != null && animations.Jumping != null)
+                overrideController["Jumping"] = animations.Jumping;
+            if (animations.Flying != null && animations.Flying != null)
+                overrideController["Flying"] = animations.Flying;
+            if (animations.Falling != null && animations.Falling != null)
+                overrideController["Falling"] = animations.Falling;
+            if (animations.Landing != null && animations.Landing != null)
+                overrideController["Landing"] = animations.Landing;
+        }
 
     }
 
@@ -44,6 +49,9 @@ public class AnimalDataScript : MonoBehaviour
     /// </summary>
     void OnValidate()
     {
+
+        if (animations == null)
+            return;
 
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();

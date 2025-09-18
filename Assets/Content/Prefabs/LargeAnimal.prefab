@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 4488857869908878870}
   - component: {fileID: 8577970384609362320}
   - component: {fileID: 6301612655783393471}
+  - component: {fileID: 507338425190504329}
+  - component: {fileID: -1057982772862017743}
   m_Layer: 0
   m_Name: LargeAnimal
   m_TagString: Untagged
@@ -105,7 +107,7 @@ Animator:
   m_GameObject: {fileID: 5170552099404172476}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8aaad3d74530b3c4285922fed43eedaf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -203,6 +205,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LargeAnimalScript
   jumpHeigth: 5
+  movingSpeed: 5
+  loopBackground: 0
+  backgroundEndX: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   hud: {fileID: 0}
   timeRemaining: 60
@@ -304,3 +309,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &507338425190504329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5170552099404172476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2cec8a09e78f541b38a814f5151855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalDataScript
+  animations: {fileID: 0}
+--- !u!114 &-1057982772862017743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5170552099404172476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10

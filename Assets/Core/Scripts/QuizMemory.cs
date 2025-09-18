@@ -15,15 +15,27 @@ public class QuizMemory : ScriptableObject
     /// <summary>
     /// Remote access to reactivate Quiz
     /// </summary>
-    public GameObject Quiz { get; set; } 
+    public GameObject Quiz { get; set; }
+
+    /// <summary>
+    /// Language setting and default value
+    /// </summary>
+    public LanguageOptions Language { get; set; }
+
+    /// <summary>
+    /// Difficulty setting and default value
+    /// </summary>
+    public QuizDifficulty Difficulty { get; set; }
 
     /// <summary>
     /// Method to instantiate a new List<int>
     /// </summary>
-    public void InitializeList()
+    public void InitializeAndResetMemory()
     {
 
         previousQuestions = new List<int>();
+        Language = LanguageOptions.Dansk;
+        Difficulty = QuizDifficulty.Easy;
 
     }
 
@@ -45,7 +57,7 @@ public class Startup
         QuizMemory so = Resources.Load<QuizMemory>("QuizMemory_SO");
 
         if (so != null)
-            so.InitializeList();
+            so.InitializeAndResetMemory();
 
     }
 

@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AnimalBehaviour : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     //End of background if the Player needs to respawn at the start position again
     public float backgroundEndX = 5f;
-    
+
     //Input System Asset
     public InputActionAsset inputActions;
 
@@ -71,6 +73,7 @@ public class AnimalBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -127,6 +130,7 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Staring jump
         jumpInput.performed += ctx => isJumping = true;
+
     }
 
     protected virtual void OnDisable()
@@ -150,6 +154,7 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Adding force to make the jump
         rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
+
     }
 
     protected virtual void FixedUpdate()
@@ -247,5 +252,18 @@ public class AnimalBehaviour : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Method to load Quiz
+    /// </summary>
+    /// <returns>Quiz Scene loaded additive</returns>
+    public IEnumerator LoadQuiz()
+    {
+
+        yield return SceneManager.LoadSceneAsync("QuizScene", LoadSceneMode.Additive);
+
+    }
+
+
 }
 

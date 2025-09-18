@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Quiz_Script : MonoBehaviour
 {
 
     [SerializeField, Tooltip("Array of quizs to be added, do not add more than one of each language or difficulty to a total of 9")] private Quiz_SO[] addedQuizes;
-    [SerializeField, Tooltip("Default language option")] LanguageOptions language;
-    [SerializeField, Tooltip("Default difficulty option")] QuizDifficulty difficulty;
+    //[SerializeField, Tooltip("Default language option")] LanguageOptions language;
+    //[SerializeField, Tooltip("Default difficulty option")] QuizDifficulty difficulty;
     [SerializeField, Range(-4f, 10f), Tooltip("Time to close resultwindow is 5 seconds minus this parameter to a minimum of 1 second and a maximum of 15 seconds")] private float closeTimeParameter = 0f;
     [SerializeField, Tooltip("Reward time to add"), Min(5)] private float timeReward = 5f;
     private Dictionary<(LanguageOptions, QuizDifficulty), Quiz_SO> quizs;
@@ -28,31 +29,15 @@ public class Quiz_Script : MonoBehaviour
     /// <summary>
     /// Get/Set property for "language" option
     /// </summary>
-    public LanguageOptions Language { get => language; set => language = value; }
+    public LanguageOptions Language { get => quizMemory.Language; /*get => language; set => language = value;*/ }
     /// <summary>
     /// Get/Set property for "difficulty" option
     /// </summary>
-    public QuizDifficulty Difficulty { get => difficulty; set => difficulty = value; }
+    public QuizDifficulty Difficulty { get => quizMemory.Difficulty; /*get => difficulty; set => difficulty = value;*/ }
     /// <summary>
     /// Combined default close time and slidable parameter
     /// </summary>
     public float CloseTime { get => defaultCloseTime + closeTimeParameter; }
-
-
-    private void Awake()
-    {
-
-        if (quizMemory == null)
-        {
-
-            quizMemory = Resources.Load<QuizMemory>("QuizMemory_SO");
-            quizMemory.Quiz = gameObject;
-
-        }
-
-        gameObject.SetActive(false);
-
-    }
 
     /// <summary>
     /// Runs initialization logic
@@ -180,7 +165,7 @@ public class Quiz_Script : MonoBehaviour
         closingQuiz = false;
         closingIn = CloseTime;
 
-        if (quiz.questions.Count == quizMemory.previousQuestions.Count) //Resets memory if all questions have been answered
+        if (quiz.questions.Count == quizMemory.previousQuestions.Count) //Resets memory if all questions have been answered 
             quizMemory.previousQuestions.Clear();
 
         do
@@ -281,7 +266,7 @@ public class Quiz_Script : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(CloseTime);
 
-        gameObject.SetActive(false);
+        yield return SceneManager.UnloadSceneAsync(gameObject.scene);
 
     }
 
