@@ -8,6 +8,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Quiz_SO", menuName = "Scriptable Objects/Quiz", order = 0)]
 public class Quiz_SO : ScriptableObject
 {
+
     /// <summary>
     /// Language-option for the quiz
     /// </summary>
@@ -35,6 +36,10 @@ public class QuestionEntry
     [SerializeField, Tooltip("Type in 3 different answering options")] private AnswerArray answers = new AnswerArray();
     [Space]
     [SerializeField, Tooltip("Select which of the 3 is the correct answer")] private QuestionOptions correctAnswer;
+    [Space]
+    [SerializeField, Tooltip("Select picture to display in question, can only display either this or text")] private Sprite picture;
+    [Space]
+    [Tooltip("Option to enforce displaying both picture and text")] public bool displayBoth;
 
     #endregion
     #region Properties
@@ -51,6 +56,10 @@ public class QuestionEntry
     /// Get property for the correct answer cast to int from "QuestionOptions"-enum
     /// </summary>
     public int CorrectAnswer { get => (int)correctAnswer; }
+    /// <summary>
+    /// Get property for the picture related to the answers
+    /// </summary>
+    public Sprite Picture { get => picture; }
 
     #endregion
 }

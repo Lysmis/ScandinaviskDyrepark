@@ -15,6 +15,7 @@ public class Quiz_Script : MonoBehaviour
     private Dictionary<(LanguageOptions, QuizDifficulty), Quiz_SO> quizs;
     private QuizMemory quizMemory;
     private Quiz_SO quiz;
+    private VisualElement picture;
     private Label question;
     private Button option1, option2, option3;
     private bool closingQuiz = false;
@@ -43,6 +44,8 @@ public class Quiz_Script : MonoBehaviour
     private void OnEnable()
     {
 
+        Time.timeScale = 0;
+
         if (quizMemory == null)
         {
 
@@ -68,17 +71,19 @@ public class Quiz_Script : MonoBehaviour
         if (buttonsEnabled)
             DisableButtons();
 
+        Time.timeScale = 1;
+
     }
 
     /// <summary>
     /// Updates countdown on textfield
     /// </summary>
-    void FixedUpdate()
+    void Update()
     {
 
         if (closingQuiz)
         {
-            closingIn -= Time.deltaTime;
+            closingIn -= Time.unscaledDeltaTime;
             question.text = result + $"\n\n{(int)closingIn}s";
         }
 
@@ -171,7 +176,27 @@ public class Quiz_Script : MonoBehaviour
         quizMemory.previousQuestions.Add(questionIndex); //Adds int so question can be skipped in favor of others
 
         //Displays question and related answers on label and buttons
-        question.text = quiz.questions[questionIndex].Question;
+        if (quiz.questions[questionIndex].Picture != null && quiz.questions[questionIndex].displayBoth)
+        {
+
+            picture.style.backgroundImage = new StyleBackground(quiz.questions[questionIndex].Picture);
+            question.text = quiz.questions[questionIndex].Question;
+
+        }
+        else if (quiz.questions[questionIndex].Picture != null)
+        {
+
+            question.text = string.Empty;
+            picture.style.backgroundImage = new StyleBackground(quiz.questions[questionIndex].Picture);
+
+        }
+        else
+        {
+
+            question.text = quiz.questions[questionIndex].Question;
+            picture.style.backgroundImage = new StyleBackground();
+
+        }
         option1.text = quiz.questions[questionIndex].Answers[(int)QuestionOptions.Option1];
         option2.text = quiz.questions[questionIndex].Answers[(int)QuestionOptions.Option2];
         option3.text = quiz.questions[questionIndex].Answers[(int)QuestionOptions.Option3];
@@ -238,9 +263,7 @@ public class Quiz_Script : MonoBehaviour
         closingQuiz = true;
         result = question.text; //Maintains string
 
-        yield return new WaitForSeconds(CloseTime);
-
-        //Unpause effect here?!
+        yield return new WaitForSecondsRealtime(CloseTime);
 
         gameObject.SetActive(false);
 
@@ -297,6 +320,7 @@ public class Quiz_Script : MonoBehaviour
         {
 
             question = root.Q<Label>("textbox");
+            picture = root.Q<VisualElement>("picture");
             option1 = root.Q<Button>("option1");
             option2 = root.Q<Button>("option2");
             option3 = root.Q<Button>("option3");
