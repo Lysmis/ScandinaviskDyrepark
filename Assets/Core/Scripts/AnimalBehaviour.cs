@@ -5,17 +5,21 @@ public class AnimalBehaviour : MonoBehaviour
 {
     #region Field
     //The jumping heigth - is public so it can bechanged in Unity
-    public float jumpHeigth = 5f;
+    [SerializeField, Tooltip("Jump heigth or fly heigth for birds")]
+    public float heigth = 5f;
 
     //Moving speed
-    public float movingSpeed = 5f;
+    [SerializeField, Tooltip("Moving speed")]
+    public float speed = 5f;
 
     //Player loop around the background
+    //[SerializeField, Tooltip("")]
     public bool loopBackground = false;
 
     //End of background if the Player needs to respawn at the start position again
+    [SerializeField, Tooltip("The end coordinates of the X axis")]
     public float backgroundEndX = 5f;
-    
+
     //Input System Asset
     public InputActionAsset inputActions;
 
@@ -41,6 +45,19 @@ public class AnimalBehaviour : MonoBehaviour
     //Player start position
     private Vector2 startPos;
 
+    //Animalsoundeffects
+    private AudioSource animalSoundEffect;
+
+    //Soundeffects timer
+    private float lastTimeAudio = 0f;
+    [SerializeField, Tooltip("The time the soundeffect is starting")]
+    public float soundStart = 5f;
+    [SerializeField, Tooltip("The length in secons of the sound effect")]
+    public float soundEffectLength = 0f;
+
+
+    /// ///////////////////////////////HUD/////////////////////////////////
+
     //The HUDManager object, that shows the HUD in the HUD scene. 
     public HUDManager hud;
 
@@ -57,15 +74,6 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Bool to show wether a HUDManager has ben sucesfully added/defined
     private bool hudAdded = false;
-
-    //Animalsoundeffects
-    private AudioSource animalSoundEffect;
-    public float soundEffectLength = 0f;
-
-    //Soundeffects timer
-    private float lastTimeAudio = 0f;
-    private float playAudioTime = 5f;
-
 
     #endregion
 
@@ -155,7 +163,7 @@ public class AnimalBehaviour : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
         //Adding force to make the jump
-        rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
+        rb.AddForce(Vector2.up * heigth, ForceMode2D.Impulse);
 
     }
 
@@ -185,7 +193,7 @@ public class AnimalBehaviour : MonoBehaviour
         }
 
         //Moving horizontal with fixed speed
-        Vector2 movePos = Vector2.right * movingSpeed * Time.fixedDeltaTime;
+        Vector2 movePos = Vector2.right * speed * Time.fixedDeltaTime;
 
         //To respawn back to start position 
         if (rb.position.x > backgroundEndX && loopBackground == true)
@@ -197,12 +205,12 @@ public class AnimalBehaviour : MonoBehaviour
         rb.position = pos + movePos;
 
         //Sound prut
-        lastTimeAudio= lastTimeAudio + Time.fixedDeltaTime;
+        lastTimeAudio = lastTimeAudio + Time.fixedDeltaTime;
 
-        if (lastTimeAudio > playAudioTime + soundEffectLength)
+        if (lastTimeAudio > soundStart + soundEffectLength)
         {
             animalSoundEffect.Play();
-            
+
             lastTimeAudio = 0;
         }
 

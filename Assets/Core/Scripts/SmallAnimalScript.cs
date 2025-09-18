@@ -12,7 +12,5 @@ public class SmallAnimalScript : AnimalBehaviour
     protected override void Update()
     {
         base.Update();
-
-        Debug.Log("Hi");
     }
 }
