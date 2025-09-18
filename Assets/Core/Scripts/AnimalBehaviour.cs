@@ -66,7 +66,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     #region Method
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
     }
 
@@ -97,7 +97,7 @@ public class AnimalBehaviour : MonoBehaviour
         }
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         //Rigidbody
         rb = GetComponent<Rigidbody2D>();
@@ -112,7 +112,7 @@ public class AnimalBehaviour : MonoBehaviour
         CameraBounds();
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         inputActions.FindActionMap("Player").Enable();
 
@@ -123,7 +123,7 @@ public class AnimalBehaviour : MonoBehaviour
         jumpInput.performed += ctx => isJumping = true;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         inputActions.FindActionMap("Player").Disable();
 
@@ -142,7 +142,7 @@ public class AnimalBehaviour : MonoBehaviour
         rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         //The player can only jump if the isJumping is true and haven't jet dobbeljumped
         if (isJumping == true && dobbelJump < 2)
@@ -180,7 +180,7 @@ public class AnimalBehaviour : MonoBehaviour
         rb.position = pos + movePos;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         //Resetting to 0 so the player can start dobbel jumping again
         dobbelJump = 0;
