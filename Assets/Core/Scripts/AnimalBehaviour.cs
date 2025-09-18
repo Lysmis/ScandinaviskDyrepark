@@ -10,6 +10,12 @@ public class AnimalBehaviour : MonoBehaviour
     //Moving speed
     public float movingSpeed = 5f;
 
+    //Player loop around the background
+    public bool loopBackground = false;
+
+    //End of background if the Player needs to respawn at the start position again
+    public float backgroundEndX = 5f;
+    
     //Input System Asset
     public InputActionAsset inputActions;
 
@@ -127,7 +133,7 @@ public class AnimalBehaviour : MonoBehaviour
         Vector2 movePos = Vector2.right * movingSpeed * Time.fixedDeltaTime;
 
         //To respawn back to start position 
-        if (rb.position.x > 5)
+        if (rb.position.x > backgroundEndX && loopBackground == true)
         {
             pos.x = startPos.x;
         }
