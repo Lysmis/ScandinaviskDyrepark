@@ -1,19 +1,22 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimalDataScript : MonoBehaviour
 {
 
     private Animator animator;
-    [SerializeField] private AnimalAnimations animations;
+    [SerializeField, Tooltip("Object containing standard sprite and animations")] private AnimalAnimations animations;
     private AnimatorOverrideController overrideController;
     private SpriteRenderer spriteRenderer;
+    private BoxCollider2D boxCollider;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    /// <summary>
+    /// Overrides standard animations with those from scriptable object
+    /// </summary>
     void Start()
     {
 
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
         overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = overrideController;
@@ -26,6 +29,9 @@ public class AnimalDataScript : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Updates sprite from scriptable object
+    /// </summary>
     void OnValidate()
     {
 
@@ -34,6 +40,12 @@ public class AnimalDataScript : MonoBehaviour
 
         if (animations.Sprite != null && spriteRenderer != null)
             spriteRenderer.sprite = animations.Sprite;
+
+        if (boxCollider != null && animations.Sprite != null)
+        {
+            boxCollider.size = animations.Sprite.bounds.size;
+            boxCollider.offset = animations.Sprite.bounds.center;
+        }
 
     }
 

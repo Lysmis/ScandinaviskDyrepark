@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LargeAnimalScript : AnimalBehaviour
+public class MenuManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -9,8 +9,8 @@ public class LargeAnimalScript : AnimalBehaviour
     }
 
     // Update is called once per frame
-    protected override void Update()
+    void Update()
     {
-        base.Update();
+        
     }
 }

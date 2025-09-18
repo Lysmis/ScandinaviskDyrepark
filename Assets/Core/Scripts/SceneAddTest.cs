@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class LargeAnimalScript : AnimalBehaviour
+public class SceneAddTest : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+     SceneManager.LoadSceneAsync("HUD", LoadSceneMode.Additive);   
     }
 
     // Update is called once per frame
-    protected override void Update()
+    void Update()
     {
-        base.Update();
+        
     }
 }

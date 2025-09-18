@@ -40,6 +40,23 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Player start position
     private Vector2 startPos;
+
+    //The HUDManager object, that shows the HUD in the HUD scene. 
+    public HUDManager hud;
+
+    //The time lift before the gme stops
+    [SerializeField, Tooltip("The default time remaining when the player starts a level")]
+    protected float timeRemaining = 60;
+
+    //A counter to use ofr things happening every second
+    protected float secondsCounter = 0;
+
+    //The number of items picked up by the player in the current level
+    [SerializeField, Tooltip("The default starting number of items picked up")]
+    protected int pickUps;
+
+    //Bool to show wether a HUDManager has ben sucesfully added/defined
+    private bool hudAdded = false;
     #endregion
 
 
@@ -54,9 +71,30 @@ public class AnimalBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
+        if (!hudAdded)
+        {
+            AddHUD();
+        }
 
+        secondsCounter += Time.deltaTime;
+        if (secondsCounter > 1)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= 1;
+                if (hud != null)
+                {
+                    hud.SetTime(timeRemaining);
+                }
+            }
+            else
+            {
+                //Quiz method should be called here
+            }
+            secondsCounter = 0;
+        }
     }
 
     private void Awake()
@@ -171,5 +209,24 @@ public class AnimalBehaviour : MonoBehaviour
     }
 
     #endregion
+
+    /// <summary>
+    /// Tries to find a gameobject from the hierarchy with the HUD tag, and set the Animals hud field to the GameObject's HUDManager component. 
+    /// </summary>
+    private void AddHUD()
+    {
+        if (!hudAdded)
+        {
+            GameObject gameObject = GameObject.FindGameObjectWithTag("HUD");
+            if (gameObject != null)
+            {
+                hud = gameObject.GetComponent<HUDManager>();
+                if (hud != null)
+                {
+                    hudAdded = true;
+                }
+            }
+        }
+    }
 }
 
