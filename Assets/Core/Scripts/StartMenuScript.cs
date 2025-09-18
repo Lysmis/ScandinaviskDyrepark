@@ -48,6 +48,7 @@ public class StartMenuScript : MonoBehaviour
     private void OnStartPressed()
     {
         SceneManager.LoadSceneAsync("Background_TEST", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("HUD", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("StartScene");
 
     }

@@ -1,29 +1,20 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BootStrapperScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private IEnumerator Start()
     {
-        LoadScenes();
-        UnloadBootStrapper();
+        yield return SceneManager.LoadSceneAsync("QuizScene", LoadSceneMode.Additive);
+        yield return SceneManager.LoadSceneAsync("StartScene", LoadSceneMode.Additive);
+        yield return SceneManager.UnloadSceneAsync("BootStrapScene");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public void LoadScenes()
-    {
-        SceneManager.LoadSceneAsync("QuizScene", LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync("StartScene", LoadSceneMode.Additive);
-    }
 
-    public void UnloadBootStrapper()
-    {
-        SceneManager.UnloadSceneAsync("BootStrapScene");
     }
-
 }
