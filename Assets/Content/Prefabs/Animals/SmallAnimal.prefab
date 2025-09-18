@@ -207,7 +207,7 @@ MonoBehaviour:
   movingSpeed: 5
   loopBackground: 0
   backgroundEndX: 5
-  inputActions: {fileID: 0}
+  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   hud: {fileID: 0}
   timeRemaining: 60
   pickUps: 0

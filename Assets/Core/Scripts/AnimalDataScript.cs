@@ -21,10 +21,18 @@ public class AnimalDataScript : MonoBehaviour
         overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = overrideController;
 
+        if (animations.Running != null)
         overrideController["Running"] = animations.Running;
+        if (animations.Jumping != null)
         overrideController["Jumping"] = animations.Jumping;
+        if(animations.Flying != null)
         overrideController["Flying"] = animations.Flying;
+        if ( animations.Falling != null)
+        {
+            
         overrideController["Falling"] = animations.Falling;
+        }
+        if (animations.Landing != null) 
         overrideController["Landing"] = animations.Landing;
 
     }
