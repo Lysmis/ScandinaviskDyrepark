@@ -38,6 +38,22 @@ public class Quiz_Script : MonoBehaviour
     /// </summary>
     public float CloseTime { get => defaultCloseTime + closeTimeParameter; }
 
+
+    private void Awake()
+    {
+
+        if (quizMemory == null)
+        {
+
+            quizMemory = Resources.Load<QuizMemory>("QuizMemory_SO");
+            quizMemory.Quiz = gameObject;
+
+        }
+
+        gameObject.SetActive(false);
+
+    }
+
     /// <summary>
     /// Runs initialization logic
     /// </summary>
