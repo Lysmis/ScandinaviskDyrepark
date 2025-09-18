@@ -20,7 +20,10 @@ public class AnimalBehaviour : MonoBehaviour
     public InputActionAsset inputActions;
 
     //Animal rigidbody
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
+
+    //Animal animator
+    protected Animator animator;
 
     //Jump values
     private InputAction jumpInput;
@@ -102,6 +105,9 @@ public class AnimalBehaviour : MonoBehaviour
         //Rigidbody
         rb = GetComponent<Rigidbody2D>();
 
+        //Animator
+        animator = GetComponent<Animator>();
+
         //Start position
         startPos = rb.position;
 
@@ -138,12 +144,20 @@ public class AnimalBehaviour : MonoBehaviour
         //The Rigidbodys velocity
         rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
+        //Transitions to "Jumping" animation
+        animator.SetTrigger("Jump");
+        animator.SetBool("canJump", false);
+
         //Adding force to make the jump
         rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
     }
 
     protected virtual void FixedUpdate()
     {
+
+        //Tells animator if animal is moving up or down
+        animator.SetFloat("velocityY", rb.linearVelocityY);
+
         //The player can only jump if the isJumping is true and haven't jet dobbeljumped
         if (isJumping == true && dobbelJump < 2)
         {
@@ -180,10 +194,15 @@ public class AnimalBehaviour : MonoBehaviour
         rb.position = pos + movePos;
     }
 
+
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         //Resetting to 0 so the player can start dobbel jumping again
         dobbelJump = 0;
+        //Enables jumping animation precondition
+        animator.SetBool("canJump", true);
+        animator.ResetTrigger("Jump");
+
     }
 
     /// <summary>
