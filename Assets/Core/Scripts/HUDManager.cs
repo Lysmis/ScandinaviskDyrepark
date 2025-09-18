@@ -14,12 +14,12 @@ public class HUDManager : MonoBehaviour
     /// <summary>
     /// Sets the Time value in the HUD
     /// </summary>
-    /// <param name="seconds">Number of seconds remaining</param>
-    public void SetTime(int seconds)
+    /// <param name="seconds">Number of seconds the remaining time should be set to</param>
+    public void SetTime(float seconds)
     {
         if (timeLabel != null)
         {
-            timeLabel.text = $"{seconds}s";
+            timeLabel.text = $"{(int)seconds}s";
         }
     }
     /// <summary>

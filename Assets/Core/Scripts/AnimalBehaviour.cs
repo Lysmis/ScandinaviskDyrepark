@@ -27,7 +27,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     //The time lift before the gme stops
     [SerializeField, Tooltip("The default time remaining when the player starts a level")]
-    protected int timeRemaining = 60;
+    protected float timeRemaining = 60;
 
     //A counter to use ofr things happening every second
     protected float secondsCounter = 0;
@@ -35,6 +35,9 @@ public class AnimalBehaviour : MonoBehaviour
     //The number of items picked up by the player in the current level
     [SerializeField, Tooltip("The default starting number of items picked up")]
     protected int pickUps;
+
+    //Bool to show wether a HUDManager has ben sucesfully added/defined
+    private bool hudAdded = false;
     #endregion
 
 
@@ -47,6 +50,11 @@ public class AnimalBehaviour : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+        if (!hudAdded)
+        {
+            AddHUD();
+        }
+
         secondsCounter += Time.deltaTime;
         if (secondsCounter > 1)
         {
@@ -122,6 +130,25 @@ public class AnimalBehaviour : MonoBehaviour
     {
         //Resetting to 0 so the player can start dobbel jumping again
         dobbelJump = 0;
+    }
+
+    /// <summary>
+    /// Tries to find a gameobject from the hierarchy with the HUD tag, and set the Animals hud field to the GameObject's HUDManager component. 
+    /// </summary>
+    private void AddHUD()
+    {
+        if (!hudAdded)
+        {
+            GameObject gameObject = GameObject.FindGameObjectWithTag("HUD");
+            if (gameObject != null)
+            {
+                hud = gameObject.GetComponent<HUDManager>();
+                if (hud != null)
+                {
+                    hudAdded = true;
+                }
+            }
+        }
     }
 }
 
