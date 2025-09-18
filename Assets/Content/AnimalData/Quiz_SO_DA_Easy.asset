@@ -21,3 +21,5 @@ MonoBehaviour:
       option2: Yes
       option3: Nope
     correctAnswer: 1
+    picture: {fileID: 0}
+    displayBoth: 0
