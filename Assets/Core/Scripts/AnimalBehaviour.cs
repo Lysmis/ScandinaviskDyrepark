@@ -8,15 +8,19 @@ public class AnimalBehaviour : MonoBehaviour
     #region Field
 
     //The jumping heigth - is public so it can bechanged in Unity
-    public float jumpHeigth = 5f;
+    [SerializeField, Tooltip("Jump heigth or fly heigth for birds")]
+    public float heigth = 5f;
 
     //Moving speed
-    public float movingSpeed = 5f;
+    [SerializeField, Tooltip("Moving speed")]
+    public float speed = 5f;
 
     //Player loop around the background
+    [SerializeField, Tooltip("The player will be teleportet back to the start position when it gets to the end")]
     public bool loopBackground = false;
 
     //End of background if the Player needs to respawn at the start position again
+    [SerializeField, Tooltip("The end coordinates of the X axis")]
     public float backgroundEndX = 5f;
 
     //Input System Asset
@@ -47,6 +51,21 @@ public class AnimalBehaviour : MonoBehaviour
     //Player start position
     private Vector2 startPos;
 
+    //Animalsoundeffects
+    private AudioSource animalSoundEffect;
+
+    //Soundeffects timer
+    private float lastTimeAudio = 0f;
+    [SerializeField, Tooltip("The sound will be repaetet")]
+    public bool repeatSounds = true;
+    [SerializeField, Tooltip("The time the soundeffect is starting")]
+    public float soundStart = 5f;
+    [SerializeField, Tooltip("The length in secons of the sound effect")]
+    public float soundEffectLength = 0f;
+
+
+    /// ///////////////////////////////HUD/////////////////////////////////
+
     //The HUDManager object, that shows the HUD in the HUD scene. 
     public HUDManager hud;
 
@@ -63,12 +82,14 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Bool to show wether a HUDManager has ben sucesfully added/defined
     private bool hudAdded = false;
+
     #endregion
 
 
     #region Properties
 
     #endregion
+
 
     #region Method
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -119,7 +140,11 @@ public class AnimalBehaviour : MonoBehaviour
         //Tap on touch screen and "Space" on keyboard
         jumpInput = inputActions.FindActionMap("Player").FindAction("Jump");
 
+        //Camera bounds
         CameraBounds();
+
+        //Soundeffect
+        animalSoundEffect = GetComponent<AudioSource>();
     }
 
     protected virtual void OnEnable()
@@ -160,8 +185,8 @@ public class AnimalBehaviour : MonoBehaviour
         animator.SetBool("canJump", false);
 
         //Adding force to make the jump
-        rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
-        
+        rb.AddForce(Vector2.up * heigth, ForceMode2D.Impulse);
+
     }
 
     protected virtual void FixedUpdate()
@@ -194,7 +219,7 @@ public class AnimalBehaviour : MonoBehaviour
         }
 
         //Moving horizontal with fixed speed
-        Vector2 movePos = Vector2.right * movingSpeed * Time.fixedDeltaTime;
+        Vector2 movePos = Vector2.right * speed * Time.fixedDeltaTime;
 
         //To respawn back to start position 
         if (rb.position.x > backgroundEndX && loopBackground == true)
@@ -204,6 +229,26 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Players new position 
         rb.position = pos + movePos;
+
+        //Sound prut
+        lastTimeAudio = lastTimeAudio + Time.fixedDeltaTime;
+        Debug.Log(lastTimeAudio);
+
+        if (repeatSounds == true)
+        {
+            if (lastTimeAudio > soundStart && animalSoundEffect.playOnAwake == true) //First time the sound starts after the input soundStart
+            {
+                animalSoundEffect.Play();
+
+                lastTimeAudio = 0;
+            }
+            else if (lastTimeAudio > soundStart + soundEffectLength) //Play nest time after the soundStart and the length of the length of the sound input
+            {
+                animalSoundEffect.Play();
+
+                lastTimeAudio = 0;
+            }
+        }
     }
 
 
