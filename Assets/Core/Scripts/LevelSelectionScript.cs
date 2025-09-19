@@ -66,6 +66,7 @@ public class LevelSelectionScript : MonoBehaviour
     private void OnEaglePressed()
     {
         if (eagleLevelName != string.Empty)
+            SceneManager.LoadScene(eagleLevelName);
     }
     private void OnFoxPressed()
     {
