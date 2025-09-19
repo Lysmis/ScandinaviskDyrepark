@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171049449d9946d438d3aac59b2a72b6, type: 3}
+  m_Name: Ferret_Animations
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalAnimations
+  Running: {fileID: 7400000, guid: d4200203cb9521a4da0761440104aea8, type: 2}
+  Jumping: {fileID: 7400000, guid: 6a79b1e30747ba54ab663138a41fce45, type: 2}
+  Flying: {fileID: 7400000, guid: 0ae90b4fbae23a54faf04429d49b71a9, type: 2}
+  Falling: {fileID: 7400000, guid: af51b33d379060a4ea7ccacf7069352c, type: 2}
+  Landing: {fileID: 7400000, guid: 2ce3359b647f519428bc527bace93493, type: 2}
+  Sprite: {fileID: -2047270503941516700, guid: 2ceb1e615d2365f4ca36ff5f26d17fb6, type: 3}

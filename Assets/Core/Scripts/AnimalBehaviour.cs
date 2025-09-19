@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AnimalBehaviour : MonoBehaviour
 {
     #region Field
+
     //The jumping heigth - is public so it can bechanged in Unity
     [SerializeField, Tooltip("Jump heigth or fly heigth for birds")]
     public float heigth = 5f;
@@ -24,7 +27,10 @@ public class AnimalBehaviour : MonoBehaviour
     public InputActionAsset inputActions;
 
     //Animal rigidbody
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
+
+    //Animal animator
+    protected Animator animator;
 
     //Jump values
     private InputAction jumpInput;
@@ -89,6 +95,7 @@ public class AnimalBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -112,7 +119,7 @@ public class AnimalBehaviour : MonoBehaviour
             }
             else
             {
-                //Quiz method should be called here
+                StartCoroutine(LoadQuiz());
             }
             secondsCounter = 0;
         }
@@ -122,6 +129,9 @@ public class AnimalBehaviour : MonoBehaviour
     {
         //Rigidbody
         rb = GetComponent<Rigidbody2D>();
+
+        //Animator
+        animator = GetComponent<Animator>();
 
         //Start position
         startPos = rb.position;
@@ -139,6 +149,9 @@ public class AnimalBehaviour : MonoBehaviour
 
     protected virtual void OnEnable()
     {
+
+        Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer += AddTime;
+
         inputActions.FindActionMap("Player").Enable();
 
         //Jump action
@@ -146,10 +159,14 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Staring jump
         jumpInput.performed += ctx => isJumping = true;
+
     }
 
     protected virtual void OnDisable()
     {
+
+        Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer -= AddTime;
+
         inputActions.FindActionMap("Player").Disable();
 
         //Ending jump
@@ -163,6 +180,10 @@ public class AnimalBehaviour : MonoBehaviour
         //The Rigidbodys velocity
         rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
+        //Transitions to "Jumping" animation
+        animator.SetTrigger("Jump");
+        animator.SetBool("canJump", false);
+
         //Adding force to make the jump
         rb.AddForce(Vector2.up * heigth, ForceMode2D.Impulse);
 
@@ -170,6 +191,10 @@ public class AnimalBehaviour : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
+
+        //Tells animator if animal is moving up or down
+        animator.SetFloat("velocityY", rb.linearVelocityY);
+
         //The player can only jump if the isJumping is true and haven't jet dobbeljumped
         if (isJumping == true && dobbelJump < 2)
         {
@@ -226,10 +251,15 @@ public class AnimalBehaviour : MonoBehaviour
         }
     }
 
+
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         //Resetting to 0 so the player can start dobbel jumping again
         dobbelJump = 0;
+        //Enables jumping animation precondition
+        animator.SetBool("canJump", true);
+        animator.ResetTrigger("Jump");
+
     }
 
     /// <summary>
@@ -274,5 +304,28 @@ public class AnimalBehaviour : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Method to load Quiz
+    /// </summary>
+    /// <returns>Quiz Scene loaded additive</returns>
+    public IEnumerator LoadQuiz()
+    {
+
+        yield return SceneManager.LoadSceneAsync("QuizScene", LoadSceneMode.Additive);
+
+    }
+
+
+    public void AddTime(float time)
+    {
+
+        timeRemaining += time;
+        if (hud != null)
+            hud.SetTime(timeRemaining);
+
+    }
+
+
 }
 

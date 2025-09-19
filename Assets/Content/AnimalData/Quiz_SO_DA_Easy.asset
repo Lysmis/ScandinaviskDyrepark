@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da34376b960570e419fe860c43c66b22, type: 3}
   m_Name: Quiz_SO_DA_Easy
   m_EditorClassIdentifier: Assembly-CSharp::Quiz_SO
-  language: 0
-  difficulty: 0
-  questions:
-  - question: Oh Deer
+  Language: 0
+  Difficulty: 0
+  Questions:
+  - question: Virker det?
     answers:
-      option1: No
-      option2: Yes
-      option3: Nope
+      option1: Nej
+      option2: Ja
+      option3: Nej
     correctAnswer: 1
+    picture: {fileID: 0}
+    displayBoth: 0

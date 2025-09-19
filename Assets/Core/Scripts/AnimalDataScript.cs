@@ -18,22 +18,29 @@ public class AnimalDataScript : MonoBehaviour
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
 
-        overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-        animator.runtimeAnimatorController = overrideController;
-
-        if (animations.Running != null)
-        overrideController["Running"] = animations.Running;
-        if (animations.Jumping != null)
-        overrideController["Jumping"] = animations.Jumping;
-        if(animations.Flying != null)
-        overrideController["Flying"] = animations.Flying;
-        if ( animations.Falling != null)
+        if (animations == null)
+            return;
+        else if (animator != null)
         {
-            
-        overrideController["Falling"] = animations.Falling;
+
+            overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+            animator.runtimeAnimatorController = overrideController;
+
         }
-        if (animations.Landing != null) 
-        overrideController["Landing"] = animations.Landing;
+
+        if (overrideController != null)
+        {
+            if (animations.Running != null)
+                overrideController["Running"] = animations.Running;
+            if (animations.Jumping != null)
+                overrideController["Jumping"] = animations.Jumping;
+            if (animations.Flying != null)
+                overrideController["Flying"] = animations.Flying;
+            if (animations.Falling != null)
+                overrideController["Falling"] = animations.Falling;
+            if (animations.Landing != null)
+                overrideController["Landing"] = animations.Landing;
+        }
 
     }
 
@@ -43,6 +50,9 @@ public class AnimalDataScript : MonoBehaviour
     void OnValidate()
     {
 
+        if (animations == null)
+            return;
+
         if (spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -51,8 +61,10 @@ public class AnimalDataScript : MonoBehaviour
 
         if (boxCollider != null && animations.Sprite != null)
         {
+
             boxCollider.size = animations.Sprite.bounds.size;
             boxCollider.offset = animations.Sprite.bounds.center;
+
         }
 
     }
@@ -60,6 +72,6 @@ public class AnimalDataScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

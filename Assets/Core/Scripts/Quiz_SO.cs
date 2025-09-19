@@ -13,15 +13,15 @@ public class Quiz_SO : ScriptableObject
     /// Language-option for the quiz
     /// </summary>
     [Header("Quiz Data")]
-    [Tooltip("Language the questions are in")] public LanguageOptions language;
+    [Tooltip("Language the questions are in")] public LanguageOptions Language;
     /// <summary>
     /// Difficulty-option for the quiz
     /// </summary>
-    [Tooltip("Approximated difficulty of quiz")] public QuizDifficulty difficulty;
+    [Tooltip("Approximated difficulty of quiz")] public QuizDifficulty Difficulty;
     /// <summary>
     /// List of questions and answers
     /// </summary>
-    [Tooltip("List of questions")] public List<QuestionEntry> questions = new List<QuestionEntry>();
+    [Tooltip("List of questions")] public List<QuestionEntry> Questions = new List<QuestionEntry>();
 
 }
 
