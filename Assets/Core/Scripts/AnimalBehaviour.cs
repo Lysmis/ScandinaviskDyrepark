@@ -154,7 +154,7 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Adding force to make the jump
         rb.AddForce(Vector2.up * jumpHeigth, ForceMode2D.Impulse);
-
+        
     }
 
     protected virtual void FixedUpdate()
