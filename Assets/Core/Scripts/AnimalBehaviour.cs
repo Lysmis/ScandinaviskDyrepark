@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class AnimalBehaviour : MonoBehaviour
 {
     #region Field
+
     //The jumping heigth - is public so it can bechanged in Unity
     public float jumpHeigth = 5f;
 

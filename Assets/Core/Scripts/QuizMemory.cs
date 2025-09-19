@@ -11,21 +11,18 @@ public class QuizMemory : ScriptableObject
     
     public List<int> previousQuestions;
     public Action<float> CorrectAnswer; //Rewards time bonus
-
-    /// <summary>
-    /// Remote access to reactivate Quiz
-    /// </summary>
-    public GameObject Quiz { get; set; }
+    [SerializeField, Tooltip("Option to select language if removing user options")] private LanguageOptions language;
+    [SerializeField, Tooltip("Option to select difficulty if removing user options")] private QuizDifficulty difficulty;
 
     /// <summary>
     /// Language setting and default value
     /// </summary>
-    public LanguageOptions Language { get; set; }
+    public LanguageOptions Language { get => language; set => language = value; }
 
     /// <summary>
     /// Difficulty setting and default value
     /// </summary>
-    public QuizDifficulty Difficulty { get; set; }
+    public QuizDifficulty Difficulty { get => difficulty; set => difficulty = value; }
 
     /// <summary>
     /// Method to instantiate a new List<int>
@@ -34,8 +31,6 @@ public class QuizMemory : ScriptableObject
     {
 
         previousQuestions = new List<int>();
-        Language = LanguageOptions.Dansk;
-        Difficulty = QuizDifficulty.Easy;
 
     }
 
