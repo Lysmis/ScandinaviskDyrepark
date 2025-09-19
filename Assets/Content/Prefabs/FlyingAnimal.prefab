@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 261133100682643981}
   - component: {fileID: 2266506269142893892}
   - component: {fileID: -5029387213453367685}
+  - component: {fileID: 2261467891782496030}
   m_Layer: 0
   m_Name: FlyingAnimal
   m_TagString: Untagged
@@ -105,7 +106,7 @@ Animator:
   m_GameObject: {fileID: 6448516944705159457}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78ef43c2453601f439f628f0fc51bd3d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -203,7 +204,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlyingAnimalScript
   jumpHeigth: 5
+  movingSpeed: 5
+  loopBackground: 0
+  backgroundEndX: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  hud: {fileID: 0}
+  timeRemaining: 60
+  pickUps: 0
+  tiltAmount: 10
+  smooth: 5
 --- !u!82 &-5029387213453367685
 AudioSource:
   m_ObjectHideFlags: 0
@@ -301,3 +310,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2261467891782496030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448516944705159457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2cec8a09e78f541b38a814f5151855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalDataScript
+  animations: {fileID: 0}

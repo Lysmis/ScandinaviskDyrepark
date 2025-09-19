@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: QuizMemory_SO
   m_EditorClassIdentifier: Assembly-CSharp::QuizMemory
   previousQuestions: 00000000
+  language: 0
+  difficulty: 0
