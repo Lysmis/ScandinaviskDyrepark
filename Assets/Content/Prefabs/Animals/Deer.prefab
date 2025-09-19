@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d5e8718a6bc2ec9409992e46b7cbf2af, type: 2}
     - target: {fileID: 4488857869908878870, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5170552099404172476, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_Name

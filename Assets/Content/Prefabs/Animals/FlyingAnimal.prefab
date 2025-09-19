@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1879931597
-  m_SortingLayer: 6
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 4495552c56071a64f9ea08439c5f76a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -190,7 +190,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2266506269142893892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,11 +208,17 @@ MonoBehaviour:
   loopBackground: 0
   backgroundEndX: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  repeatSounds: 1
+  soundStart: 5
+  soundEffectLength: 0
   hud: {fileID: 0}
   timeRemaining: 60
   pickUps: 0
   tiltAmount: 10
   smooth: 5
+  fullAnimationSpeed: 1
+  slowedAnimationSpeed: 0.25
+  decreaseAnimationThreshold: 0
 --- !u!82 &-5029387213453367685
 AudioSource:
   m_ObjectHideFlags: 0
