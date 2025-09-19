@@ -98,7 +98,7 @@ public class AnimalBehaviour : MonoBehaviour
             }
             else
             {
-                //Quiz method should be called here
+                StartCoroutine(LoadQuiz());
             }
             secondsCounter = 0;
         }
@@ -124,6 +124,9 @@ public class AnimalBehaviour : MonoBehaviour
 
     protected virtual void OnEnable()
     {
+
+        Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer += AddTime;
+
         inputActions.FindActionMap("Player").Enable();
 
         //Jump action
@@ -136,6 +139,9 @@ public class AnimalBehaviour : MonoBehaviour
 
     protected virtual void OnDisable()
     {
+
+        Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer -= AddTime;
+
         inputActions.FindActionMap("Player").Disable();
 
         //Ending jump
@@ -262,6 +268,16 @@ public class AnimalBehaviour : MonoBehaviour
     {
 
         yield return SceneManager.LoadSceneAsync("QuizScene", LoadSceneMode.Additive);
+
+    }
+
+
+    public void AddTime(float time)
+    {
+
+        timeRemaining += time;
+        if (hud != null)
+            hud.SetTime(timeRemaining);
 
     }
 
