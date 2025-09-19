@@ -15,7 +15,6 @@ public class StartMenuScript : MonoBehaviour
     [SerializeField, Tooltip("The opacity a button should have, when it is NOT selected."), Range(0f, 1f)]
     private float OpacityWhenNotSelected = 0.5f;
     [SerializeField, Tooltip("The name of the next scene(s) to be loaded\nBeware that both a level scene and HUD/UI scene might be needed")] string[] scenes;
-    private bool unloadScene = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,29 +43,17 @@ public class StartMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(unloadScene)
-        {
-            SceneManager.UnloadSceneAsync("StartScene");
-        }
+      
     }
 
 
     private void OnStartPressed()
     {
-        //If more scenes are to be loaded, it is done with the aync method, and StartScene is unloaded in Update loop.
-        //Else the new scene is loaded with the normal LoadScene method
-        if (scenes.Length > 1)
-        {
             foreach (string scene in scenes)
             {
                 SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
             }
-            unloadScene = true;
-        }
-        else
-        {
-            SceneManager.LoadScene(scenes[0]);
-        }
+            SceneManager.UnloadSceneAsync("StartScene");
     }
 
 

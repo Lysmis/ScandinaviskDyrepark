@@ -153,8 +153,9 @@ MonoBehaviour:
   deerLevelName: Philip_TEST
   eagleLevelName: 
   foxLevelName: 
-  polarBearLevelName: 
+  polarBearLevelName: Background_TEST
   wolfLevelName: 
+  unappliedButtonOpacity: 0.3
 --- !u!114 &1190449540
 MonoBehaviour:
   m_ObjectHideFlags: 0
