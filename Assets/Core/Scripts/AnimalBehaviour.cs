@@ -13,7 +13,7 @@ public class AnimalBehaviour : MonoBehaviour
     public float speed = 5f;
 
     //Player loop around the background
-    //[SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("The player will be teleportet back to the start position when it gets to the end")]
     public bool loopBackground = false;
 
     //End of background if the Player needs to respawn at the start position again
@@ -50,7 +50,8 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Soundeffects timer
     private float lastTimeAudio = 0f;
-    private int firstSoundPlay = 0;
+    [SerializeField, Tooltip("The sound will be repaetet")]
+    public bool repeatSounds = true;
     [SerializeField, Tooltip("The time the soundeffect is starting")]
     public float soundStart = 5f;
     [SerializeField, Tooltip("The length in secons of the sound effect")]
@@ -134,8 +135,6 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Soundeffect
         animalSoundEffect = GetComponent<AudioSource>();
-
-
     }
 
     protected virtual void OnEnable()
@@ -210,21 +209,23 @@ public class AnimalBehaviour : MonoBehaviour
         lastTimeAudio = lastTimeAudio + Time.fixedDeltaTime;
         Debug.Log(lastTimeAudio);
 
-        if (lastTimeAudio > soundStart && firstSoundPlay < 1) //First time the sound starts after the input soundStart
+        if (repeatSounds == true)
         {
-            animalSoundEffect.Play();
+            if (lastTimeAudio > soundStart && animalSoundEffect.playOnAwake == true) //First time the sound starts after the input soundStart
+            {
+                animalSoundEffect.Play();
 
-            lastTimeAudio = 0;
+                lastTimeAudio = 0;
 
-            firstSoundPlay++;
+                firstSoundPlay++;
+            }
+            else if (lastTimeAudio > soundStart + soundEffectLength) //Play nest time after the soundStart and the length of the length of the sound input
+            {
+                animalSoundEffect.Play();
+
+                lastTimeAudio = 0;
+            }
         }
-        else if (lastTimeAudio > soundStart + soundEffectLength) //Play nest time after the soundStart and the length of the length of the sound input
-        {
-            animalSoundEffect.Play();
-
-            lastTimeAudio = 0;
-        }
-
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
