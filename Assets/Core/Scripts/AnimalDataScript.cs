@@ -30,15 +30,15 @@ public class AnimalDataScript : MonoBehaviour
 
         if (overrideController != null)
         {
-            if (animations.Running != null && animations.Running != null)
+            if (animations.Running != null)
                 overrideController["Running"] = animations.Running;
-            if (animations.Jumping != null && animations.Jumping != null)
+            if (animations.Jumping != null)
                 overrideController["Jumping"] = animations.Jumping;
-            if (animations.Flying != null && animations.Flying != null)
+            if (animations.Flying != null)
                 overrideController["Flying"] = animations.Flying;
-            if (animations.Falling != null && animations.Falling != null)
+            if (animations.Falling != null)
                 overrideController["Falling"] = animations.Falling;
-            if (animations.Landing != null && animations.Landing != null)
+            if (animations.Landing != null)
                 overrideController["Landing"] = animations.Landing;
         }
 
