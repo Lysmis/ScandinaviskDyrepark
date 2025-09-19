@@ -203,15 +203,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3912a8ae9dce2154c81d7132630b8755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmallAnimalScript
-  jumpHeigth: 5
-  movingSpeed: 5
+  heigth: 5
+  speed: 5
   loopBackground: 0
   backgroundEndX: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  soundStart: 5
+  soundEffectLength: 0
   hud: {fileID: 0}
   timeRemaining: 60
   pickUps: 0
-  soundEffectLength: 0
 --- !u!82 &155875450692361694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -224,7 +225,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

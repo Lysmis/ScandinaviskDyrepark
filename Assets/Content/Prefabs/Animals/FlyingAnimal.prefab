@@ -202,11 +202,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6cf951c42ffcd46b2cb6496f5daa12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlyingAnimalScript
-  jumpHeigth: 5
-  movingSpeed: 5
+  heigth: 5
+  speed: 5
   loopBackground: 0
   backgroundEndX: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  soundStart: 5
+  soundEffectLength: 0
   hud: {fileID: 0}
   timeRemaining: 60
   pickUps: 0
@@ -222,7 +224,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

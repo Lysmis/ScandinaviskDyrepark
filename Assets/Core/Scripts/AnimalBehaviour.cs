@@ -50,6 +50,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     //Soundeffects timer
     private float lastTimeAudio = 0f;
+    private int firstSoundPlay = 0;
     [SerializeField, Tooltip("The time the soundeffect is starting")]
     public float soundStart = 5f;
     [SerializeField, Tooltip("The length in secons of the sound effect")]
@@ -81,6 +82,7 @@ public class AnimalBehaviour : MonoBehaviour
     #region Properties
 
     #endregion
+
 
     #region Method
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -206,8 +208,17 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Sound prut
         lastTimeAudio = lastTimeAudio + Time.fixedDeltaTime;
+        Debug.Log(lastTimeAudio);
 
-        if (lastTimeAudio > soundStart + soundEffectLength)
+        if (lastTimeAudio > soundStart && firstSoundPlay < 1) //First time the sound starts after the input soundStart
+        {
+            animalSoundEffect.Play();
+
+            lastTimeAudio = 0;
+
+            firstSoundPlay++;
+        }
+        else if (lastTimeAudio > soundStart + soundEffectLength) //Play nest time after the soundStart and the length of the length of the sound input
         {
             animalSoundEffect.Play();
 
