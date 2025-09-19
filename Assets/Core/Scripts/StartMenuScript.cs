@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class StartMenuScript : MonoBehaviour
 {
@@ -8,12 +9,13 @@ public class StartMenuScript : MonoBehaviour
     private Button danishLanguageButton;
     private Button englishLanguageButton;
     private Button germanLanguageButton;
-    private Quiz_Script script;
+    private QuizMemory quiz_so;
     [SerializeField, Tooltip("The opacity a button should have, when it is selected."), Range(0f, 1f)]
     private float OpacityWhenSelected = 1f;
     [SerializeField, Tooltip("The opacity a button should have, when it is NOT selected."), Range(0f, 1f)]
     private float OpacityWhenNotSelected = 0.5f;
     [SerializeField, Tooltip("The name of the next scene(s) to be loaded\nBeware that both a level scene and HUD/UI scene might be needed")] string[] scenes;
+    private bool unloadScene = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +25,7 @@ public class StartMenuScript : MonoBehaviour
 
     private void OnEnable()
     {
-        script = Resources.Load<QuizMemory>("QuizMemory_SO").Quiz.GetComponent<Quiz_Script>();
+        quiz_so = Resources.Load<QuizMemory>("QuizMemory_SO");
         var doc = GetComponent<UIDocument>();
         var root = doc.rootVisualElement;
         startButton = root.Q<Button>("StartButton");
@@ -42,19 +44,31 @@ public class StartMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(unloadScene)
+        {
+            SceneManager.UnloadSceneAsync("StartScene");
+        }
     }
 
 
     private void OnStartPressed()
     {
-        foreach (string scene in scenes)
+        //If more scenes are to be loaded, it is done with the aync method, and StartScene is unloaded in Update loop.
+        //Else the new scene is loaded with the normal LoadScene method
+        if (scenes.Length > 1)
         {
-            SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            foreach (string scene in scenes)
+            {
+                SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            }
+            unloadScene = true;
         }
-        SceneManager.UnloadSceneAsync("StartScene");
-
+        else
+        {
+            SceneManager.LoadScene(scenes[0]);
+        }
     }
+
 
     private void OnDanishPressed()
     {
@@ -73,7 +87,7 @@ public class StartMenuScript : MonoBehaviour
 
     private void SetLanguage(LanguageOptions language)
     {
-        script.Language = language;
+        quiz_so.Language = language;
         switch (language)
         {
             case LanguageOptions.Dansk:
