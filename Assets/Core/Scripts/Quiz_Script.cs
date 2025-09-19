@@ -3,13 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Quiz_Script : MonoBehaviour
 {
 
     [SerializeField, Tooltip("Array of quizs to be added, do not add more than one of each language or difficulty to a total of 9")] private Quiz_SO[] addedQuizes;
-    [SerializeField, Tooltip("Default language option")] LanguageOptions language;
-    [SerializeField, Tooltip("Default difficulty option")] QuizDifficulty difficulty;
     [SerializeField, Range(-4f, 10f), Tooltip("Time to close resultwindow is 5 seconds minus this parameter to a minimum of 1 second and a maximum of 15 seconds")] private float closeTimeParameter = 0f;
     [SerializeField, Tooltip("Reward time to add"), Min(5)] private float timeReward = 5f;
     private Dictionary<(LanguageOptions, QuizDifficulty), Quiz_SO> quizs;
@@ -28,31 +27,41 @@ public class Quiz_Script : MonoBehaviour
     /// <summary>
     /// Get/Set property for "language" option
     /// </summary>
-    public LanguageOptions Language { get => language; set => language = value; }
+    public LanguageOptions Language 
+    { 
+
+        get
+        {
+
+            if (quizMemory != null)
+                return quizMemory.Language;
+
+            return LanguageOptions.Dansk;
+
+        }
+
+    }
     /// <summary>
     /// Get/Set property for "difficulty" option
     /// </summary>
-    public QuizDifficulty Difficulty { get => difficulty; set => difficulty = value; }
+    public QuizDifficulty Difficulty 
+    { 
+
+        get
+        {
+            
+            if (quizMemory != null)
+                return quizMemory.Difficulty;
+
+            return QuizDifficulty.Easy;
+
+        }
+
+    }
     /// <summary>
     /// Combined default close time and slidable parameter
     /// </summary>
     public float CloseTime { get => defaultCloseTime + closeTimeParameter; }
-
-
-    private void Awake()
-    {
-
-        if (quizMemory == null)
-        {
-
-            quizMemory = Resources.Load<QuizMemory>("QuizMemory_SO");
-            quizMemory.Quiz = gameObject;
-
-        }
-
-        gameObject.SetActive(false);
-
-    }
 
     /// <summary>
     /// Runs initialization logic
@@ -61,14 +70,6 @@ public class Quiz_Script : MonoBehaviour
     {
 
         Time.timeScale = 0;
-
-        if (quizMemory == null)
-        {
-
-            quizMemory = Resources.Load<QuizMemory>("QuizMemory_SO");
-            quizMemory.Quiz = gameObject;
-
-        }
 
         CheckQuizAndMemory();
 
@@ -114,7 +115,7 @@ public class Quiz_Script : MonoBehaviour
         if (buttonsEnabled)
             DisableButtons();
 
-        switch (quiz.language) //Gives feedback dependant on language selected
+        switch (quiz.Language) //Gives feedback dependant on language selected
         {
             case LanguageOptions.Dansk:
                 question.text = "Rigtigt svar";
@@ -142,7 +143,7 @@ public class Quiz_Script : MonoBehaviour
         if (buttonsEnabled)
             DisableButtons();
 
-        switch (quiz.language) //Gives feedback dependant on language selected
+        switch (quiz.Language) //Gives feedback dependant on language selected
         {
             case LanguageOptions.Dansk:
                 question.text = "Forkert svar";
@@ -180,44 +181,44 @@ public class Quiz_Script : MonoBehaviour
         closingQuiz = false;
         closingIn = CloseTime;
 
-        if (quiz.questions.Count == quizMemory.previousQuestions.Count) //Resets memory if all questions have been answered
+        if (quiz.Questions.Count == quizMemory.previousQuestions.Count) //Resets memory if all questions have been answered 
             quizMemory.previousQuestions.Clear();
 
         do
         {
 
-            questionIndex = Random.Range(0, quiz.questions.Count); //Gives a random index number inside bounds
+            questionIndex = Random.Range(0, quiz.Questions.Count); //Gives a random index number inside bounds
 
         } while (quizMemory.previousQuestions.Contains(questionIndex)); //Loops until a new index is found
         quizMemory.previousQuestions.Add(questionIndex); //Adds int so question can be skipped in favor of others
 
         //Displays question and related answers on label and buttons
-        if (quiz.questions[questionIndex].Picture != null && quiz.questions[questionIndex].displayBoth)
+        if (quiz.Questions[questionIndex].Picture != null && quiz.Questions[questionIndex].displayBoth)
         {
 
-            picture.style.backgroundImage = new StyleBackground(quiz.questions[questionIndex].Picture);
-            question.text = quiz.questions[questionIndex].Question;
+            picture.style.backgroundImage = new StyleBackground(quiz.Questions[questionIndex].Picture);
+            question.text = quiz.Questions[questionIndex].Question;
 
         }
-        else if (quiz.questions[questionIndex].Picture != null)
+        else if (quiz.Questions[questionIndex].Picture != null)
         {
 
             question.text = string.Empty;
-            picture.style.backgroundImage = new StyleBackground(quiz.questions[questionIndex].Picture);
+            picture.style.backgroundImage = new StyleBackground(quiz.Questions[questionIndex].Picture);
 
         }
         else
         {
 
-            question.text = quiz.questions[questionIndex].Question;
+            question.text = quiz.Questions[questionIndex].Question;
             picture.style.backgroundImage = new StyleBackground();
 
         }
-        option1.text = quiz.questions[questionIndex].Answers[(int)QuestionOptions.Option1];
-        option2.text = quiz.questions[questionIndex].Answers[(int)QuestionOptions.Option2];
-        option3.text = quiz.questions[questionIndex].Answers[(int)QuestionOptions.Option3];
+        option1.text = quiz.Questions[questionIndex].Answers[(int)QuestionOptions.Option1];
+        option2.text = quiz.Questions[questionIndex].Answers[(int)QuestionOptions.Option2];
+        option3.text = quiz.Questions[questionIndex].Answers[(int)QuestionOptions.Option3];
 
-        switch (quiz.questions[questionIndex].CorrectAnswer) //Assigns actions to buttons dependant on "CorrectAnswer", which is Option# minus 1 to account for 0-indexation
+        switch (quiz.Questions[questionIndex].CorrectAnswer) //Assigns actions to buttons dependant on "CorrectAnswer", which is Option# minus 1 to account for 0-indexation
         {
             case 0:
                 option1.clicked += CorrectAnswer;
@@ -246,7 +247,7 @@ public class Quiz_Script : MonoBehaviour
     private void DisableButtons()
     {
 
-        switch (quiz.questions[questionIndex].CorrectAnswer) //Unassigns actions from buttons in same manner as they were assigned
+        switch (quiz.Questions[questionIndex].CorrectAnswer) //Unassigns actions from buttons in same manner as they were assigned
         {
             case 0:
                 option1.clicked -= CorrectAnswer;
@@ -276,12 +277,12 @@ public class Quiz_Script : MonoBehaviour
     private IEnumerator CloseQuiz()
     {
 
-        closingQuiz = true;
         result = question.text; //Maintains string
+        closingQuiz = true;
 
         yield return new WaitForSecondsRealtime(CloseTime);
 
-        gameObject.SetActive(false);
+        yield return SceneManager.UnloadSceneAsync(gameObject.scene);
 
     }
 
@@ -291,6 +292,9 @@ public class Quiz_Script : MonoBehaviour
     private void CheckQuizAndMemory()
     {
 
+        if (quizMemory == null)
+            quizMemory = Resources.Load<QuizMemory>("QuizMemory_SO");
+
         if (quizs == null || quizs.Count == 0) //Populates quizs as needed
         {
 
@@ -298,12 +302,12 @@ public class Quiz_Script : MonoBehaviour
             foreach (Quiz_SO entry in addedQuizes)
             {
 
-                if (entry != null && quizs.TryAdd((entry.language, entry.difficulty), entry)) { }
+                if (entry != null && quizs.TryAdd((entry.Language, entry.Difficulty), entry)) { }
                 else
                     Debug.Log("Multiple same language and difficulty quizs");
 
             }
-
+             
         }
 
         if (quizs.TryGetValue((Language, Difficulty), out Quiz_SO foundQuiz))
@@ -327,7 +331,7 @@ public class Quiz_Script : MonoBehaviour
     private void AssignLabelAndButtons()
     {
 
-        if (question != null && option1 != null && option2 != null && option3 != null)
+        if (question != null && picture != null && option1 != null && option2 != null && option3 != null)
             return;
 
         var root = GetComponent<UIDocument>().rootVisualElement;

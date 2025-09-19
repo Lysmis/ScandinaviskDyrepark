@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2261467891782496030, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: animations
+      value: 
+      objectReference: {fileID: 11400000, guid: 9736e058ab83af64d858ec8ea842b334, type: 2}
     - target: {fileID: 6448516944705159457, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Name
       value: Eagle
@@ -51,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 7934511614879349933, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7307749852707414618, guid: 19542905a3333f54e975640caa512816, type: 3}
+      objectReference: {fileID: 3770968622880793076, guid: 19542905a3333f54e975640caa512816, type: 3}
     - target: {fileID: 7934511614879349933, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

@@ -11,16 +11,23 @@ public class QuizMemory : ScriptableObject
     
     public List<int> previousQuestions;
     public Action<float> CorrectAnswer; //Rewards time bonus
+    [SerializeField, Tooltip("Option to select language if removing user options")] private LanguageOptions language;
+    [SerializeField, Tooltip("Option to select difficulty if removing user options")] private QuizDifficulty difficulty;
 
     /// <summary>
-    /// Remote access to reactivate Quiz
+    /// Language setting and default value
     /// </summary>
-    public GameObject Quiz { get; set; } 
+    public LanguageOptions Language { get => language; set => language = value; }
+
+    /// <summary>
+    /// Difficulty setting and default value
+    /// </summary>
+    public QuizDifficulty Difficulty { get => difficulty; set => difficulty = value; }
 
     /// <summary>
     /// Method to instantiate a new List<int>
     /// </summary>
-    public void InitializeList()
+    public void InitializeAndResetMemory()
     {
 
         previousQuestions = new List<int>();
@@ -45,7 +52,7 @@ public class Startup
         QuizMemory so = Resources.Load<QuizMemory>("QuizMemory_SO");
 
         if (so != null)
-            so.InitializeList();
+            so.InitializeAndResetMemory();
 
     }
 

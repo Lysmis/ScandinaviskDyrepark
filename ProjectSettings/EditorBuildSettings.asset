@@ -9,23 +9,38 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/BootStrapScene.unity
-    guid: 13a365756fb9f7240ba6315b53b75208
+    path: Assets/Scenes/Background_TEST.unity
+    guid: c73d358ac9b468e4f989271b0473974f
   - enabled: 1
     path: Assets/Scenes/HUD.unity
     guid: 8074f24c2a72e3c498760a982dc33d1e
   - enabled: 1
+    path: Assets/Scenes/ChooseAnimalScene.unity
+    guid: 15d03651ae1826b4b9c9f9f64a65d33f
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 0049e34b94e1cec42a687a9c9dd8e21e
+  - enabled: 1
+    path: Assets/Scenes/Philip_Test.unity
+    guid: 67c7ffba4d1e40d4985652573d8f5968
+  - enabled: 1
     path: Assets/Scenes/QuizScene.unity
     guid: 56d8bb4b49d381c42a15b28852068406
+  - enabled: 1
+    path: Assets/Scenes/RikkeTest.unity
+    guid: a302c5bbdc1a11342994059cd96f7926
+  - enabled: 1
+    path: Assets/Scenes/Simon_Test.unity
+    guid: f97ddcf3065017243901e82e36e145e6
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: e307dea0f6c74b44ea95d792ac84cc56
   - enabled: 1
-    path: Assets/Scenes/Background_TEST.unity
-    guid: c73d358ac9b468e4f989271b0473974f
+    path: Assets/Scenes/Levels/DeerLevel.unity
+    guid: 2a192c9e16de6cf469ed2fef6fffee4f
   - enabled: 1
-    path: Assets/Scenes/Philip_Test.unity
-    guid: 67c7ffba4d1e40d4985652573d8f5968
+    path: Assets/Scenes/bgbtest.unity
+    guid: 7fc8f902a5082714f8a17195e128d4ca
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
