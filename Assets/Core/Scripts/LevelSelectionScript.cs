@@ -17,6 +17,7 @@ public class LevelSelectionScript : MonoBehaviour
     [SerializeField] private string foxLevelName;
     [SerializeField] private string polarBearLevelName;
     [SerializeField] private string wolfLevelName;
+    [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UILevelName;
     [SerializeField, Tooltip("The opacity of buttons with no referenced scene"), Range(0, 1)] private float unappliedButtonOpacity = 0.3f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,7 +55,8 @@ public class LevelSelectionScript : MonoBehaviour
     {
         if (bearLevelName != string.Empty)
         {
-            SceneManager.LoadScene(bearLevelName);
+            SceneManager.LoadSceneAsync(bearLevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
             UnloadLevelSelectionScene();
         }
 
@@ -63,7 +65,8 @@ public class LevelSelectionScript : MonoBehaviour
     {
         if (deerLevelName != string.Empty)
         {
-            SceneManager.LoadScene(deerLevelName);
+            SceneManager.LoadSceneAsync(deerLevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
             UnloadLevelSelectionScene();
         }
     }
@@ -71,28 +74,36 @@ public class LevelSelectionScript : MonoBehaviour
     {
         if (eagleLevelName != string.Empty)
         {
-            SceneManager.LoadScene(eagleLevelName); UnloadLevelSelectionScene();
+            SceneManager.LoadSceneAsync(eagleLevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            UnloadLevelSelectionScene();
         }
     }
     private void OnFoxPressed()
     {
         if (foxLevelName != string.Empty)
         {
-            SceneManager.LoadScene(foxLevelName); UnloadLevelSelectionScene();
+            SceneManager.LoadSceneAsync(foxLevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            UnloadLevelSelectionScene();
         }
     }
     private void OnPolarBearPressed()
     {
         if (polarBearLevelName != string.Empty)
         {
-            SceneManager.LoadScene(polarBearLevelName); UnloadLevelSelectionScene();
+            SceneManager.LoadSceneAsync(polarBearLevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            UnloadLevelSelectionScene();
         }
     }
     private void OnWolfPressed()
     {
         if (wolfLevelName != string.Empty)
         {
-            SceneManager.LoadScene(wolfLevelName); UnloadLevelSelectionScene();
+            SceneManager.LoadSceneAsync(wolfLevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            UnloadLevelSelectionScene();
         }
     }
 
