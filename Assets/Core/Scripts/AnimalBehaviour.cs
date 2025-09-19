@@ -216,8 +216,6 @@ public class AnimalBehaviour : MonoBehaviour
                 animalSoundEffect.Play();
 
                 lastTimeAudio = 0;
-
-                firstSoundPlay++;
             }
             else if (lastTimeAudio > soundStart + soundEffectLength) //Play nest time after the soundStart and the length of the length of the sound input
             {
