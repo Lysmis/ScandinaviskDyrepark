@@ -11,14 +11,15 @@ public class LevelSelectionScript : MonoBehaviour
     private Button foxLevelButton;
     private Button polarBearLevelButton;
     private Button wolfLevelButton;
-    [SerializeField] private string bearLevelName;
-    [SerializeField] private string deerLevelName;
-    [SerializeField] private string eagleLevelName;
-    [SerializeField] private string foxLevelName;
-    [SerializeField] private string polarBearLevelName;
-    [SerializeField] private string wolfLevelName;
+    [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string bearLevelName;
+    [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string deerLevelName;
+    [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string eagleLevelName;
+    [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string foxLevelName;
+    [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string polarBearLevelName;
+    [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string wolfLevelName;
     [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UILevelName;
     [SerializeField, Tooltip("The opacity of buttons with no referenced scene"), Range(0, 1)] private float unappliedButtonOpacity = 0.3f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +28,7 @@ public class LevelSelectionScript : MonoBehaviour
 
     private void OnEnable()
     {
+        //References for all the buttons in the UI document
         var doc = GetComponent<UIDocument>();
         var root = doc.rootVisualElement;
         bearLevelButton = root.Q<Button>("BearLevelButton");
@@ -37,6 +39,8 @@ public class LevelSelectionScript : MonoBehaviour
         wolfLevelButton = root.Q<Button>("WolfLevelButton");
 
         SetButtonOpacities();
+
+        //Actions added to buttons
         bearLevelButton.clicked += OnBearPressed;
         deerLevelButton.clicked += OnDeerPressed;
         eagleLevelButton.clicked += OnEaglePressed;
@@ -51,6 +55,9 @@ public class LevelSelectionScript : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
+    /// </summary>
     private void OnBearPressed()
     {
         if (bearLevelName != string.Empty)
@@ -61,6 +68,9 @@ public class LevelSelectionScript : MonoBehaviour
         }
 
     }
+    /// <summary>
+    /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
+    /// </summary>
     private void OnDeerPressed()
     {
         if (deerLevelName != string.Empty)
@@ -70,6 +80,9 @@ public class LevelSelectionScript : MonoBehaviour
             UnloadLevelSelectionScene();
         }
     }
+    /// <summary>
+    /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
+    /// </summary>
     private void OnEaglePressed()
     {
         if (eagleLevelName != string.Empty)
@@ -79,6 +92,9 @@ public class LevelSelectionScript : MonoBehaviour
             UnloadLevelSelectionScene();
         }
     }
+    /// <summary>
+    /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
+    /// </summary>
     private void OnFoxPressed()
     {
         if (foxLevelName != string.Empty)
@@ -88,6 +104,9 @@ public class LevelSelectionScript : MonoBehaviour
             UnloadLevelSelectionScene();
         }
     }
+    /// <summary>
+    /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
+    /// </summary>
     private void OnPolarBearPressed()
     {
         if (polarBearLevelName != string.Empty)
@@ -97,6 +116,9 @@ public class LevelSelectionScript : MonoBehaviour
             UnloadLevelSelectionScene();
         }
     }
+    /// <summary>
+    /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
+    /// </summary>
     private void OnWolfPressed()
     {
         if (wolfLevelName != string.Empty)
@@ -107,11 +129,17 @@ public class LevelSelectionScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Unloads the LevelSelectionScene
+    /// </summary>
     private void UnloadLevelSelectionScene()
     {
         SceneManager.UnloadSceneAsync("LevelSelectionScene");
     }
 
+    /// <summary>
+    /// Sets the opacities of the buttons, according to wether or not they have a scene they reference. 
+    /// </summary>
     private void SetButtonOpacities()
     {
 

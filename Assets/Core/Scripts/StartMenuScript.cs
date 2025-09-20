@@ -46,7 +46,9 @@ public class StartMenuScript : MonoBehaviour
       
     }
 
-
+    /// <summary>
+    /// Handles loading an unloading scenes when the start button is pressed
+    /// </summary>
     private void OnStartPressed()
     {
             foreach (string scene in scenes)
@@ -56,22 +58,33 @@ public class StartMenuScript : MonoBehaviour
             SceneManager.UnloadSceneAsync("StartScene");
     }
 
-
+    /// <summary>
+    /// Sets the language to danish
+    /// </summary>
     private void OnDanishPressed()
     {
         SetLanguage(LanguageOptions.Dansk);
     }
-
+    /// <summary>
+    /// Sets the language to english
+    /// </summary>
     private void OnEnglishPressed()
     {
         SetLanguage(LanguageOptions.English);
     }
-
+    /// <summary>
+    /// Sets the language to german
+    /// </summary>
     private void OnGermanPressed()
     {
         SetLanguage(LanguageOptions.Deutsch);
     }
 
+    /// <summary>
+    /// Handles setting the language, by suing the quiz scriptble objects.
+    /// Also changes the opacities of buttons of selected and not selected languages. 
+    /// </summary>
+    /// <param name="language">The LanguageOptions enum for thelanguage selected </param>
     private void SetLanguage(LanguageOptions language)
     {
         quiz_so.Language = language;
