@@ -8,17 +8,30 @@ public class LevelSelectionScript : MonoBehaviour
     private Button bearLevelButton;
     private Button deerLevelButton;
     private Button eagleLevelButton;
+    private Button ferretLevelButton;
     private Button foxLevelButton;
     private Button polarBearLevelButton;
     private Button wolfLevelButton;
+    private TextField passWordTextField;
+    [Header("Scenes")]
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string bearLevelName;
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string deerLevelName;
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string eagleLevelName;
+    [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string ferretLevelName;
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string foxLevelName;
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string polarBearLevelName;
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string wolfLevelName;
     [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UILevelName;
-    [SerializeField, Tooltip("The opacity of buttons with no referenced scene"), Range(0, 1)] private float unappliedButtonOpacity = 0.3f;
+    [SerializeField, Tooltip("The opacity of buttons with no referenced scene"), Range(0, 1)] private float unappliedButtonOpacity = 0.1f;
+    [SerializeField, Tooltip("The opacity of buttons with a scene, but not yet unlocked by the player"), Range(0, 1)] private float lockedButtonOpacity = 0.3f;
+    [Header("Passwords")]
+    [SerializeField, Tooltip("Password for unlocking the bear level")] private string bearPassword;
+    [SerializeField, Tooltip("Password for unlocking the deer level")] private string deerPassword;
+    [SerializeField, Tooltip("Password for unlocking the eagle level")] private string eaglePassword;
+    [SerializeField, Tooltip("Password for unlocking the ferret level")] private string ferretPassword;
+    [SerializeField, Tooltip("Password for unlocking the fox level")] private string foxPassword;
+    [SerializeField, Tooltip("Password for unlocking the polar bear level")] private string polarBearPassword;
+    [SerializeField, Tooltip("Password for unlocking the wolf level")] private string wolfPassword;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,19 +47,26 @@ public class LevelSelectionScript : MonoBehaviour
         bearLevelButton = root.Q<Button>("BearLevelButton");
         deerLevelButton = root.Q<Button>("DeerLevelButton");
         eagleLevelButton = root.Q<Button>("EagleLevelButton");
+        ferretLevelButton = root.Q<Button>("FerretLevelButton");
         foxLevelButton = root.Q<Button>("FoxLevelButton");
         polarBearLevelButton = root.Q<Button>("PolarBearLevelButton");
         wolfLevelButton = root.Q<Button>("WolfLevelButton");
+        passWordTextField = root.Q<TextField>("PasswordTextInput");
 
-        SetButtonOpacities();
+
+        DisableButtons(new Button[] { bearLevelButton, eagleLevelButton, ferretLevelButton, foxLevelButton, polarBearLevelButton, wolfLevelButton });
+
 
         //Actions added to buttons
         bearLevelButton.clicked += OnBearPressed;
         deerLevelButton.clicked += OnDeerPressed;
         eagleLevelButton.clicked += OnEaglePressed;
+        ferretLevelButton.clicked += OnFerretPressed;
         foxLevelButton.clicked += OnFoxPressed;
         polarBearLevelButton.clicked += OnPolarBearPressed;
         wolfLevelButton.clicked += OnWolfPressed;
+        passWordTextField.isDelayed = true;
+        passWordTextField.RegisterCallback<ChangeEvent<string>>(changeEvent => CheckInputAgainstPasswordTextInput(changeEvent));
     }
 
     // Update is called once per frame
@@ -92,6 +112,20 @@ public class LevelSelectionScript : MonoBehaviour
             UnloadLevelSelectionScene();
         }
     }
+
+    /// <summary>
+    /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
+    /// </summary>
+    private void OnFerretPressed()
+    {
+        if (ferretLevelName != string.Empty)
+        {
+            SceneManager.LoadSceneAsync(ferretLevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            UnloadLevelSelectionScene();
+        }
+    }
+
     /// <summary>
     /// Loads the appropriate scenes for the corresponding button (level and UI) and calls mehtods to unload the level selection scene. 
     /// </summary>
@@ -138,34 +172,140 @@ public class LevelSelectionScript : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the opacities of the buttons, according to wether or not they have a scene they reference. 
+    /// Sets the opacities of the button, according to wether or not they have a scene they reference. 
     /// </summary>
-    private void SetButtonOpacities()
+    private void SetButtonOpacity(Button button)
     {
+        switch (button.name)
+        {
+            case "BearLevelButton":
+                if (bearLevelName == string.Empty)
+                {
+                    button.style.opacity = unappliedButtonOpacity;
+                }
+                else
+                {
+                    button.style.opacity = lockedButtonOpacity;
+                }
+                break;
+            case "DeerLevelButton":
+                if (deerLevelName == string.Empty)
+                {
+                    button.style.opacity = unappliedButtonOpacity;
+                }
+                else
+                {
+                    button.style.opacity = lockedButtonOpacity;
+                }
+                break;
+            case "EagleLevelButton":
+                if (eagleLevelName == string.Empty)
+                {
+                    button.style.opacity = unappliedButtonOpacity;
+                }
+                else
+                {
+                    button.style.opacity = lockedButtonOpacity;
+                }
+                break;
+            case "FerretLevelButton":
+                if (ferretLevelName == string.Empty)
+                {
+                    button.style.opacity = unappliedButtonOpacity;
+                }
+                else
+                {
+                    button.style.opacity = lockedButtonOpacity;
+                }
+                break;
+            case "FoxLevelButton":
+                if (foxLevelName == string.Empty)
+                {
+                    button.style.opacity = unappliedButtonOpacity;
+                }
+                else
+                {
+                    button.style.opacity = lockedButtonOpacity;
+                }
+                break;
+            case "PolarBearLevelButton":
+                if (polarBearLevelName == string.Empty)
+                {
+                    button.style.opacity = unappliedButtonOpacity;
+                }
+                else
+                {
+                    button.style.opacity = lockedButtonOpacity;
+                }
+                break;
+            case "WolfLevelButton":
+                if (wolfLevelName == string.Empty)
+                {
+                    button.style.opacity = unappliedButtonOpacity;
+                }
+                else
+                {
+                    button.style.opacity = lockedButtonOpacity;
+                }
+                break;
+        }
+    }
 
-        if (bearLevelName == string.Empty)
+    /// <summary>
+    /// Disable all buttons in the given array, and sets their opacites by callin SetButtonOpacity method.
+    /// </summary>
+    /// <param name="buttons">The array of butttons to disable</param>
+    private void DisableButtons(Button[] buttons)
+    {
+        foreach (Button button in buttons)
         {
-            bearLevelButton.style.opacity = unappliedButtonOpacity;
+            button.SetEnabled(false);
+            SetButtonOpacity(button);
         }
-        if (deerLevelName == string.Empty)
+    }
+
+    /// <summary>
+    /// Checks if the input is equal to one of the passwords for unlocking scenes.
+    /// If so, and if the scene is assigned to a button, the corrosponding button is enabled and opacity changed. 
+    /// </summary>
+    /// <param name="changeEvent">The changeevent that triggers the method</param>
+    public void CheckInputAgainstPasswordTextInput(ChangeEvent<string> changeEvent)
+    {
+        if(changeEvent.newValue == bearPassword && bearLevelName != string.Empty)
         {
-            deerLevelButton.style.opacity = unappliedButtonOpacity;
+                    bearLevelButton.SetEnabled(true);
+                    bearLevelButton.style.opacity = 1;
         }
-        if (eagleLevelName == string.Empty)
+        else if (changeEvent.newValue == deerPassword && deerLevelName != string.Empty)
         {
-            eagleLevelButton.style.opacity = unappliedButtonOpacity;
+            deerLevelButton.SetEnabled(true);
+            deerLevelButton.style.opacity = 1;
         }
-        if (foxLevelName == string.Empty)
+        else if (changeEvent.newValue == eaglePassword && eagleLevelName != string.Empty)
         {
-            foxLevelButton.style.opacity = unappliedButtonOpacity;
+            eagleLevelButton.SetEnabled(true);
+            eagleLevelButton.style.opacity = 1;
         }
-        if (polarBearLevelName == string.Empty)
+        else if (changeEvent.newValue == ferretPassword && ferretLevelName != string.Empty)
         {
-            polarBearLevelButton.style.opacity = unappliedButtonOpacity;
+            ferretLevelButton.SetEnabled(true);
+            ferretLevelButton.style.opacity = 1;
         }
-        if (wolfLevelName == string.Empty)
+        else if (changeEvent.newValue == foxPassword && foxLevelName != string.Empty)
         {
-            wolfLevelButton.style.opacity = unappliedButtonOpacity;
+            foxLevelButton.SetEnabled(true);
+            foxLevelButton.style.opacity = 1;
         }
+        else if (changeEvent.newValue == polarBearPassword && polarBearLevelName != string.Empty)
+        {
+            polarBearLevelButton.SetEnabled(true);
+            polarBearLevelButton.style.opacity = 1;
+        }
+        else if (changeEvent.newValue == wolfPassword && wolfLevelName != string.Empty)
+        {
+            wolfLevelButton.SetEnabled(true);
+            wolfLevelButton.style.opacity = 1;
+        }
+        passWordTextField.SetValueWithoutNotify(string.Empty);
     }
 }

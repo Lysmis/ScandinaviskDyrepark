@@ -152,11 +152,20 @@ MonoBehaviour:
   bearLevelName: 
   deerLevelName: Philip_TEST
   eagleLevelName: 
+  ferretLevelName: 
   foxLevelName: 
   polarBearLevelName: Background_TEST
   wolfLevelName: 
   UILevelName: HUD
-  unappliedButtonOpacity: 0.3
+  unappliedButtonOpacity: 0
+  lockedButtonOpacity: 0.3
+  bearPassword: "StilleN\xE5rDerSpises"
+  deerPassword: Gevir123
+  eaglePassword: Stellers
+  ferretPassword: "S\xF8desteDyr"
+  foxPassword: MikkelTogMinTegnebog
+  polarBearPassword: "KanIkkeLideS\xE6ler"
+  wolfPassword: OdinErEnBangebuks
 --- !u!114 &1190449540
 MonoBehaviour:
   m_ObjectHideFlags: 0
