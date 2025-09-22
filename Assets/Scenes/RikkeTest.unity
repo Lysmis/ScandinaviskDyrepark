@@ -3488,7 +3488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3571559799830509044, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.26
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 3571559799830509044, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3676,6 +3676,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1867399604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8546891083996888997, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+  m_PrefabInstance: {fileID: 376594250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1891755400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5081001952480815710, guid: 144239921dadbae449909efc6bde9ef2, type: 3}
@@ -3719,6 +3724,22 @@ PrefabInstance:
     - target: {fileID: 2448116470258444349, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: m_Name
       value: RandomManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1867399604}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: obstacle
+      value: 
+      objectReference: {fileID: 3278944639803346358, guid: e2a15c9ed5e49874285d1a73c950ffae, type: 3}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: groundYAxis
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: endOfMapXAxis
+      value: 243
       objectReference: {fileID: 0}
     - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: m_LocalPosition.x

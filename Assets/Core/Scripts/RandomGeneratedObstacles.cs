@@ -25,6 +25,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     //Lister
     private List<GameObject> obstacles = new List<GameObject>();
+    private Stack<GameObject> kage = new Stack<GameObject>();
 
     private float respawnTimer = 10f;
     private float playerPositionX = 0f;
@@ -54,24 +55,22 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
             respawnTimer = 0f;
 
-            foreach (GameObject obj in obstacles)
-            {
-                if (obj.transform.position.x + (leftBound) < playerPositionX)
-                {
-                    Destroy(obj);
-
-                }
-            }
         }
 
 
+        for (int i = 0; i < obstacles.Count; i++)
+        {
+            GameObject go = obstacles[i];
 
+            if (go.transform.position.x - (leftBound) < playerPositionX)
+            {
+                obstacles.Remove(go);
+                kage.Push(go);
+            }
+        }
 
-        //for (int i = 0; i < obstacles.Count; i++)
-        //{
-        //    Debug.Log(leftBound);
-        //}
     }
+
 
     private void Awake()
     {
@@ -103,7 +102,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
         Vector2 screenBounds = mainCamera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
         //The top bound 
-        leftBound = screenBounds.x;
+        leftBound = -screenBounds.x;
 
     }
 
@@ -113,18 +112,28 @@ public class RandomGeneratedObstacles : MonoBehaviour
         Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
 
 
-        Vector2 spawnPosition = new Vector2(leftBound + playerPositionX, 0);
+        Vector2 spawnPosition = new Vector2(playerPositionX - (leftBound * 2), 0);
         //Spawn position 
-        if(prutfims == 1)
-            {
+        if (prutfims == 1)
+        {
             spawnPosition.y = spriteHeight;
         }
 
         //New position where there taken into account the of set position
         Vector2 newPosition = spawnPosition + ofSetPosition;
 
-        //Instantiating the new obstacles
-        GameObject newObstacle = Instantiate(obstacle, newPosition, Quaternion.identity);
+        GameObject newObstacle;
+
+        if (kage.Count > 0)
+        {
+            newObstacle = kage.Pop();
+            newObstacle.transform.position = newPosition;
+        }
+        else
+        {
+            //Instantiating the new obstacles
+            newObstacle = Instantiate(obstacle, newPosition, Quaternion.identity);
+        }
 
         obstacles.Add(newObstacle);
     }
