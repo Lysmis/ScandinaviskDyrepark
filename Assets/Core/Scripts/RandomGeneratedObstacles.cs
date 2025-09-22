@@ -21,12 +21,14 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     //Ground coordinat Y
     public float groundYAxis;
+    public float endOfMapXAxis; // I dont think so
 
     //Lister
     private List<GameObject> obstacles = new List<GameObject>();
 
+    private float respawnTimer = 10f;
+    float playerPositionX = 0f;
 
-    int kage = 0;
     #endregion
 
 
@@ -39,16 +41,23 @@ public class RandomGeneratedObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AddTiles();
 
+        respawnTimer = respawnTimer + Time.deltaTime;
+
+        if (respawnTimer > 3f)
+        {
+            AddTiles();
+
+            respawnTimer = 0f;
+        }
 
 
         //Removing obstacles when they are out of the frame
-        float playerPositionX = player.transform.position.x;
+        playerPositionX = player.transform.position.x;
 
         foreach (GameObject obj in obstacles)
         {
-            if (obj.transform.position.x + (leftBound * 2) < playerPositionX)
+            if (obj.transform.position.x + (leftBound) < playerPositionX)
             {
                 Destroy(obj);
             }
@@ -91,28 +100,19 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     private void AddTiles()
     {
-        if (kage < 1)
-        {
-            //Of setting the position so the obstacles sits on the ground
-            Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
+        //Of setting the position so the obstacles sits on the ground
+        Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
 
-            //Spawn position 
-            Vector2 spawnPosition = new Vector2(20,0);
+        //Spawn position 
+        Vector2 spawnPosition = new Vector2(leftBound + playerPositionX, 0);
 
-            //New position where there taken into account the of set position
-            Vector2 newPosition = spawnPosition + ofSetPosition;
+        //New position where there taken into account the of set position
+        Vector2 newPosition = spawnPosition + ofSetPosition;
 
-            //Instantiating the new obstacles
-            GameObject newObstacle = Instantiate(obstacle, newPosition, Quaternion.identity);
+        //Instantiating the new obstacles
+        GameObject newObstacle = Instantiate(obstacle, newPosition, Quaternion.identity);
 
-            obstacles.Add(newObstacle);
-
-            kage++;
-
-        }
-
-
-
+        obstacles.Add(newObstacle);
     }
 
 }
