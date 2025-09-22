@@ -284,7 +284,6 @@ public class AnimalBehaviour : MonoBehaviour
         }
     }
 
-    #endregion
 
     /// <summary>
     /// Tries to find a gameobject from the hierarchy with the HUD tag, and set the Animals hud field to the GameObject's HUDManager component. 
@@ -327,5 +326,6 @@ public class AnimalBehaviour : MonoBehaviour
     }
 
 
+    #endregion
 }
 
