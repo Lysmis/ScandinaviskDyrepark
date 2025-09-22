@@ -13,6 +13,7 @@ public class LevelSelectionScript : MonoBehaviour
     private Button polarBearLevelButton;
     private Button wolfLevelButton;
     private TextField passWordTextField;
+    private Label levelSelectLabel;
     [Header("Scenes")]
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string bearLevelName;
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string deerLevelName;
@@ -51,12 +52,20 @@ public class LevelSelectionScript : MonoBehaviour
         foxLevelButton = root.Q<Button>("FoxLevelButton");
         polarBearLevelButton = root.Q<Button>("PolarBearLevelButton");
         wolfLevelButton = root.Q<Button>("WolfLevelButton");
+        levelSelectLabel = root.Q<Label>("LevelSelectLabel");
         passWordTextField = root.Q<TextField>("PasswordTextInput");
         
        //Set languages of buttons:
         languageStrings = Resources.Load<LanguageStrings_SO>("LanguageStrings_SO");
+        levelSelectLabel.text = languageStrings.GetString("LevelSelectLabel");
         bearLevelButton.text = languageStrings.GetString("BearLevelButton");
         deerLevelButton.text = languageStrings.GetString("DeerLevelButton");
+        eagleLevelButton.text = languageStrings.GetString("EagleLevelButton");
+        ferretLevelButton.text = languageStrings.GetString("FerretLevelButton");
+        foxLevelButton.text = languageStrings.GetString("FoxLevelButton");
+        polarBearLevelButton.text = languageStrings.GetString("PolarBearLevelButton");
+        wolfLevelButton.text = languageStrings.GetString("WolfLevelButton");
+        passWordTextField.textEdition.placeholder = languageStrings.GetString("PasswordTextInput");
 
 
         DisableButtons(new Button[] { bearLevelButton, eagleLevelButton, ferretLevelButton, foxLevelButton, polarBearLevelButton, wolfLevelButton });

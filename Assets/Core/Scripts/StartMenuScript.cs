@@ -10,6 +10,7 @@ public class StartMenuScript : MonoBehaviour
     private Button englishLanguageButton;
     private Button germanLanguageButton;
     private QuizMemory quiz_so;
+    private LanguageStrings_SO languageStrings;
     [SerializeField, Tooltip("The opacity a button should have, when it is selected."), Range(0f, 1f)]
     private float OpacityWhenSelected = 1f;
     [SerializeField, Tooltip("The opacity a button should have, when it is NOT selected."), Range(0f, 1f)]
@@ -25,6 +26,7 @@ public class StartMenuScript : MonoBehaviour
     private void OnEnable()
     {
         quiz_so = Resources.Load<QuizMemory>("QuizMemory_SO");
+        languageStrings = Resources.Load<LanguageStrings_SO>("LanguageStrings_SO");
         var doc = GetComponent<UIDocument>();
         var root = doc.rootVisualElement;
         startButton = root.Q<Button>("StartButton");
@@ -88,6 +90,7 @@ public class StartMenuScript : MonoBehaviour
     private void SetLanguage(LanguageOptions language)
     {
         quiz_so.Language = language;
+        startButton.text = languageStrings.GetString("StartButton");
         switch (language)
         {
             case LanguageOptions.Dansk:
