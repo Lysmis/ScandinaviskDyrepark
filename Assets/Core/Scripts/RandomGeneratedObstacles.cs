@@ -27,7 +27,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
     private List<GameObject> obstacles = new List<GameObject>();
 
     private float respawnTimer = 10f;
-    float playerPositionX = 0f;
+    private float playerPositionX = 0f;
 
     #endregion
 
@@ -41,32 +41,41 @@ public class RandomGeneratedObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         respawnTimer = respawnTimer + Time.deltaTime;
-
-        if (respawnTimer > 3f)
-        {
-            AddTiles();
-
-            respawnTimer = 0f;
-        }
 
 
         //Removing obstacles when they are out of the frame
         playerPositionX = player.transform.position.x;
 
-        foreach (GameObject obj in obstacles)
+        if (respawnTimer > 3f)
         {
-            if (obj.transform.position.x + (leftBound) < playerPositionX)
+            AddTiles(0);
+            AddTiles(1);
+
+            respawnTimer = 0f;
+
+            foreach (GameObject obj in obstacles)
             {
-                Destroy(obj);
+                if (obj.transform.position.x + (leftBound) < playerPositionX)
+                {
+                    Destroy(obj);
+
+                }
             }
         }
+
+
+
+
+        //for (int i = 0; i < obstacles.Count; i++)
+        //{
+        //    Debug.Log(leftBound);
+        //}
     }
 
     private void Awake()
     {
-        //go sprite size
+        //Obstacle sprite size
         getSpriteSize(obstacle);
 
         CameraBounds();
@@ -98,13 +107,18 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     }
 
-    private void AddTiles()
+    private void AddTiles(int prutfims)
     {
         //Of setting the position so the obstacles sits on the ground
         Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
 
-        //Spawn position 
+
         Vector2 spawnPosition = new Vector2(leftBound + playerPositionX, 0);
+        //Spawn position 
+        if(prutfims == 1)
+            {
+            spawnPosition.y = spriteHeight;
+        }
 
         //New position where there taken into account the of set position
         Vector2 newPosition = spawnPosition + ofSetPosition;
