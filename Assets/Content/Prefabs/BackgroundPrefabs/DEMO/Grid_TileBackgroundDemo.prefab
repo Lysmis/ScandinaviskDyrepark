@@ -15772,7 +15772,7 @@ GameObject:
   - component: {fileID: 5046919025534806007}
   - component: {fileID: 5034914165231570848}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Grid_TileBackgroundDemo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

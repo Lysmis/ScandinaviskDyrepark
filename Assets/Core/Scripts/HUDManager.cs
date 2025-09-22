@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 public class HUDManager : MonoBehaviour
 {
     Label timeLabel, pickUpLabel;
+    [SerializeField] private CollectibleDataSO collectibleData;
 
     private void OnEnable()
     {
@@ -30,7 +31,7 @@ public class HUDManager : MonoBehaviour
     {
         if (pickUpLabel != null)
         {
-            pickUpLabel.text = $"{value}";
+            pickUpLabel.text = $"{collectibleData.CollectibleCount}"; //Henter data fra CollectibleDataSO
         }
     }
 

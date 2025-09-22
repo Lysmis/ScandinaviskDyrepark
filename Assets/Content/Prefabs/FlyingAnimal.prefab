@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2261467891782496030}
   m_Layer: 0
   m_Name: FlyingAnimal
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,6 +213,9 @@ MonoBehaviour:
   pickUps: 0
   tiltAmount: 10
   smooth: 5
+  fullAnimationSpeed: 1
+  slowedAnimationSpeed: 0.25
+  decreaseAnimationThreshold: 0
 --- !u!82 &-5029387213453367685
 AudioSource:
   m_ObjectHideFlags: 0
