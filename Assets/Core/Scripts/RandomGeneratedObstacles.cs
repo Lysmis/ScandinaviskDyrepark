@@ -5,15 +5,26 @@ public class RandomGeneratedObstacles : MonoBehaviour
 {
     #region Field
     //Obstacle GameObject
-    public GameObject go;
+    public GameObject obstacle;
+
+    //Player GameObject
+    public GameObject player;
+
+    //Camera
+    private Camera mainCamera;
+    private float leftBound;
 
     //Sprite size
-    private SpriteRenderer srGO;
+    private SpriteRenderer srObstacles;
     private float spriteHeight = 0f;
     private float spriteWidth = 0f;
 
     //Ground coordinat Y
     public float groundYAxis;
+
+    //Lister
+    private List<GameObject> obstacles = new List<GameObject>();
+
 
     int kage = 0;
     #endregion
@@ -29,25 +40,52 @@ public class RandomGeneratedObstacles : MonoBehaviour
     void Update()
     {
         AddTiles();
+
+
+
+        //Removing obstacles when they are out of the frame
+        float playerPositionX = player.transform.position.x;
+
+        foreach (GameObject obj in obstacles)
+        {
+            if (obj.transform.position.x + (leftBound * 2) < playerPositionX)
+            {
+                Destroy(obj);
+            }
+        }
     }
 
     private void Awake()
     {
         //go sprite size
-        getSpriteSize(go);
+        getSpriteSize(obstacle);
+
+        CameraBounds();
     }
 
     private void getSpriteSize(GameObject go)
     {
         //Getting go Sprite Rencerer
-        srGO = go.GetComponent<SpriteRenderer>();
+        srObstacles = go.GetComponent<SpriteRenderer>();
 
         //If go has a sprite renderer it will calculate the sprite size 
-        if (srGO != null)
+        if (srObstacles != null)
         {
-            spriteHeight = srGO.bounds.size.y;
-            spriteWidth = srGO.bounds.size.x;
+            spriteHeight = srObstacles.bounds.size.y;
+            spriteWidth = srObstacles.bounds.size.x;
         }
+
+    }
+
+    private void CameraBounds()
+    {
+        //Findung the camera scrren bounds
+        mainCamera = Camera.main;
+
+        Vector2 screenBounds = mainCamera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+
+        //The top bound 
+        leftBound = screenBounds.x;
 
     }
 
@@ -55,16 +93,26 @@ public class RandomGeneratedObstacles : MonoBehaviour
     {
         if (kage < 1)
         {
-            Vector2 offSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
+            //Of setting the position so the obstacles sits on the ground
+            Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
 
-            Vector2 newPosition = Vector2.zero + offSetPosition;
+            //Spawn position 
+            Vector2 spawnPosition = new Vector2(20,0);
 
-            GameObject tempObstacles = Instantiate(go, newPosition, Quaternion.identity);
+            //New position where there taken into account the of set position
+            Vector2 newPosition = spawnPosition + ofSetPosition;
 
+            //Instantiating the new obstacles
+            GameObject newObstacle = Instantiate(obstacle, newPosition, Quaternion.identity);
 
+            obstacles.Add(newObstacle);
 
             kage++;
+
         }
 
+
+
     }
+
 }
