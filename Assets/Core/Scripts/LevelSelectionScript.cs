@@ -32,7 +32,7 @@ public class LevelSelectionScript : MonoBehaviour
     [SerializeField, Tooltip("Password for unlocking the fox level")] private string foxPassword;
     [SerializeField, Tooltip("Password for unlocking the polar bear level")] private string polarBearPassword;
     [SerializeField, Tooltip("Password for unlocking the wolf level")] private string wolfPassword;
-
+    private LanguageStrings_SO languageStrings;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,6 +52,11 @@ public class LevelSelectionScript : MonoBehaviour
         polarBearLevelButton = root.Q<Button>("PolarBearLevelButton");
         wolfLevelButton = root.Q<Button>("WolfLevelButton");
         passWordTextField = root.Q<TextField>("PasswordTextInput");
+        
+       //Set languages of buttons:
+        languageStrings = Resources.Load<LanguageStrings_SO>("LanguageStrings_SO");
+        bearLevelButton.text = languageStrings.GetString("BearLevelButton");
+        deerLevelButton.text = languageStrings.GetString("DeerLevelButton");
 
 
         DisableButtons(new Button[] { bearLevelButton, eagleLevelButton, ferretLevelButton, foxLevelButton, polarBearLevelButton, wolfLevelButton });
