@@ -232,7 +232,6 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Sound prut
         lastTimeAudio = lastTimeAudio + Time.fixedDeltaTime;
-        Debug.Log(lastTimeAudio);
 
         if (repeatSounds == true)
         {
