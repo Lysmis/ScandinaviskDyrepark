@@ -232,7 +232,7 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Sound prut
         lastTimeAudio = lastTimeAudio + Time.fixedDeltaTime;
-        Debug.Log(lastTimeAudio);
+        //Debug.Log(lastTimeAudio);
 
         if (repeatSounds == true)
         {
@@ -284,7 +284,6 @@ public class AnimalBehaviour : MonoBehaviour
         }
     }
 
-    #endregion
 
     /// <summary>
     /// Tries to find a gameobject from the hierarchy with the HUD tag, and set the Animals hud field to the GameObject's HUDManager component. 
@@ -316,7 +315,10 @@ public class AnimalBehaviour : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// Method to add more game-time
+    /// </summary>
+    /// <param name="time">Time added with trigger</param>
     public void AddTime(float time)
     {
 
@@ -326,6 +328,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     }
 
+    #endregion
 
 }
 

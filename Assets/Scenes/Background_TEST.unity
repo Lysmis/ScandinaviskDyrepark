@@ -556,6 +556,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 11400000, guid: c2c0c73ddb21108448f60e5f326ca3f9, type: 2}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: timeRemaining
       value: 60
       objectReference: {fileID: 0}
@@ -573,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9043133805306461904, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_SortingLayer
-      value: 7
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 9043133805306461904, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_SortingLayerID
