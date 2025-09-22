@@ -157,7 +157,7 @@ MonoBehaviour:
   polarBearLevelName: Background_TEST
   wolfLevelName: 
   UILevelName: HUD
-  unappliedButtonOpacity: 0
+  unappliedButtonOpacity: 0.1
   lockedButtonOpacity: 0.3
   bearPassword: "StilleN\xE5rDerSpises"
   deerPassword: Gevir123
