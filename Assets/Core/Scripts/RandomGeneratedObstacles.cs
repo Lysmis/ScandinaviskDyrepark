@@ -84,7 +84,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
         {
             GameObject go = obstaclesList[i];
 
-            if (go.transform.position.x - (leftBound) < playerPositionX || playerPositionX > endOfMapXAxis * 0.95f)
+            if (go.transform.position.x - (leftBound * 1.2f) < playerPositionX || playerPositionX > endOfMapXAxis * 0.95f)
             {
                 obstaclesList.Remove(go);
                 obstaclesStack.Push(go);
