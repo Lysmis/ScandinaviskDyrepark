@@ -3684,6 +3684,91 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1001 &1012325976
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2448116470258444349, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_Name
+      value: RandomManager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1867399604}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: inTheAir
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: obstacle
+      value: 
+      objectReference: {fileID: 3278944639803346358, guid: e2a15c9ed5e49874285d1a73c950ffae, type: 3}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: spawnTimer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: groundYAxis
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: endOfMapXAxis
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: isPlayerFlying
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.33846
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.37262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
 --- !u!1 &1867399604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8546891083996888997, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
@@ -3741,6 +3826,10 @@ PrefabInstance:
       propertyPath: obstacle
       value: 
       objectReference: {fileID: 3278944639803346358, guid: e2a15c9ed5e49874285d1a73c950ffae, type: 3}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: spawnTimer
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: groundYAxis
       value: -4
@@ -3808,3 +3897,4 @@ SceneRoots:
   - {fileID: 376594250}
   - {fileID: 43390267}
   - {fileID: 8765837475753427384}
+  - {fileID: 1012325976}
