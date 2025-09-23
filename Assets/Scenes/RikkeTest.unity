@@ -3526,6 +3526,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: backgroundEndX
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: loopBackground
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7362829895755860902, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_Resource
       value: 
@@ -3740,6 +3748,10 @@ PrefabInstance:
     - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: endOfMapXAxis
       value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: isPlayerFlying
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: m_LocalPosition.x

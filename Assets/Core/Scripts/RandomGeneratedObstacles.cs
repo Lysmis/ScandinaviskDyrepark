@@ -23,14 +23,14 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     //Ground coordinat Y
     public float groundYAxis;
-    //public float endOfMapXAxis; // I dont think so
+    public float endOfMapXAxis;
 
     //List and stack for obstacles
     private List<GameObject> obstaclesList = new List<GameObject>();
     private Stack<GameObject> obstaclesStack = new Stack<GameObject>();
 
-    private float respawnTimer1 = 10f;
-    private float respawnTimer2 = 10f;
+    private float respawnTimer = 10f;
+    private bool kage = true;
 
     private float playerPositionX = 0f;
 
@@ -46,36 +46,36 @@ public class RandomGeneratedObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        respawnTimer1 = respawnTimer1 + Time.deltaTime;
-        respawnTimer2 = respawnTimer2 + Time.deltaTime;
+        respawnTimer = respawnTimer + Time.deltaTime;
 
 
         //Removing obstacles when they are out of the frame
         playerPositionX = player.transform.position.x;
 
-        if (respawnTimer1 > 3f)
+        if (respawnTimer > 3f)
         {
             AddTiles(0);
             AddTiles(1);
 
-            respawnTimer1 = 0f;
+            respawnTimer = 0f;
+            kage = true;
         }
-        //else if (respawnTimer2 > 2f )
-        //{
-        //    AddTiles(0);
-
-        //    respawnTimer2 = 0f;
-        //}
+        else if (respawnTimer > 2.5f && kage == true)
+        {
+            AddTiles(0);
+            kage = false;
+        }
 
         for (int i = 0; i < obstaclesList.Count; i++)
         {
             GameObject go = obstaclesList[i];
 
-            if (go.transform.position.x - (leftBound) < playerPositionX)
+            if (go.transform.position.x - (leftBound) < playerPositionX || go.transform.position.x > endOfMapXAxis)
             {
                 obstaclesList.Remove(go);
                 obstaclesStack.Push(go);
             }
+
         }
 
     }
@@ -113,10 +113,12 @@ public class RandomGeneratedObstacles : MonoBehaviour
         //The bound 
         leftBound = -screenBounds.x;
         topBound = screenBounds.y;
+
     }
 
     private void AddTiles(int onTop)
     {
+        Debug.Log(topBound);
         //Of setting the position so the obstacles sits on the ground
         Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
 
@@ -126,7 +128,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
         //If the obstacles needs to stand on top of eachother
         if (isPlayerFlying == true)
         {
-            spawnPosition.y = topBound - groundYAxis - (spriteHeight * 3 / 2);
+            spawnPosition.y = topBound - groundYAxis - (spriteHeight / 2) -(spriteHeight * (onTop + 1));
         }
         else
         {
