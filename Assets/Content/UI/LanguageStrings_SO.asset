@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62aa8182b2ab0814e9356ed81c9fbd8a, type: 3}
   m_Name: LanguageStrings_SO
   m_EditorClassIdentifier: Assembly-CSharp::LanguageStrings_SO
-  textFields:
-  - tag: header
-    danish: Dansk
-    english: Engelsk
-    german: Tysk
+  textFields: []
