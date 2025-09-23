@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8813308410863859316, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
+      propertyPath: animations
+      value: 
+      objectReference: {fileID: 11400000, guid: 70df06651461b4840886c8893e7d0277, type: 2}
     - target: {fileID: -3716716054708741472, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
       propertyPath: soundEffectLength
       value: 3
@@ -63,6 +67,14 @@ PrefabInstance:
     - target: {fileID: 3784786639975065257, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542080491418127462, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542080491418127462, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5542080491418127462, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x

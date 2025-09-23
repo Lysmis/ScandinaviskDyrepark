@@ -73,6 +73,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380705255849346139, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
       objectReference: {fileID: 0}
@@ -119,6 +123,10 @@ PrefabInstance:
     - target: {fileID: 8577970384609362320, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
       propertyPath: jumpHeigth
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577970384609362320, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}
+      propertyPath: timeRemaining
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1057982772862017743, guid: 186421ea9c3dedc4bbe024ad03bfc698, type: 3}

@@ -7,6 +7,13 @@ public class AnimalBehaviour : MonoBehaviour
 {
     #region Field
 
+    //Scene names
+    private const string quizScene = "QuizScene";
+    private const string gameOverScene = "GameOverScene";
+    private const string hudScene = "HUD";
+    [SerializeField, Tooltip("Set same as total closing time for Quiz"), Range(1, 15)] private float closeTime = 5f;
+    private bool animalSceneLoaded = false;
+
     //The jumping heigth - is public so it can bechanged in Unity
     [SerializeField, Tooltip("Jump heigth or fly heigth for birds")]
     public float heigth = 5f;
@@ -106,6 +113,11 @@ public class AnimalBehaviour : MonoBehaviour
             AddHUD();
         }
 
+        if (timeRemaining < 0 && animalSceneLoaded)
+        {
+            StartCoroutine(LoadScene(gameOverScene, true));
+        }
+
         secondsCounter += Time.deltaTime;
         if (secondsCounter > 1)
         {
@@ -119,7 +131,7 @@ public class AnimalBehaviour : MonoBehaviour
             }
             else
             {
-                StartCoroutine(LoadQuiz());
+                StartCoroutine(LoadScene(quizScene));
             }
             secondsCounter = 0;
         }
@@ -127,6 +139,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     protected virtual void Awake()
     {
+
         //Rigidbody
         rb = GetComponent<Rigidbody2D>();
 
@@ -149,6 +162,8 @@ public class AnimalBehaviour : MonoBehaviour
 
     protected virtual void OnEnable()
     {
+
+        animalSceneLoaded = true;
 
         Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer += AddTime;
 
@@ -298,6 +313,7 @@ public class AnimalBehaviour : MonoBehaviour
                 if (hud != null)
                 {
                     hudAdded = true;
+                    hud.SetTime(timeRemaining);
                 }
             }
         }
@@ -306,15 +322,40 @@ public class AnimalBehaviour : MonoBehaviour
     /// <summary>
     /// Method to load Quiz
     /// </summary>
-    /// <returns>Quiz Scene loaded additive</returns>
-    public IEnumerator LoadQuiz()
+    /// <param name="sceneName">String of scene to be loadeds name</param>
+    /// <param name="unloadScene">Set true if current scene should be unloaded</param>
+    /// <returns>Quiz Scene (un)loaded additive</returns>
+    public IEnumerator LoadScene(string sceneName, bool unloadScene = false)
     {
 
-        yield return SceneManager.LoadSceneAsync("QuizScene", LoadSceneMode.Additive);
+        if (unloadScene)
+        {
+            
+            animalSceneLoaded = false;
+            yield return new WaitForSecondsRealtime(closeTime);
+
+            yield return SceneManager.UnloadSceneAsync(quizScene);
+
+        }
+
+        yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+        if (unloadScene)
+        {
+
+            hudAdded = false;
+            yield return SceneManager.UnloadSceneAsync(hudScene);
+
+            yield return SceneManager.UnloadSceneAsync(gameObject.scene);
+
+        }
 
     }
 
-
+    /// <summary>
+    /// Method to add more game-time
+    /// </summary>
+    /// <param name="time">Time added with trigger</param>
     public void AddTime(float time)
     {
 
@@ -324,6 +365,7 @@ public class AnimalBehaviour : MonoBehaviour
 
     }
 
+    #endregion
 
     #endregion
 }

@@ -4,12 +4,18 @@ using UnityEngine.UIElements;
 public class HUDManager : MonoBehaviour
 {
     Label timeLabel, pickUpLabel;
+    [SerializeField] private CollectibleDataSO CollectibleData;
 
     private void OnEnable()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
         timeLabel = root.Q<Label>("TimeLabel");
         pickUpLabel = root.Q<Label>("PickUpLabel");
+
+        if (CollectibleData != null)
+        {
+            CollectibleData.OnCollectibleCountChanged += SetPickUp;
+        }
     }
     /// <summary>
     /// Sets the Time value in the HUD
@@ -30,8 +36,15 @@ public class HUDManager : MonoBehaviour
     {
         if (pickUpLabel != null)
         {
-            pickUpLabel.text = $"{value}";
+            pickUpLabel.text = $"{value}"; 
         }
     }
 
+    private void OnDisable()
+    {
+        if (CollectibleData != null)
+        {
+            CollectibleData.OnCollectibleCountChanged -= SetPickUp;
+        }
+    }
 }
