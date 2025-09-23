@@ -9,10 +9,12 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     //Player GameObject
     public GameObject player;
+    public bool isPlayerFlying = false;
 
     //Camera
     private Camera mainCamera;
     private float leftBound;
+    private float topBound;
 
     //Sprite size
     private SpriteRenderer srObstacles;
@@ -21,13 +23,15 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     //Ground coordinat Y
     public float groundYAxis;
-    public float endOfMapXAxis; // I dont think so
+    //public float endOfMapXAxis; // I dont think so
 
-    //Lister
-    private List<GameObject> obstacles = new List<GameObject>();
-    private Stack<GameObject> kage = new Stack<GameObject>();
+    //List and stack for obstacles
+    private List<GameObject> obstaclesList = new List<GameObject>();
+    private Stack<GameObject> obstaclesStack = new Stack<GameObject>();
 
-    private float respawnTimer = 10f;
+    private float respawnTimer1 = 10f;
+    private float respawnTimer2 = 10f;
+
     private float playerPositionX = 0f;
 
     #endregion
@@ -42,30 +46,35 @@ public class RandomGeneratedObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        respawnTimer = respawnTimer + Time.deltaTime;
+        respawnTimer1 = respawnTimer1 + Time.deltaTime;
+        respawnTimer2 = respawnTimer2 + Time.deltaTime;
 
 
         //Removing obstacles when they are out of the frame
         playerPositionX = player.transform.position.x;
 
-        if (respawnTimer > 3f)
+        if (respawnTimer1 > 3f)
         {
             AddTiles(0);
             AddTiles(1);
 
-            respawnTimer = 0f;
-
+            respawnTimer1 = 0f;
         }
+        //else if (respawnTimer2 > 2f )
+        //{
+        //    AddTiles(0);
 
+        //    respawnTimer2 = 0f;
+        //}
 
-        for (int i = 0; i < obstacles.Count; i++)
+        for (int i = 0; i < obstaclesList.Count; i++)
         {
-            GameObject go = obstacles[i];
+            GameObject go = obstaclesList[i];
 
             if (go.transform.position.x - (leftBound) < playerPositionX)
             {
-                obstacles.Remove(go);
-                kage.Push(go);
+                obstaclesList.Remove(go);
+                obstaclesStack.Push(go);
             }
         }
 
@@ -101,22 +110,27 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
         Vector2 screenBounds = mainCamera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
-        //The top bound 
+        //The bound 
         leftBound = -screenBounds.x;
-
+        topBound = screenBounds.y;
     }
 
-    private void AddTiles(int prutfims)
+    private void AddTiles(int onTop)
     {
         //Of setting the position so the obstacles sits on the ground
         Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
 
 
-        Vector2 spawnPosition = new Vector2(playerPositionX - (leftBound * 2), 0);
         //Spawn position 
-        if (prutfims == 1)
+        Vector2 spawnPosition = new Vector2(playerPositionX - (leftBound * 2), 0);
+        //If the obstacles needs to stand on top of eachother
+        if (isPlayerFlying == true)
         {
-            spawnPosition.y = spriteHeight;
+            spawnPosition.y = topBound - groundYAxis - (spriteHeight * 3 / 2);
+        }
+        else
+        {
+            spawnPosition.y = spriteHeight * onTop;
         }
 
         //New position where there taken into account the of set position
@@ -124,9 +138,10 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
         GameObject newObstacle;
 
-        if (kage.Count > 0)
+        if (obstaclesStack.Count > 0)
         {
-            newObstacle = kage.Pop();
+            //Popping an obstacle from the stack
+            newObstacle = obstaclesStack.Pop();
             newObstacle.transform.position = newPosition;
         }
         else
@@ -135,7 +150,8 @@ public class RandomGeneratedObstacles : MonoBehaviour
             newObstacle = Instantiate(obstacle, newPosition, Quaternion.identity);
         }
 
-        obstacles.Add(newObstacle);
+        obstaclesList.Add(newObstacle);
+
     }
 
 }
