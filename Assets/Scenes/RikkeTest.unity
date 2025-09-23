@@ -3532,7 +3532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: loopBackground
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7362829895755860902, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_Resource
@@ -3747,7 +3747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: endOfMapXAxis
-      value: 243
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: isPlayerFlying
