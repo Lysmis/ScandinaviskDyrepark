@@ -29,6 +29,13 @@ public class ParallaxTilemap : MonoBehaviour
 
     void FixedUpdate()
     {
+        //Sørger for camera
+        if (cam == null)
+        {
+            cam = Camera.main; // prøv at finde et nyt main camera
+            if (cam == null) return; // stadig intet kamera, så spring over
+        }
+
         // Calculate the distance the camera has moved since the start position
         float distanceX = (cam.transform.position.x - camStartPos.x) * ParallaxAmountX;
         float distanceY = (cam.transform.position.y - camStartPos.y) * ParallaxAmountY;

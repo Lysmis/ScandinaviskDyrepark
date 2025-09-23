@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CollectibleDataSO", menuName = "Scriptable Objects/CollectibleDataSO")]
@@ -7,22 +8,20 @@ public class CollectibleDataSO : ScriptableObject
 
     public int CollectibleCount { get => collectibleCount; set => collectibleCount = value; }
 
+    public event Action<int> OnCollectibleCountChanged;
 
-    //Ressetter tæller
+
+    //Resetter tæller
     void Reset()
     {
         CollectibleCount = 0;
+        OnCollectibleCountChanged?.Invoke(collectibleCount);
     }
 
-    ////+1 collectible
-    //public void AddCollectible(int amount = 1)
-    //{
-    //    CollectibleCount += amount;
-    //}
-
-    //+1 collectible
+    //Tilføjer 1 til vores tæller collectibleCount
     public void AddCollectible()
     {
         CollectibleCount++;
+        OnCollectibleCountChanged?.Invoke(collectibleCount);
     }
 }

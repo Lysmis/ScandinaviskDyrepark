@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2630978399700593583, guid: dc0f98d9ae2eefd4181d1cc96001d75f, type: 3}
+      propertyPath: CollectibleData
+      value: 
+      objectReference: {fileID: 11400000, guid: b3a53fe2510232847b9bf439b75bf30f, type: 2}
     - target: {fileID: 4220002623886920411, guid: dc0f98d9ae2eefd4181d1cc96001d75f, type: 3}
       propertyPath: m_Name
       value: HUD

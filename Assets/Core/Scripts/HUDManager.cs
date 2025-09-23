@@ -11,6 +11,11 @@ public class HUDManager : MonoBehaviour
         var root = GetComponent<UIDocument>().rootVisualElement;
         timeLabel = root.Q<Label>("TimeLabel");
         pickUpLabel = root.Q<Label>("PickUpLabel");
+
+        if (CollectibleData != null)
+        {
+            CollectibleData.OnCollectibleCountChanged += SetPickUp;
+        }
     }
     /// <summary>
     /// Sets the Time value in the HUD
@@ -31,8 +36,15 @@ public class HUDManager : MonoBehaviour
     {
         if (pickUpLabel != null)
         {
-            pickUpLabel.text = $"{CollectibleData.CollectibleCount}"; //Henter data fra CollectibleDataSO
+            pickUpLabel.text = $"{value}"; 
         }
     }
 
+    private void OnDisable()
+    {
+        if (CollectibleData != null)
+        {
+            CollectibleData.OnCollectibleCountChanged -= SetPickUp;
+        }
+    }
 }
