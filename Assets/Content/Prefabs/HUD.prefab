@@ -68,3 +68,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710b0e19810ad014598957be03979eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HUDManager
+  collectibleData: {fileID: 0}

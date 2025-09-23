@@ -14,9 +14,15 @@ public class CollectibleDataSO : ScriptableObject
         CollectibleCount = 0;
     }
 
+    ////+1 collectible
+    //public void AddCollectible(int amount = 1)
+    //{
+    //    CollectibleCount += amount;
+    //}
+
     //+1 collectible
-    public void AddCollectible(int amount = 1)
+    public void AddCollectible()
     {
-        CollectibleCount += amount;
+        CollectibleCount++;
     }
 }

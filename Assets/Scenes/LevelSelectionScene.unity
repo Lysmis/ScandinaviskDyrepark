@@ -151,9 +151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   bearLevelName: 
   deerLevelName: Philip_TEST
-  eagleLevelName: 
+  eagleLevelName: Irene_Test
   foxLevelName: 
-  polarBearLevelName: Background_TEST
+  polarBearLevelName: 
   wolfLevelName: 
   UILevelName: HUD
   unappliedButtonOpacity: 0.3
