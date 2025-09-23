@@ -20,6 +20,7 @@ public class Quiz_Script : MonoBehaviour
     private bool closingQuiz = false;
     private bool buttonsEnabled = false;
     private const float defaultCloseTime = 5f;
+    private const float wrongAnswer = -1f;
     private float closingIn;
     private int questionIndex;
     private string result = string.Empty;
@@ -155,6 +156,9 @@ public class Quiz_Script : MonoBehaviour
                 question.text = "Falsche antwort";
                 break;
         }
+
+        quizMemory.CorrectAnswer?.Invoke(wrongAnswer);
+
         StartCoroutine(CloseQuiz());
 
     }

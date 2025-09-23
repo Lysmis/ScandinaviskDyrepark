@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BootStrapScene.unity
     guid: 13a365756fb9f7240ba6315b53b75208
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: a8a5aeb45f2b0a74aa183019c64ffdff
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
