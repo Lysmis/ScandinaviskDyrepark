@@ -34,13 +34,19 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
     private float playerPositionX = 0f;
 
+    private float first;
+    private float second;
+
     #endregion
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        first = Random.Range(4, 5);
+        second = Random.Range(2, 3);
 
+        
     }
 
     // Update is called once per frame
@@ -52,7 +58,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
         //Removing obstacles when they are out of the frame
         playerPositionX = player.transform.position.x;
 
-        if (respawnTimer > 3f)
+        if (respawnTimer > first)
         {
             AddTiles(0);
             AddTiles(1);
@@ -60,7 +66,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
             respawnTimer = 0f;
             kage = true;
         }
-        else if (respawnTimer > 2.5f && kage == true)
+        else if (respawnTimer > second && kage == true)
         {
             AddTiles(0);
             kage = false;
@@ -78,6 +84,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
 
         }
 
+        Debug.Log("First " + first + " second " + second);
     }
 
 
@@ -87,6 +94,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
         getSpriteSize(obstacle);
 
         CameraBounds();
+
     }
 
     private void getSpriteSize(GameObject go)
