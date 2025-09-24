@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268683435}
   - component: {fileID: 268683434}
+  - component: {fileID: 268683436}
   m_Layer: 5
   m_Name: GameOverUI
   m_TagString: Untagged
@@ -174,6 +175,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268683436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268683433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd7a8eadf056814bba0f286197c30bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverScript
+  restartLevelName: LevelSelectionScene
 --- !u!1 &1624606596
 GameObject:
   m_ObjectHideFlags: 0

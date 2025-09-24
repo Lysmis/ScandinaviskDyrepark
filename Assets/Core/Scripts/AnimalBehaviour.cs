@@ -1,6 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class AnimalBehaviour : MonoBehaviour
@@ -182,7 +183,6 @@ public class AnimalBehaviour : MonoBehaviour
 
         QuizMemory memory = Resources.Load<QuizMemory>("QuizMemory_SO");
         memory.CorrectAnswer -= AddTime;
-        memory.TotalCollected += pickUps;
 
         inputActions.FindActionMap("Player").Disable();
 
@@ -332,7 +332,6 @@ public class AnimalBehaviour : MonoBehaviour
 
         if (unloadScene)
         {
-            
             animalSceneLoaded = false;
             yield return new WaitForSecondsRealtime(closeTime);
 
