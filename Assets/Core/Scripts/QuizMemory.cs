@@ -56,9 +56,17 @@ public class Startup
     {
 
         QuizMemory so = Resources.Load<QuizMemory>("QuizMemory_SO");
+        LanguageStrings_SO languageStrings_SO = Resources.Load<LanguageStrings_SO>("LanguageStrings_SO");
+        CollectibleDataSO collectibleDataSO = Resources.Load<CollectibleDataSO>("CollectibleDataSO");
 
         if (so != null)
             so.InitializeAndResetMemory();
+
+        if (languageStrings_SO != null)
+            languageStrings_SO.Initialize();
+
+        if (collectibleDataSO != null)
+            collectibleDataSO.CollectibleCount = 0;
 
     }
 
