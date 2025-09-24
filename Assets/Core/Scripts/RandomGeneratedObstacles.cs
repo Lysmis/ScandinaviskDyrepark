@@ -5,8 +5,10 @@ public class RandomGeneratedObstacles : MonoBehaviour
 {
     #region Field
     //Obstacle GameObject
-    [SerializeField, Tooltip("Obstacle prefab")]
-    public GameObject obstacle;
+    [SerializeField, Tooltip("Obstacle/collectibel prefab")]
+    public GameObject prefab;
+    [SerializeField, Tooltip("Is it a collectibel")]
+    public bool isCollectibel = false;
     [SerializeField, Tooltip("The obstacles is placed at the top of the screen")]
     public bool inTheAir = false;
 
@@ -59,22 +61,35 @@ public class RandomGeneratedObstacles : MonoBehaviour
         if(respawnTimer > spawnTimer)
         {
             int tileCase = Random.Range(0, 3);
-            switch (tileCase)
+
+            if (isCollectibel == false)
             {
-                case 0: //Two tiles on top of each other
-                    AddTiles(0);
-                    AddTiles(1);
-                    break;
-                case 1: //Hovering
-                    AddTiles(1);
-                    break;
-                default: //One tile
-                    AddTiles(0);
-                    break;
+                switch (tileCase)
+                {
+                    case 0: //Two tiles on top of each other
+                        AddTiles(0);
+                        AddTiles(1);
+                        break;
+                    case 1: //Hovering
+                        AddTiles(1);
+                        break;
+                    default: //One tile
+                        AddTiles(0);
+                        break;
+                }
+            }
+            else
+            {
+                switch (tileCase)
+                {
+                    default:
+                        AddTiles(0);
+                        break;
+                }
             }
 
-            //Resetting the respawnTimer
-            respawnTimer = 0;
+                //Resetting the respawnTimer
+                respawnTimer = 0;
         }
 
         //Removing obstacles from the list and push to the stack when they are out of the frame
