@@ -27,7 +27,7 @@ public class AnimalBehaviour : MonoBehaviour
     public bool loopBackground = false;
 
     //End of background if the Player needs to respawn at the start position again
-    [SerializeField, Tooltip("The end coordinates of the X axis")]
+    [SerializeField, Tooltip("The end coordinat of the X axis")]
     public float backgroundEndX = 5f;
 
     //Input System Asset
@@ -249,7 +249,6 @@ public class AnimalBehaviour : MonoBehaviour
 
         //Sound prut
         lastTimeAudio = lastTimeAudio + Time.fixedDeltaTime;
-        //Debug.Log(lastTimeAudio);
 
         if (repeatSounds == true)
         {
@@ -370,5 +369,6 @@ public class AnimalBehaviour : MonoBehaviour
 
     #endregion
 
+    
 }
 
