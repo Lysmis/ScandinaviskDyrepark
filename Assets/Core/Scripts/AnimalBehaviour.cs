@@ -334,9 +334,6 @@ public class AnimalBehaviour : MonoBehaviour
         {
             animalSceneLoaded = false;
             yield return new WaitForSecondsRealtime(closeTime);
-
-            yield return SceneManager.UnloadSceneAsync(quizScene);
-
         }
 
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
@@ -361,7 +358,7 @@ public class AnimalBehaviour : MonoBehaviour
     {
 
         timeRemaining += time;
-        if (hud != null)
+        if (hud != null && timeRemaining >=0)
             hud.SetTime(timeRemaining);
 
     }
