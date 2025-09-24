@@ -25,12 +25,18 @@ public class QuizMemory : ScriptableObject
     public QuizDifficulty Difficulty { get => difficulty; set => difficulty = value; }
 
     /// <summary>
+    /// Property to retrieve score
+    /// </summary>
+    public int TotalCollected { get; set; }
+
+    /// <summary>
     /// Method to instantiate a new List<int>
     /// </summary>
     public void InitializeAndResetMemory()
     {
 
         previousQuestions = new List<int>();
+        TotalCollected = 0;
 
     }
 
@@ -50,9 +56,17 @@ public class Startup
     {
 
         QuizMemory so = Resources.Load<QuizMemory>("QuizMemory_SO");
+        LanguageStrings_SO languageStrings_SO = Resources.Load<LanguageStrings_SO>("LanguageStrings_SO");
+        CollectibleDataSO collectibleDataSO = Resources.Load<CollectibleDataSO>("CollectibleDataSO");
 
         if (so != null)
             so.InitializeAndResetMemory();
+
+        if (languageStrings_SO != null)
+            languageStrings_SO.Initialize();
+
+        if (collectibleDataSO != null)
+            collectibleDataSO.CollectibleCount = 0;
 
     }
 

@@ -1,6 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class AnimalBehaviour : MonoBehaviour
@@ -180,7 +181,8 @@ public class AnimalBehaviour : MonoBehaviour
     protected virtual void OnDisable()
     {
 
-        Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer -= AddTime;
+        QuizMemory memory = Resources.Load<QuizMemory>("QuizMemory_SO");
+        memory.CorrectAnswer -= AddTime;
 
         inputActions.FindActionMap("Player").Disable();
 
@@ -330,12 +332,8 @@ public class AnimalBehaviour : MonoBehaviour
 
         if (unloadScene)
         {
-            
             animalSceneLoaded = false;
             yield return new WaitForSecondsRealtime(closeTime);
-
-            yield return SceneManager.UnloadSceneAsync(quizScene);
-
         }
 
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
@@ -360,7 +358,7 @@ public class AnimalBehaviour : MonoBehaviour
     {
 
         timeRemaining += time;
-        if (hud != null)
+        if (hud != null && timeRemaining >=0)
             hud.SetTime(timeRemaining);
 
     }

@@ -53,3 +53,15 @@ MonoBehaviour:
     danish: Kodeord til nye dyr
     english: Password for new animals
     german: "Code f\xFCr neue Tiere"
+  - tag: GameOverLabel
+    danish: Spillet er slut
+    english: Game over
+    german: Spiel vorbei
+  - tag: TotalCollectedLabel
+    danish: 'Antal indsamlede ting:'
+    english: 'Total collected items: '
+    german: "Gesammelte Gegenst\xE4nde:"
+  - tag: RestartButton
+    danish: Spil igen
+    english: Restart game
+    german: Nochmal spielen

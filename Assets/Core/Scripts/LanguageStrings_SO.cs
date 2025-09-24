@@ -35,7 +35,7 @@ public class LanguageStrings_SO : ScriptableObject
 
     }
 
-    private void OnValidate()
+    public void Initialize()
     {
 
         strings = new Dictionary<string, LanguageStringArray>();
