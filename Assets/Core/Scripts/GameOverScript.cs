@@ -46,6 +46,7 @@ public class GameOverScript : MonoBehaviour
 
     public void RestartGame()
     {
+        memory.CollectibleCount = 0;
         SceneManager.LoadSceneAsync(restartLevelName, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("GameOverScene");
     }
