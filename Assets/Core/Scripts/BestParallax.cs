@@ -60,7 +60,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class ParallaxLayer : MonoBehaviour
+public class BestParallax : MonoBehaviour
 {
     [Tooltip("0 = bevæger sig helt med kameraet, 1 = står stille. Typisk 0.2-0.8.")]
     [Range(0f, 1f)]

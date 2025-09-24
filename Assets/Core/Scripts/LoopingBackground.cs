@@ -122,57 +122,57 @@
 
 
 
-using UnityEngine;
-using UnityEngine.Tilemaps;
+//using UnityEngine;
+//using UnityEngine.Tilemaps;
 
-public class BackgroundLooper : MonoBehaviour
-{
-    [Tooltip("Skal baggrunden loopes?")]
-    public bool loop = true;
+//public class BackgroundLooper : MonoBehaviour
+//{
+//    [Tooltip("Skal baggrunden loopes?")]
+//    public bool loop = true;
 
-    private float length;
-    private Vector3 startPos;
+//    private float length;
+//    private Vector3 startPos;
 
-    void Start()
-    {
-        startPos = transform.position;
+//    void Start()
+//    {
+//        startPos = transform.position;
 
-        // Tjek for SpriteRenderer
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        if (sr != null)
-        {
-            length = sr.bounds.size.x;
-            return;
-        }
+//        // Tjek for SpriteRenderer
+//        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+//        if (sr != null)
+//        {
+//            length = sr.bounds.size.x;
+//            return;
+//        }
 
-        // Tjek for TilemapRenderer
-        TilemapRenderer tr = GetComponent<TilemapRenderer>();
-        if (tr != null)
-        {
-            length = tr.bounds.size.x;
-            return;
-        }
+//        // Tjek for TilemapRenderer
+//        TilemapRenderer tr = GetComponent<TilemapRenderer>();
+//        if (tr != null)
+//        {
+//            length = tr.bounds.size.x;
+//            return;
+//        }
 
-        Debug.LogWarning($"{name} har ingen SpriteRenderer eller TilemapRenderer!");
-    }
+//        Debug.LogWarning($"{name} har ingen SpriteRenderer eller TilemapRenderer!");
+//    }
 
-    void Update()
-    {
-        if (!loop || length <= 0) return;
+//    void Update()
+//    {
+//        if (!loop || length <= 0) return;
 
-        // Flytter baggrunden når kameraet går forbi
-        if (Camera.main.transform.position.x > startPos.x + length)
-        {
-            startPos.x += length;
-            transform.position = startPos;
-        }
-        else if (Camera.main.transform.position.x < startPos.x - length)
-        {
-            startPos.x -= length;
-            transform.position = startPos;
-        }
-    }
-}
+//        // Flytter baggrunden når kameraet går forbi
+//        if (Camera.main.transform.position.x > startPos.x + length)
+//        {
+//            startPos.x += length;
+//            transform.position = startPos;
+//        }
+//        else if (Camera.main.transform.position.x < startPos.x - length)
+//        {
+//            startPos.x -= length;
+//            transform.position = startPos;
+//        }
+//    }
+//}
 
 
 
