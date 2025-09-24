@@ -58,7 +58,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
         respawnTimer = respawnTimer + Time.deltaTime;
 
 
-        if(respawnTimer > spawnTimer)
+        if (respawnTimer > spawnTimer)
         {
             int tileCase = Random.Range(0, 3);
 
@@ -82,14 +82,20 @@ public class RandomGeneratedObstacles : MonoBehaviour
             {
                 switch (tileCase)
                 {
+                    case 0:
+                        AddTiles(1);
+                        break;
+                    case 1:
+                        AddTiles(2);
+                        break;
                     default:
                         AddTiles(0);
                         break;
                 }
             }
 
-                //Resetting the respawnTimer
-                respawnTimer = 0;
+            //Resetting the respawnTimer
+            respawnTimer = 0;
         }
 
         //Removing obstacles from the list and push to the stack when they are out of the frame
@@ -99,10 +105,12 @@ public class RandomGeneratedObstacles : MonoBehaviour
         {
             GameObject go = obstaclesList[i];
 
-            if (go.transform.position.x - (leftBound * 1.2f) < playerPositionX || playerPositionX > endOfMapXAxis * 0.95f)
+            if (go.transform.position.x - (leftBound * 1.4f) < playerPositionX || playerPositionX > endOfMapXAxis * 0.95f)
             {
                 obstaclesList.Remove(go);
                 obstaclesStack.Push(go);
+
+                go.SetActive(false);
             }
         }
 
@@ -112,7 +120,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
     private void Awake()
     {
         //Obstacle sprite size
-        getSpriteSize(obstacle);
+        getSpriteSize(prefab);
 
         //Camera bounds
         CameraBounds();
@@ -190,8 +198,10 @@ public class RandomGeneratedObstacles : MonoBehaviour
         else
         {
             //Instantiating the new obstacles
-            newObstacle = Instantiate(obstacle, newPosition, Quaternion.identity);
+            newObstacle = Instantiate(prefab, newPosition, Quaternion.identity);
         }
+
+        newObstacle.SetActive(true);
 
         obstaclesList.Add(newObstacle);
 

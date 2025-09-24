@@ -3547,6 +3547,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+--- !u!1 &397629990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8546891083996888997, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+  m_PrefabInstance: {fileID: 376594250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &679070846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,9 +3644,33 @@ PrefabInstance:
       value: Collectibels
       objectReference: {fileID: 0}
     - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 397629990}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 3643318730983119335, guid: e87850e2b12615644a993c3f6e9ed607, type: 3}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: obstacle
       value: 
       objectReference: {fileID: 3643318730983119335, guid: e87850e2b12615644a993c3f6e9ed607, type: 3}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: spawnTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: groundYAxis
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: endOfMapXAxis
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: isCollectibel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.49043
@@ -3835,6 +3864,26 @@ PrefabInstance:
     - target: {fileID: 2448116470258444349, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: m_Name
       value: Obstacles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 397629990}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 3278944639803346358, guid: e2a15c9ed5e49874285d1a73c950ffae, type: 3}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: spawnTimer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: groundYAxis
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
+      propertyPath: endOfMapXAxis
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5726152910542250796, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: m_LocalPosition.x
