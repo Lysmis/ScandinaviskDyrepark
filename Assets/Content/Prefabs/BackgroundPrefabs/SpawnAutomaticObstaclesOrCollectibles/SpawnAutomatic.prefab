@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5726152910542250796}
   - component: {fileID: 4054430759849796670}
   m_Layer: 0
-  m_Name: RandomManager
+  m_Name: SpawnAutomatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
