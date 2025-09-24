@@ -180,7 +180,9 @@ public class AnimalBehaviour : MonoBehaviour
     protected virtual void OnDisable()
     {
 
-        Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer -= AddTime;
+        QuizMemory memory = Resources.Load<QuizMemory>("QuizMemory_SO");
+        memory.CorrectAnswer -= AddTime;
+        memory.TotalCollected += pickUps;
 
         inputActions.FindActionMap("Player").Disable();
 

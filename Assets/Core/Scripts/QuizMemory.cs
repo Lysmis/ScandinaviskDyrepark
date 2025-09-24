@@ -25,12 +25,18 @@ public class QuizMemory : ScriptableObject
     public QuizDifficulty Difficulty { get => difficulty; set => difficulty = value; }
 
     /// <summary>
+    /// Property to retrieve score
+    /// </summary>
+    public int TotalCollected { get; set; }
+
+    /// <summary>
     /// Method to instantiate a new List<int>
     /// </summary>
     public void InitializeAndResetMemory()
     {
 
         previousQuestions = new List<int>();
+        TotalCollected = 0;
 
     }
 
