@@ -443,11 +443,11 @@ public class ParallaxScript : MonoBehaviour
         {
             float movementX = (cam.transform.position.x - camStartPos.x) * (1 - ParallaxAmountX);
 
-            if (movementX > startPos.x + length)
+            if (movementX > startPos.x + length/0.5)
             {
                 startPos.x += length;
             }
-            else if (movementX < startPos.x - length)
+            else if (movementX < startPos.x - length/0.5)
             {
                 startPos.x -= length;
             }

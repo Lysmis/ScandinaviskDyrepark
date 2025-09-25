@@ -50,10 +50,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5924227435646011132, guid: 61f852c351e58ef43a26e7707dbc663e, type: 3}
       propertyPath: m_Name
-      value: Grid_TileBackgroundDemo
+      value: Grid_TileBackgroundPrefab Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883351433823188483, guid: 61f852c351e58ef43a26e7707dbc663e, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883351433823188483, guid: 61f852c351e58ef43a26e7707dbc663e, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[4].m_RefCount
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883351433823188483, guid: 61f852c351e58ef43a26e7707dbc663e, type: 3}
+      propertyPath: m_Tiles.Array.data[66].second.m_TileSpriteIndex
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 724630746194170778, guid: 61f852c351e58ef43a26e7707dbc663e, type: 3}
+    - {fileID: 3109285791203539069, guid: 61f852c351e58ef43a26e7707dbc663e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61f852c351e58ef43a26e7707dbc663e, type: 3}
