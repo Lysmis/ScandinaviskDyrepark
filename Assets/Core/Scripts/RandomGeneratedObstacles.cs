@@ -186,6 +186,14 @@ public class RandomGeneratedObstacles : MonoBehaviour
         //New position where there taken into account the of set position
         Vector2 newPosition = spawnPosition + ofSetPosition;
 
+        //The position is outside of the map it will chance the position to spawn at the beginning of the map 
+        if (newPosition.x > endOfMapXAxis)
+        {
+            float tempPositionX = newPosition.x;
+
+            newPosition.x = tempPositionX - endOfMapXAxis;
+        }
+
         //The new obstacle
         GameObject newObstacle;
 
