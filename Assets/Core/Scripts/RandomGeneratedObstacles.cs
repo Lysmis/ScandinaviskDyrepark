@@ -141,7 +141,6 @@ public class RandomGeneratedObstacles : MonoBehaviour
         {
             spriteHeight = srObstacles.bounds.size.y;
         }
-
     }
 
     /// <summary>
@@ -214,5 +213,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
         obstaclesList.Add(newObstacle);
 
     }
+
+    
 
 }

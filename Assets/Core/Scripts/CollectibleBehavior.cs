@@ -14,7 +14,24 @@ public class CollectibleBehavior : MonoBehaviour
             Destroy(gameObject);
         }
     }
-  
 
-    
+    [ContextMenu("Force Update")]
+    void OnValidate()
+    {
+        //Getting SpriteRenderer
+        SpriteRenderer srObstacles = GetComponent<SpriteRenderer>();
+
+        //Getting BoxCollision2D
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+
+        //Resizing the CollisionBox
+        if (boxCollider != null && srObstacles.sprite != null)
+        {
+            boxCollider.size = srObstacles.sprite.bounds.size;
+            boxCollider.offset = srObstacles.sprite.bounds.center;
+
+        }
+
+    }
+
 }

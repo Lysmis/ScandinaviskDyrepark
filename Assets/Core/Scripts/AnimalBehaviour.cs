@@ -75,7 +75,7 @@ public class AnimalBehaviour : MonoBehaviour
     /// ///////////////////////////////HUD/////////////////////////////////
 
     //The HUDManager object, that shows the HUD in the HUD scene. 
-    public HUDManager hud;
+    private HUDManager hud;
 
     //The time lift before the gme stops
     [SerializeField, Tooltip("The default time remaining when the player starts a level")]
@@ -85,8 +85,8 @@ public class AnimalBehaviour : MonoBehaviour
     protected float secondsCounter = 0;
 
     //The number of items picked up by the player in the current level
-    [SerializeField, Tooltip("The default starting number of items picked up")]
-    protected int pickUps;
+    //[SerializeField, Tooltip("The default starting number of items picked up")]
+    //protected int pickUps;
 
     //Bool to show wether a HUDManager has ben sucesfully added/defined
     private bool hudAdded = false;
