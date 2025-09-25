@@ -406,16 +406,16 @@ public class ParallaxScript : MonoBehaviour
         }
 
         // Try to detect renderer type
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
         TilemapRenderer tr = GetComponent<TilemapRenderer>();
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
 
-        if (sr != null)
-        {
-            bounds = sr.bounds;
-        }
-        else if (tr != null)
+        if (tr != null)
         {
             bounds = tr.bounds;
+        }
+        else if (sr != null)
+        {
+            bounds = sr.bounds;
         }
         else
         {
@@ -428,7 +428,7 @@ public class ParallaxScript : MonoBehaviour
         length = bounds.size.x;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (cam == null) return;
 
@@ -443,11 +443,11 @@ public class ParallaxScript : MonoBehaviour
         {
             float movementX = (cam.transform.position.x - camStartPos.x) * (1 - ParallaxAmountX);
 
-            if (movementX > startPos.x + length/0.5)
+            if (movementX > startPos.x + length)
             {
                 startPos.x += length;
             }
-            else if (movementX < startPos.x - length/0.5)
+            else if (movementX < startPos.x - length)
             {
                 startPos.x -= length;
             }
