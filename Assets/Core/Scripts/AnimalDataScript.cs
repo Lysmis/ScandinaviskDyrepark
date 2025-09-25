@@ -59,6 +59,9 @@ public class AnimalDataScript : MonoBehaviour
         if (animations.Sprite != null && spriteRenderer != null)
             spriteRenderer.sprite = animations.Sprite;
 
+        if (boxCollider == null)
+            boxCollider = GetComponent<BoxCollider2D>();
+
         if (boxCollider != null && animations.Sprite != null)
         {
 
