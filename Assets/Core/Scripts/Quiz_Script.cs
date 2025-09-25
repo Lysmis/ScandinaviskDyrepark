@@ -316,6 +316,8 @@ public class Quiz_Script : MonoBehaviour
 
         if (quizs.TryGetValue((Language, Difficulty), out Quiz_SO foundQuiz))
             quiz = foundQuiz;
+        else if (quizs.TryGetValue((Language, QuizDifficulty.Easy), out Quiz_SO alternativeQuiz))
+            quiz = alternativeQuiz;
         else
         {
 
