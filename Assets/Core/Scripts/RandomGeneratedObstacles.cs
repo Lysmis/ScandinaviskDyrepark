@@ -33,7 +33,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
     [SerializeField, Tooltip("The end coordinat of the X axis")]
     public float endOfMapXAxis;
 
-    //List and stack for obstacles to use for Factory pattern
+    //List and stack for obstacles to use for object pool
     private List<GameObject> obstaclesList = new List<GameObject>();
     private Stack<GameObject> obstaclesStack = new Stack<GameObject>();
 
@@ -160,7 +160,7 @@ public class RandomGeneratedObstacles : MonoBehaviour
     }
 
     /// <summary>
-    /// Adding a tile by using factory pattern
+    /// Adding a tile by object pool
     /// </summary>
     /// <param name="placeOn">The place the tile sits on where 0 on the surface</param>
     private void AddTiles(int placeOn)

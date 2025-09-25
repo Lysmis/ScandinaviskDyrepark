@@ -11,7 +11,6 @@ public class CollectibleBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) 
         {
             collectibleData.AddCollectible();
-            Destroy(gameObject);
         }
     }
 
