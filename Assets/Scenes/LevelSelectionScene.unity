@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   bearLevelName: 
-  deerLevelName: Philip_TEST
-  eagleLevelName: Irene_Test
+  deerLevelName: DemoScene
+  eagleLevelName: 
   ferretLevelName: 
   foxLevelName: 
   polarBearLevelName: 
