@@ -165,7 +165,6 @@ public class RandomGeneratedObstacles : MonoBehaviour
     /// <param name="placeOn">The place the tile sits on where 0 on the surface</param>
     private void AddTiles(int placeOn)
     {
-        Debug.Log(topBound);
         //Of setting the position so the obstacles sits on the ground
         Vector2 ofSetPosition = new Vector2(0, groundYAxis) + new Vector2(0, spriteHeight / 2);
 
