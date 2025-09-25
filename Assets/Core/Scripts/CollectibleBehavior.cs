@@ -6,21 +6,12 @@ public class CollectibleBehavior : MonoBehaviour
 {
     [SerializeField]private CollectibleDataSO collectibleData;
 
-    private AudioSource coinSound;
-
-    private void Start()
-    {
-
-        coinSound = GetComponent<AudioSource>();   
-
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player")) 
         {
             collectibleData.AddCollectible();
-            coinSound.PlayOneShot(coinSound.clip);
+            Resources.Load<QuizMemory>("QuizMemory_SO").CoinSoundTrigger?.Invoke();
         }
     }
 

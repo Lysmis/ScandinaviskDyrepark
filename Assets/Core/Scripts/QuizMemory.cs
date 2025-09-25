@@ -11,6 +11,7 @@ public class QuizMemory : ScriptableObject
     
     public List<int> previousQuestions;
     public Action<float> CorrectAnswer; //Rewards time bonus
+    public Action CoinSoundTrigger;
     [SerializeField, Tooltip("Option to select language if removing user options")] private LanguageOptions language;
     [SerializeField, Tooltip("Option to select difficulty if removing user options")] private QuizDifficulty difficulty;
 
