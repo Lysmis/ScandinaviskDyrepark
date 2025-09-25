@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: prefab
       value: 
-      objectReference: {fileID: 1599429339299243198, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      objectReference: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
     - target: {fileID: 4054430759849796670, guid: d49777287fcc0e748b38a26dd28ea023, type: 3}
       propertyPath: inTheAir
       value: 1
