@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1900745264971965703}
   m_Layer: 0
   m_Name: NonCollidableObject
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

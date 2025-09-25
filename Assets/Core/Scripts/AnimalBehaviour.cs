@@ -301,6 +301,18 @@ public class AnimalBehaviour : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //When player collect a collectible it will be no longer be active
+        if (collision.gameObject.CompareTag("Collectible"))
+        {
+            collision.gameObject.SetActive(false);
+        }
+    }
+
+
+
+
     /// <summary>
     /// Tries to find a gameobject from the hierarchy with the HUD tag, and set the Animals hud field to the GameObject's HUDManager component. 
     /// </summary>
