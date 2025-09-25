@@ -12,7 +12,7 @@ public class AnimalBehaviour : MonoBehaviour
     private const string quizScene = "QuizScene";
     private const string gameOverScene = "GameOverScene";
     private const string hudScene = "HUD";
-    [SerializeField, Tooltip("Set same as total closing time for Quiz"), Range(1, 15)] private float closeTime = 5f;
+    /*[SerializeField, Tooltip("Set same as total closing time for Quiz"), Range(1, 15)] */private float closeTime = 0.0001f;
     private bool animalSceneLoaded = false;
 
     //The jumping heigth - is public so it can bechanged in Unity
@@ -348,7 +348,7 @@ public class AnimalBehaviour : MonoBehaviour
         if (unloadScene)
         {
             animalSceneLoaded = false;
-            yield return new WaitForSecondsRealtime(closeTime);
+            yield return new WaitForSeconds(closeTime);
         }
 
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);

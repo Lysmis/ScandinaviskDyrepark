@@ -313,6 +313,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c2c0c73ddb21108448f60e5f326ca3f9, type: 2}
     - target: {fileID: 4843251847232952677, guid: 362aa93072c8cff4882e7e57284475a9, type: 3}
+      propertyPath: timeReward
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843251847232952677, guid: 362aa93072c8cff4882e7e57284475a9, type: 3}
+      propertyPath: closeTimeParameter
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843251847232952677, guid: 362aa93072c8cff4882e7e57284475a9, type: 3}
       propertyPath: addedQuizes.Array.size
       value: 2
       objectReference: {fileID: 0}
