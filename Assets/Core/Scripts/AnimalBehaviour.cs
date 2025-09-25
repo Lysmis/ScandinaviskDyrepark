@@ -109,6 +109,10 @@ public class AnimalBehaviour : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+
+        if (mainCamera == null)
+            CameraBounds();
+
         if (!hudAdded)
         {
             AddHUD();
@@ -285,6 +289,9 @@ public class AnimalBehaviour : MonoBehaviour
     {
         //Findung the camera scrren bounds
         mainCamera = Camera.main;
+
+        if (mainCamera == null)
+            return;
 
         Vector2 screenBounds = mainCamera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
