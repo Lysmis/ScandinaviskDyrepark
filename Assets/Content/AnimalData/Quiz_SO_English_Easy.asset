@@ -10,24 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da34376b960570e419fe860c43c66b22, type: 3}
-  m_Name: Quiz_SO_DA_Easy
+  m_Name: Quiz_SO_English_Easy
   m_EditorClassIdentifier: Assembly-CSharp::Quiz_SO
-  Language: 0
+  Language: 1
   Difficulty: 0
   Questions:
-  - question: Virker det?
+  - question: Is a brown bear green?
     answers:
-      option1: Nej
-      option2: Ja
-      option3: Nej
-    correctAnswer: 1
-    picture: {fileID: 0}
-    displayBoth: 0
-  - question: "Spiser bj\xF8rne ost?"
-    answers:
-      option1: Nej
-      option2: Ja
-      option3: "Kun bl\xE5skimmel"
+      option1: No it is blue
+      option2: No it is brown
+      option3: Yes for sure!
     correctAnswer: 1
     picture: {fileID: 0}
     displayBoth: 0
