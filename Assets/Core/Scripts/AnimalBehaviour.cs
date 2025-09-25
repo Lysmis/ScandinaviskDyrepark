@@ -103,7 +103,7 @@ public class AnimalBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -271,11 +271,14 @@ public class AnimalBehaviour : MonoBehaviour
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         //Resetting to 0 so the player can start dobbel jumping again
-        dobbelJump = 0;
-        //Enables jumping animation precondition
-        animator.SetBool("canJump", true);
-        animator.ResetTrigger("Jump");
+        if (collision.gameObject.tag != "Collectible")
+        {
+            dobbelJump = 0;
 
+            //Enables jumping animation precondition
+            animator.SetBool("canJump", true);
+            animator.ResetTrigger("Jump");
+        }
     }
 
     /// <summary>
@@ -370,13 +373,13 @@ public class AnimalBehaviour : MonoBehaviour
     {
 
         timeRemaining += time;
-        if (hud != null && timeRemaining >=0)
+        if (hud != null && timeRemaining >= 0)
             hud.SetTime(timeRemaining);
 
     }
 
     #endregion
 
-    
+
 }
 
