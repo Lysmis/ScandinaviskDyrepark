@@ -148,7 +148,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -211,9 +211,7 @@ MonoBehaviour:
   repeatSounds: 1
   soundStart: 5
   soundEffectLength: 0
-  hud: {fileID: 0}
   timeRemaining: 60
-  pickUps: 0
 --- !u!82 &6301612655783393471
 AudioSource:
   m_ObjectHideFlags: 0
