@@ -10,32 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da34376b960570e419fe860c43c66b22, type: 3}
-  m_Name: Quiz_SO_English_Easy
+  m_Name: Quiz_SO_DE_Easy
   m_EditorClassIdentifier: Assembly-CSharp::Quiz_SO
-  Language: 1
+  Language: 2
   Difficulty: 0
   Questions:
-  - question: What color can a fallow deer NOT be?
+  - question: 'Welche Farbe kann ein Damhirsch nicht haben?
+
+'
     answers:
-      option1: Black
-      option2: Pink
-      option3: Brown
+      option1: 'Schwarz '
+      option2: 'Rosa '
+      option3: Braun
     correctAnswer: 1
     picture: {fileID: 0}
     displayBoth: 0
-  - question: What do you think the brown bear does in winter?
+  - question: "Was glaubst du, macht der Braunb\xE4r im Winter?\r\n\r\n"
     answers:
-      option1: Goes skiing
-      option2: 'Builds snowmen '
-      option3: Snores and sleeps all winter long
+      option1: "F\xE4hrt Ski "
+      option2: "Baut Schneem\xE4nner "
+      option3: "Schnarcht und schl\xE4ft den ganzen Winter lang"
     correctAnswer: 2
     picture: {fileID: 0}
     displayBoth: 0
-  - question: "What is the wolf\u2019s favorite food?\r\n"
+  - question: 'Was ist das Lieblingsessen des Wolfs?
+
+      
+
+'
     answers:
-      option1: 'Cakes from Little Red Riding Hood '
-      option2: 'Big and heavy elephants '
-      option3: 'A tasty lamb leg '
+      option1: "Kuchen von Rotk\xE4ppchen "
+      option2: "Gro\xDFe, schwere Elefanten "
+      option3: Ein leckeres Lammkeule
     correctAnswer: 2
     picture: {fileID: 0}
     displayBoth: 0
