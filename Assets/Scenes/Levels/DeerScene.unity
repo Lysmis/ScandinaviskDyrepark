@@ -1847,6 +1847,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 636077973}
+    - target: {fileID: 6792143508168339096, guid: d18d817cc3f25ca4780435b3011bd3ca, type: 3}
+      propertyPath: groundYAxis
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2730,7 +2734,7 @@ PrefabInstance:
       objectReference: {fileID: 1312501340}
     - target: {fileID: 7833693951554375522, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
       propertyPath: offset.y
-      value: 0.69
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8999177276262768189, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
       propertyPath: m_Name
@@ -5460,7 +5464,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 38.88412, y: 1.84689, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 103963360}
@@ -6798,15 +6802,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3571559799830509044, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.61
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 3571559799830509044, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.61
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 3571559799830509044, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.61
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 3571559799830509044, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -106322,6 +106326,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 636077973}
+    - target: {fileID: 3770657706360102483, guid: fdc00a96a15ff354e8f4cbcf14240b89, type: 3}
+      propertyPath: groundYAxis
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4856934029940611393, guid: fdc00a96a15ff354e8f4cbcf14240b89, type: 3}
       propertyPath: m_LocalPosition.x
       value: 120.16573
