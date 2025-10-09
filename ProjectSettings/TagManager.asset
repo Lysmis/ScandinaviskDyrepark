@@ -56,6 +56,12 @@ TagManager:
   - name: Foreground
     uniqueID: 2613143929
     locked: 0
+  - name: trees
+    uniqueID: 2327137713
+    locked: 0
+  - name: bushes
+    uniqueID: 806865849
+    locked: 0
   - name: Obstacles
     uniqueID: 210136551
     locked: 0
