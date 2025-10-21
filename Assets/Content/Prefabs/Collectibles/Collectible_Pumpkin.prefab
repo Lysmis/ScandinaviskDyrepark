@@ -50,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1900745264971965703, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: m_Size.x
-      value: 0.23
+      value: 0.71875
       objectReference: {fileID: 0}
     - target: {fileID: 1900745264971965703, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: m_Size.y
-      value: 0.2
+      value: 0.625
       objectReference: {fileID: 0}
     - target: {fileID: 1900745264971965703, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -74,11 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1900745264971965703, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.23
+      value: 0.71875
       objectReference: {fileID: 0}
     - target: {fileID: 1900745264971965703, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.2
+      value: 0.625
       objectReference: {fileID: 0}
     - target: {fileID: 1900745264971965703, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5089495214727829768, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: m_Name
-      value: DEMOFruitCollectible
+      value: Collectible_Pumpkin
       objectReference: {fileID: 0}
     - target: {fileID: 8514798080468932065, guid: 3ab76a98fad1f444cb6014f9f2478145, type: 3}
       propertyPath: Loop
