@@ -1,9 +1,21 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Content/UI/UiStyleSheets/Start_USS.uss?fileID=7433441132597879392&amp;guid=ea73f2f494d769146850f5e183995df0&amp;type=3#Start_USS" />
+<<<<<<< Updated upstream
     <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
         <ui:Button text="Start" name="StartButton" style="top: auto; bottom: auto; width: 20%; height: 20%; align-self: center; background-image: url(&quot;project://database/Assets/Content/Sprites/GUI/GUI.png?fileID=21300034&amp;guid=1eaee135ce037439d925cee5e41ce026&amp;type=3#GUI_17&quot;); background-color: rgba(140, 140, 140, 0); margin-top: 10%;" />
         <ui:Button text="Dansk" name="DanishLanguageButton" style="width: 85px;" />
         <ui:Button text="English" name="EnglishLanguageButton" style="width: 85px; opacity: 1;" />
         <ui:Button text="Deutsch" name="GermanLanguageButton" style="width: 85px; opacity: 1;" />
+=======
+    <ui:VisualElement name="start-wrapper" style="flex-grow: 1; justify-content: center; align-items: center; flex-wrap: wrap; flex-direction: row; align-content: center; align-self: auto;">
+        <ui:VisualElement name="StartBox" style="flex-grow: 1; width: 100%; height: 100%; align-self: center; max-width: 40%; max-height: 66%; margin-top: -9px; top: 9%; min-width: 40px; min-height: 66px; margin-bottom: 0; padding-bottom: 0;">
+            <ui:Button text="START" name="StartButton" class="shadow" style="top: 47px; bottom: auto; width: 100%; height: 100%; align-self: center; background-image: url(&quot;project://database/Assets/Content/Sprites/GUI/sign.png?fileID=2800000&amp;guid=70140594809164d4bbbcb190a5de34d1&amp;type=3#sign&quot;); background-color: rgba(55, 55, 55, 0); margin-top: -15%; opacity: 1; left: auto; font-size: 35px; color: rgb(102, 114, 71); -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Content/Fonts/FilsonProBold.otf?fileID=12800000&amp;guid=9f200729552adc346a9e2dfe0b506585&amp;type=3#FilsonProBold&quot;); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-shadow: 0 0 0 rgba(0, 0, 0, 0); flex-direction: column; align-items: center; justify-content: center; margin-right: -5%; margin-bottom: -5%; margin-left: -5%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="flag-wrapper" style="flex-grow: 1; flex-direction: row; justify-content: center; align-content: auto; align-self: auto; align-items: stretch;">
+        <ui:Button name="DanishLanguageButton" class="flag" style="width: 5%; background-image: url(&quot;project://database/Assets/Content/Sprites/GUI/dansk.png?fileID=2800000&amp;guid=c45cbb53ceaf87044be21b7cd71748e3&amp;type=3#dansk&quot;); height: 20%; top: auto; left: auto; position: relative; align-items: flex-start; flex-direction: row; white-space: nowrap; margin-right: 4px;" />
+        <ui:Button name="EnglishLanguageButton" class="flag" style="width: 5%; opacity: 1; height: 20%; background-image: url(&quot;project://database/Assets/Content/Sprites/GUI/engelsk.png?fileID=2800000&amp;guid=9a7dc2e79c9d7a849b2a96f9b1dcb85e&amp;type=3#engelsk&quot;); top: auto; left: auto; right: auto; position: relative; align-items: center; flex-direction: row; margin-right: 30px; margin-left: 30px;" />
+        <ui:Button name="GermanLanguageButton" class="flag" style="width: 5%; opacity: 1; height: 20%; background-image: url(&quot;project://database/Assets/Content/Sprites/GUI/tysk.png?fileID=2800000&amp;guid=29c242a7cdc82b24bbe984d176db9727&amp;type=3#tysk&quot;); top: auto; left: auto; right: auto; position: relative; align-items: flex-end; justify-content: flex-start; align-self: auto; flex-direction: row;" />
+>>>>>>> Stashed changes
     </ui:VisualElement>
 </ui:UXML>
