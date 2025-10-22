@@ -257,6 +257,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (2)
@@ -679,6 +683,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (14)
@@ -921,6 +929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (4)
@@ -983,6 +995,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (4)
@@ -1114,6 +1130,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (10)
@@ -1266,6 +1286,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (6)
@@ -1328,6 +1352,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (9)
@@ -1604,6 +1632,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (12)
@@ -2249,6 +2281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (7)
@@ -2924,6 +2960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (5)
@@ -3220,6 +3260,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (1)
@@ -3371,6 +3415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (3)
@@ -4080,6 +4128,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: soundStart
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: timeRemaining
       value: 60
       objectReference: {fileID: 0}
@@ -4089,6 +4141,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: loopBackground
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: soundEffectLength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362829895755860902, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362829895755860902, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bcac66efd9a3a4498c519b6ae76f278, type: 3}
+    - target: {fileID: 7362829895755860902, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8546891083996888997, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
@@ -4697,6 +4765,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (5)
@@ -4939,6 +5011,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (3)
@@ -101124,6 +101200,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (6)
@@ -101186,6 +101266,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (13)
@@ -101248,6 +101332,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible
@@ -101490,6 +101578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (15)
@@ -101801,6 +101893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (7)
@@ -101953,6 +102049,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (8)
@@ -102285,6 +102385,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (11)
@@ -102527,6 +102631,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902020655900488689, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a36487d509b3ca44fb5232b1b2d54610, type: 3}
     - target: {fileID: 7017478857441099544, guid: 9c1714ab7d8f8364eb6031bb6a9f0fb4, type: 3}
       propertyPath: m_Name
       value: DEMOFruitCollectible (2)
