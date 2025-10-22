@@ -44,3 +44,34 @@
     padding-left: 15%;
 }
 
+#DeerLevelButton:hover {
+    scale: 1.1 1.1 1.1;
+}
+
+#DeerLevelButton:active {
+    scale: 0.9 0.9 0.9;
+}
+
+#FoxLevelButton:hover {
+    scale: 1.1 1.1 1.1;
+}
+
+#FoxLevelButton:active {
+    scale: 0.9 0.9 0.9;
+}
+
+#EagleLevelButton:hover {
+    scale: 1.1 1.1 1.1;
+}
+
+#EagleLevelButton:active {
+    scale: 0.9 0.9 0.9;
+}
+
+#WolfLevelButton:hover {
+    scale: 1.1 1.1 1.1;
+}
+
+#WolfLevelButton:active {
+    scale: 0.9 0.9 0.9;
+}

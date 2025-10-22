@@ -9,5 +9,14 @@ VisualElement {
     transition-delay: 0s;
 }
 
+.flag:active {
+    scale: 0.9 0.9 0.9;
+}
 
+#StartButton:hover {
+    scale: 1.1 1.1 1.1;
+}
 
+#StartButton:active {
+    scale: 0.9 0.9 0.9;
+}
