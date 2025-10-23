@@ -202,7 +202,7 @@ public class AnimalBehaviour : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
         //Transitions to "Jumping" animation
-        SoundManager.insance.PlaySound(jumpSound);
+        SoundManager.instance.PlaySound(jumpSound);
         animator.SetTrigger("Jump");
         animator.SetBool("canJump", false);
 
@@ -283,6 +283,7 @@ public class AnimalBehaviour : MonoBehaviour
             //Enables jumping animation precondition
             animator.SetBool("canJump", true);
             animator.ResetTrigger("Jump");
+            SoundManager.instance.PlaySound(runSound);
         }
      }
 
@@ -319,7 +320,7 @@ public class AnimalBehaviour : MonoBehaviour
     }
 
 
-
+    
 
     /// <summary>
     /// Tries to find a gameobject from the hierarchy with the HUD tag, and set the Animals hud field to the GameObject's HUDManager component. 
