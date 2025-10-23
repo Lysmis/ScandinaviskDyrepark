@@ -15,6 +15,10 @@ public class AnimalBehaviour : MonoBehaviour
     /*[SerializeField, Tooltip("Set same as total closing time for Quiz"), Range(1, 15)] */private float closeTime = 0.0001f;
     private bool animalSceneLoaded = false;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip runSound;
+
     //The jumping heigth - is public so it can bechanged in Unity
     [SerializeField, Tooltip("Jump heigth or fly heigth for birds")]
     public float heigth = 5f;
@@ -198,6 +202,7 @@ public class AnimalBehaviour : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
         //Transitions to "Jumping" animation
+        SoundManager.insance.PlaySound(jumpSound);
         animator.SetTrigger("Jump");
         animator.SetBool("canJump", false);
 
@@ -279,7 +284,7 @@ public class AnimalBehaviour : MonoBehaviour
             animator.SetBool("canJump", true);
             animator.ResetTrigger("Jump");
         }
-    }
+     }
 
     /// <summary>
     /// Getting the screenBounds and SpriteRenderer size
