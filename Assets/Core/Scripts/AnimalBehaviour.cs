@@ -198,18 +198,26 @@ public class AnimalBehaviour : MonoBehaviour
 
     private void Jumping()
     {
-        //The Rigidbodys velocity
+        // Nulstil vertical fart først
         rb.linearVelocity = new Vector2(rb.linearVelocityX, 0f);
 
-        //Transitions to "Jumping" animation
-        SoundManager.instance.PlaySound(jumpSound);
-        animator.SetTrigger("Jump");
-        animator.SetBool("canJump", false);
+        // Spil hoppelyd, men kun hvis vi rent faktisk HAR noget at spille
+        if (SoundManager.instance != null && jumpSound != null)
+        {
+            SoundManager.instance.PlaySound(jumpSound);
+        }
 
-        //Adding force to make the jump
+        // Fortæl animatoren at vi hopper
+        if (animator != null)
+        {
+            animator.SetTrigger("Jump");
+            animator.SetBool("canJump", false);
+        }
+
+        // Giv det opad-kick
         rb.AddForce(Vector2.up * heigth, ForceMode2D.Impulse);
-
     }
+
 
     protected virtual void FixedUpdate()
     {
