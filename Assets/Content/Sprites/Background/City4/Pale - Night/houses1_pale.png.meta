@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: ee6c62794c28ec549a967b4833e1d605
+guid: ff843ce924b20f64182464b966fc2b57
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2095752182085654519
-    second: Sky_pale_0
+      213: -1282889085208827916
+    second: houses1_pale_0
+  - first:
+      213: 5577400344228197018
+    second: houses1_pale_1
+  - first:
+      213: 2964028757816133626
+    second: houses1_pale_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sky_pale_0
+      name: houses1_pale_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        y: 280
+        width: 202
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f7177e718b951d10800000000000000
-      internalID: 2095752182085654519
+      spriteID: 4f7e6ed8c23423ee0800000000000000
+      internalID: -1282889085208827916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houses1_pale_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 280
+        width: 630
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92fcdf0018e66d40800000000000000
+      internalID: 5577400344228197018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houses1_pale_2
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 280
+        width: 211
+        height: 754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af74cad7378522920800000000000000
+      internalID: 2964028757816133626
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sky_pale_0: 2095752182085654519
+      houses1_pale_0: -1282889085208827916
+      houses1_pale_1: 5577400344228197018
+      houses1_pale_2: 2964028757816133626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: dbcae615bf1934f4ebad6a0ad328de37
+guid: 8b4c86f3e95b11b4b88360e783e64525
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1282889085208827916
-    second: houses1_pale_0
-  - first:
-      213: 5577400344228197018
-    second: houses1_pale_1
-  - first:
-      213: 2964028757816133626
-    second: houses1_pale_2
+      213: -6581876824212605340
+    second: banner 128_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +97,33 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -119,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: houses1_pale_0
+      name: banner 128_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 263
-        width: 189
-        height: 702
+        x: 11
+        y: 207
+        width: 494
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f7e6ed8c23423ee0800000000000000
-      internalID: -1282889085208827916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: houses1_pale_1
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 263
-        width: 590
-        height: 506
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a92fcdf0018e66d40800000000000000
-      internalID: 5577400344228197018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: houses1_pale_2
-      rect:
-        serializedVersion: 2
-        x: 1723
-        y: 263
-        width: 197
-        height: 706
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af74cad7378522920800000000000000
-      internalID: 2964028757816133626
+      spriteID: 4667e6196e978a4a0800000000000000
+      internalID: -6581876824212605340
       vertices: []
       indices: 
       edges: []
@@ -198,9 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      houses1_pale_0: -1282889085208827916
-      houses1_pale_1: 5577400344228197018
-      houses1_pale_2: 2964028757816133626
+      banner 128_0: -6581876824212605340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
