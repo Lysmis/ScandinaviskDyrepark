@@ -10416,6 +10416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rudolf
       objectReference: {fileID: 0}
+    - target: {fileID: 1543346178170528432, guid: 68b9051e0021f234393c37d581902242, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 78ef43c2453601f439f628f0fc51bd3d, type: 2}
     - target: {fileID: 2762477219535123619, guid: 68b9051e0021f234393c37d581902242, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -10426,15 +10430,15 @@ PrefabInstance:
       objectReference: {fileID: -1855713084577579414, guid: 422c6cdf99181794c98e372a4b84d8f3, type: 3}
     - target: {fileID: 4397368733579622076, guid: 68b9051e0021f234393c37d581902242, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4397368733579622076, guid: 68b9051e0021f234393c37d581902242, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4397368733579622076, guid: 68b9051e0021f234393c37d581902242, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4397368733579622076, guid: 68b9051e0021f234393c37d581902242, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10495,6 +10499,26 @@ PrefabInstance:
     - target: {fileID: 5259775300334532842, guid: 68b9051e0021f234393c37d581902242, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286876998867520842, guid: 68b9051e0021f234393c37d581902242, type: 3}
+      propertyPath: smooth
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286876998867520842, guid: 68b9051e0021f234393c37d581902242, type: 3}
+      propertyPath: runSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286876998867520842, guid: 68b9051e0021f234393c37d581902242, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286876998867520842, guid: 68b9051e0021f234393c37d581902242, type: 3}
+      propertyPath: tiltAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286876998867520842, guid: 68b9051e0021f234393c37d581902242, type: 3}
+      propertyPath: timeRemaining
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: timeRemaining
