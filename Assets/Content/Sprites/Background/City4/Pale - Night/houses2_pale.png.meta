@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -119,10 +119,10 @@ TextureImporter:
       name: houses2_pale_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 319
-        width: 450
-        height: 694
+        x: 122
+        y: 340
+        width: 481
+        height: 741
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: houses2_pale_1
       rect:
         serializedVersion: 2
-        x: 1491
-        y: 367
-        width: 342
-        height: 630
+        x: 1590
+        y: 391
+        width: 366
+        height: 673
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

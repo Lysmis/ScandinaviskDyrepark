@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -119,10 +119,10 @@ TextureImporter:
       name: umbrella&policebox_pale_0
       rect:
         serializedVersion: 2
-        x: 867
-        y: 219
-        width: 254
-        height: 266
+        x: 924
+        y: 233
+        width: 272
+        height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: umbrella&policebox_pale_1
       rect:
         serializedVersion: 2
-        x: 1411
-        y: 223
-        width: 246
-        height: 430
+        x: 1505
+        y: 237
+        width: 263
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
