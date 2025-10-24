@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4887778823339036683
+--- !u!1001 &5209334511286339598
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,27 +10,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9172354800879669020, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Size.x
-      value: 31.25
+      value: 1.625
       objectReference: {fileID: 0}
     - target: {fileID: -9172354800879669020, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Size.y
-      value: 30.0625
+      value: 1.4375
       objectReference: {fileID: 0}
     - target: {fileID: -9172354800879669020, guid: b344f8f9be00ced469b839f96caec932, type: 3}
-      propertyPath: m_IncludeLayers.m_Bits
-      value: 0
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.625
       objectReference: {fileID: 0}
+    - target: {fileID: -9172354800879669020, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261467891782496030, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: animations
+      value: 
+      objectReference: {fileID: 11400000, guid: a3eecb1d6411e9c44b49adabbe070338, type: 2}
     - target: {fileID: 2266506269142893892, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: smooth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2266506269142893892, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: tiltAmount
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6448516944705159457, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Name
-      value: Eagle
+      value: Rudolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934511614879349933, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934511614879349933, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1855713084577579414, guid: 422c6cdf99181794c98e372a4b84d8f3, type: 3}
+    - target: {fileID: 8452642646031859378, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452642646031859378, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8452642646031859378, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_LocalPosition.x
