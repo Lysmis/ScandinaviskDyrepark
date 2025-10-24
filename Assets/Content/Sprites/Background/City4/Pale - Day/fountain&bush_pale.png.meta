@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9ad7b6b1f688a9b4ead4f61c1ec9ca6d
+guid: 10cf91d40c9983741802a744a3e53cc2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3442586105471691126
-    second: road_pale_0
+      213: -5191028197687862163
+    second: fountain&bush_pale_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: road_pale_0
+      name: fountain&bush_pale_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 213
+        x: 911
+        y: 315
+        width: 610
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 679e555c2d586cf20800000000000000
-      internalID: 3442586105471691126
+      spriteID: d6c57c18b53c5f7b0800000000000000
+      internalID: -5191028197687862163
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      road_pale_0: 3442586105471691126
+      fountain&bush_pale_0: -5191028197687862163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ee6c62794c28ec549a967b4833e1d605
+guid: 7120e4c9d9aacc047b8d143f8581df52
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2095752182085654519
-    second: Sky_pale_0
+      213: 3442586105471691126
+    second: road_pale_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sky_pale_0
+      name: road_pale_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 2048
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f7177e718b951d10800000000000000
-      internalID: 2095752182085654519
+      spriteID: 679e555c2d586cf20800000000000000
+      internalID: 3442586105471691126
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sky_pale_0: 2095752182085654519
+      road_pale_0: 3442586105471691126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

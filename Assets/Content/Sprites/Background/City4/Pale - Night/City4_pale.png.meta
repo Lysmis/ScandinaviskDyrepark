@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 269c5b3ee78e85841a6f96ef185ad264
+guid: 77e03833697cd6d43afd7016bb4640da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3333111805637685700
-    second: umbrella&policebox_pale_0
-  - first:
-      213: -2185479652810111668
-    second: umbrella&policebox_pale_1
+      213: 1667847567859710554
+    second: City4_pale_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: umbrella&policebox_pale_0
+      name: City4_pale_0
       rect:
         serializedVersion: 2
-        x: 867
-        y: 219
-        width: 254
-        height: 266
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3e0e4ce8786eb1d0800000000000000
-      internalID: -3333111805637685700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: umbrella&policebox_pale_1
-      rect:
-        serializedVersion: 2
-        x: 1411
-        y: 223
-        width: 246
-        height: 430
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c45c86eb5dd9ba1e0800000000000000
-      internalID: -2185479652810111668
+      spriteID: a5af6cdb682652710800000000000000
+      internalID: 1667847567859710554
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      umbrella&policebox_pale_0: -3333111805637685700
-      umbrella&policebox_pale_1: -2185479652810111668
+      City4_pale_0: 1667847567859710554
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
