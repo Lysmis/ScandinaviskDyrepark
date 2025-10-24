@@ -3492,7 +3492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: timeRemaining
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: backgroundEndX
@@ -3516,7 +3516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7362829895755860902, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_Volume
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7362829895755860902, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: m_Resource
