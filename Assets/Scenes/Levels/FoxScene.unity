@@ -5125,7 +5125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7833693951554375522, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
       propertyPath: offset.y
-      value: 2.5
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 8999177276262768189, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
       propertyPath: m_Name
