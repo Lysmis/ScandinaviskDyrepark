@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -5029387213453367685}
   - component: {fileID: 2261467891782496030}
   m_Layer: 0
-  m_Name: FlyingAnimal
+  m_Name: Template-FlyingAnimal
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 9.62}
+  m_Size: {x: 31.25, y: 30.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -157,7 +157,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 31.25, y: 30.0625}
-    newSize: {x: 10, y: 9.62}
+    newSize: {x: 31.25, y: 30.0625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -203,6 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6cf951c42ffcd46b2cb6496f5daa12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlyingAnimalScript
+  jumpSound: {fileID: 0}
+  runSound: {fileID: 0}
   heigth: 5
   speed: 5
   loopBackground: 0
