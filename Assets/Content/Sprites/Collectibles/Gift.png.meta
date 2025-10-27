@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f5b10d31dddff4a48b737cb46ac7cf42
+guid: be52dc9dd8982984295c65588ad81db5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2868227955446624379
-    second: coll_fish_0
+      213: -2049028587633510652
+    second: coll_gift_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coll_fish_0
+      name: coll_gift_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 30
-        height: 29
+        x: 4
+        y: 2
+        width: 26
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b70bd33012efdc720800000000000000
-      internalID: 2868227955446624379
+      spriteID: 407fb731b536093e0800000000000000
+      internalID: -2049028587633510652
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      coll_fish_0: 2868227955446624379
+      coll_gift_0: -2049028587633510652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
