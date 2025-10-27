@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: ca35f8696c75dc1408d97ac5efe5249a
+guid: c80a7388ec856294ab82ee758cebdb83
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4178046375966092550
-    second: 4_0
+      213: -3688671442719381158
+    second: Plan-4 no trunks_0
   - first:
-      213: 8982099749623107299
-    second: 4_1
+      213: -8866239476656338010
+    second: Plan-4 no trunks_1
   - first:
-      213: -2214249495721929474
-    second: 4_2
+      213: -5873101331120057487
+    second: Plan-4 no trunks_2
   - first:
-      213: 7945056504642708236
-    second: 4_3
+      213: -7018583923549012812
+    second: Plan-4 no trunks_3
   - first:
-      213: -10500422234371694
-    second: 4_4
+      213: 8763314877861350609
+    second: Plan-4 no trunks_4
   - first:
-      213: -4683111340605770916
-    second: 4_5
-  - first:
-      213: -5933289837275991918
-    second: 4_6
+      213: -1872795124028390040
+    second: Plan-4 no trunks_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4_0
+      name: Plan-4 no trunks_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 70
-        width: 49
-        height: 254
+        x: 0
+        y: 179
+        width: 25
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,41 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af2de6115f89406c0800000000000000
-      internalID: -4178046375966092550
+      spriteID: a596593cdd43fccc0800000000000000
+      internalID: -3688671442719381158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_1
+      name: Plan-4 no trunks_1
       rect:
         serializedVersion: 2
-        x: 186
-        y: 78
-        width: 28
-        height: 246
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ee09611224d6ac70800000000000000
-      internalID: 8982099749623107299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 4_2
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 65
-        width: 20
+        x: 6
+        y: 14
+        width: 158
         height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -190,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef41863b0d76541e0800000000000000
-      internalID: -2214249495721929474
+      spriteID: 6ab8a5cdb2ac4f480800000000000000
+      internalID: -8866239476656338010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_3
+      name: Plan-4 no trunks_2
       rect:
         serializedVersion: 2
-        x: 287
-        y: 71
-        width: 54
-        height: 253
+        x: 33
+        y: 236
+        width: 10
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c03a2a7dbc2824e60800000000000000
-      internalID: 7945056504642708236
+      spriteID: 17317b4d47d8e7ea0800000000000000
+      internalID: -5873101331120057487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_4
+      name: Plan-4 no trunks_3
       rect:
         serializedVersion: 2
-        x: 397
-        y: 72
-        width: 70
-        height: 252
+        x: 226
+        y: 13
+        width: 142
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,19 +209,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2998abeebe1badff0800000000000000
-      internalID: -10500422234371694
+      spriteID: 4bcf79a8b1bf89e90800000000000000
+      internalID: -7018583923549012812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_5
+      name: Plan-4 no trunks_4
       rect:
         serializedVersion: 2
-        x: 476
-        y: 74
-        width: 40
+        x: 367
+        y: 11
+        width: 99
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc42dd837c8d9970800000000000000
+      internalID: 8763314877861350609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plan-4 no trunks_5
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 23
+        width: 87
         height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,30 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c53f6934c0f320fb0800000000000000
-      internalID: -4683111340605770916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 4_6
-      rect:
-        serializedVersion: 2
-        x: 543
-        y: 69
-        width: 33
-        height: 255
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 290bab33458b8ada0800000000000000
-      internalID: -5933289837275991918
+      spriteID: 8654437d1ce7206e0800000000000000
+      internalID: -1872795124028390040
       vertices: []
       indices: 
       edges: []
@@ -298,13 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      4_0: -4178046375966092550
-      4_1: 8982099749623107299
-      4_2: -2214249495721929474
-      4_3: 7945056504642708236
-      4_4: -10500422234371694
-      4_5: -4683111340605770916
-      4_6: -5933289837275991918
+      Plan-4 no trunks_0: -3688671442719381158
+      Plan-4 no trunks_1: -8866239476656338010
+      Plan-4 no trunks_2: -5873101331120057487
+      Plan-4 no trunks_3: -7018583923549012812
+      Plan-4 no trunks_4: 8763314877861350609
+      Plan-4 no trunks_5: -1872795124028390040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
