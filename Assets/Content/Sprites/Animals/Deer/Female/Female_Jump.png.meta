@@ -134,8 +134,8 @@ TextureImporter:
       name: Female_Jump_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 6
+        x: 10
+        y: 0
         width: 42
         height: 52
       alignment: 0
@@ -156,8 +156,8 @@ TextureImporter:
       name: Female_Jump_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 6
+        x: 74
+        y: 0
         width: 42
         height: 52
       alignment: 0
@@ -178,8 +178,8 @@ TextureImporter:
       name: Female_Jump_2
       rect:
         serializedVersion: 2
-        x: 141
-        y: 6
+        x: 138
+        y: 0
         width: 42
         height: 52
       alignment: 0
@@ -200,8 +200,8 @@ TextureImporter:
       name: Female_Jump_3
       rect:
         serializedVersion: 2
-        x: 205
-        y: 6
+        x: 202
+        y: 0
         width: 42
         height: 52
       alignment: 0
@@ -222,8 +222,8 @@ TextureImporter:
       name: Female_Jump_4
       rect:
         serializedVersion: 2
-        x: 264
-        y: 6
+        x: 257
+        y: 0
         width: 46
         height: 52
       alignment: 0
@@ -244,8 +244,8 @@ TextureImporter:
       name: Female_Jump_5
       rect:
         serializedVersion: 2
-        x: 327
-        y: 6
+        x: 326
+        y: 0
         width: 49
         height: 52
       alignment: 0
@@ -266,8 +266,8 @@ TextureImporter:
       name: Female_Jump_6
       rect:
         serializedVersion: 2
-        x: 390
-        y: 6
+        x: 391
+        y: 0
         width: 50
         height: 52
       alignment: 0
