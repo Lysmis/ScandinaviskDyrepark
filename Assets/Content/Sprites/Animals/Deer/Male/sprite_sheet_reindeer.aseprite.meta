@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 57043e7c933f85f47bc16f7931e40b09
+guid: 66f95c9856a599a49af5c73c8e6b2248
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,114 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: collectibles
+  - name: Frame_0
     originalName: 
-    pivot: {x: 0.45833334, y: -0.11538462}
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 115
+      width: 40
+      height: 54
+    spriteID: 8c0be952b0a2f344f8c69cd88ac4c82b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 115}
+  - name: Frame_1
+    originalName: 
+    pivot: {x: 0.5106383, y: -0.21739131}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 61
+      width: 47
+      height: 46
+    spriteID: 981c58f796c6aff4da1e9c51280bde63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 61}
+  - name: Frame_2
+    originalName: 
+    pivot: {x: 0.46808508, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 4
+      width: 47
+      height: 49
+    spriteID: a237cc2bfe523d84dacbddd0200349fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 4}
+  - name: Frame_3
+    originalName: 
+    pivot: {x: 0.48780486, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 70
+      width: 41
+      height: 46
+    spriteID: 997eb8bf0bccf424585d66eb40c57ed8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 70}
+  - name: Frame_4
+    originalName: 
+    pivot: {x: 0.5263158, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 56
+      y: 177
+      width: 38
+      height: 53
+    spriteID: 472bae2ad0f036f499c5f40b65bcac06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 56, y: 177}
+  - name: Frame_5
+    originalName: 
+    pivot: {x: 0.65909094, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +242,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 24
-      height: 26
-    spriteID: f495948580fa998439914e8e2850e88b
+      width: 44
+      height: 58
+    spriteID: 10c1855776323614ca9c1b9d31c834de
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +258,70 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 108543771
+      value0: 3106953126
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: collectibles
+    name: sprite_sheet_reindeer
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: collectibles
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 5
-        y: 3
-        width: 24
-        height: 26
-      spriteId: f495948580fa998439914e8e2850e88b
+        x: 12
+        y: 0
+        width: 40
+        height: 54
+      spriteId: 8c0be952b0a2f344f8c69cd88ac4c82b
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 8
+        y: 10
+        width: 47
+        height: 46
+      spriteId: 981c58f796c6aff4da1e9c51280bde63
+    - name: Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 10
+        y: 0
+        width: 47
+        height: 49
+      spriteId: a237cc2bfe523d84dacbddd0200349fc
+    - name: Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 12
+        y: 0
+        width: 41
+        height: 46
+      spriteId: 997eb8bf0bccf424585d66eb40c57ed8
+    - name: Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 12
+        y: 0
+        width: 38
+        height: 53
+      spriteId: 472bae2ad0f036f499c5f40b65bcac06
+    - name: Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 0
+        width: 44
+        height: 58
+      spriteId: 10c1855776323614ca9c1b9d31c834de
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +331,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
-  previousTextureSize: {x: 32, y: 64}
+  canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 128, y: 256}
