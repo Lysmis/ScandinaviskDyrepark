@@ -46,6 +46,7 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    -unity-text-align: middle-center;
 }
 
 #textbox {

@@ -291,13 +291,9 @@ public class AnimalBehaviour : MonoBehaviour
             //Enables jumping animation precondition
             animator.SetBool("canJump", true);
             animator.ResetTrigger("Jump");
-
-        }
-
-        if (collision.gameObject.CompareTag("Ground"))
-        {
             SoundManager.instance.PlaySound(runSound);
         }
+
 
     }
 
