@@ -129,7 +129,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 8
-        y: 6
+        y: 0
         width: 48
         height: 51
       alignment: 0
@@ -150,8 +150,8 @@ TextureImporter:
       name: Female_Run_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 6
+        x: 73
+        y: 0
         width: 48
         height: 51
       alignment: 0
@@ -172,8 +172,8 @@ TextureImporter:
       name: Female_Run_2
       rect:
         serializedVersion: 2
-        x: 141
-        y: 6
+        x: 133
+        y: 0
         width: 48
         height: 51
       alignment: 0
@@ -194,8 +194,8 @@ TextureImporter:
       name: Female_Run_3
       rect:
         serializedVersion: 2
-        x: 204
-        y: 6
+        x: 194
+        y: 0
         width: 48
         height: 51
       alignment: 0
@@ -216,8 +216,8 @@ TextureImporter:
       name: Female_Run_4
       rect:
         serializedVersion: 2
-        x: 264
-        y: 6
+        x: 255
+        y: 0
         width: 48
         height: 51
       alignment: 0
