@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 98effb00e20118ac38d42406581ebdfd
+guid: 9b9edee25aebe4f438c4137d78995fe3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8524565058863128530
-    second: fox_jump_0
+      213: -5607358702324942356
+    second: eagle_fly_0
   - first:
-      213: -6610413202284801491
-    second: fox_jump_1
+      213: -3868701736710277119
+    second: eagle_fly_1
   - first:
-      213: 125415772538660435
-    second: fox_jump_2
+      213: -2180828406209275572
+    second: eagle_fly_2
+  - first:
+      213: -5534231754278443924
+    second: eagle_fly_3
+  - first:
+      213: 8334766847932419096
+    second: eagle_fly_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,67 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fox_jump_0
+      name: eagle_fly_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 62
+        x: 2
+        y: 20
+        width: 61
         height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      alignment: 9
+      pivot: {x: 0.8, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 25}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2df5e3681c65d4670800000000000000
-      internalID: 8524565058863128530
+      spriteID: ce9f9b328f8ae22b0800000000000000
+      internalID: -5607358702324942356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fox_jump_1
+      name: eagle_fly_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 11
-        width: 63
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 66
+        y: 20
+        width: 61
+        height: 30
+      alignment: 9
+      pivot: {x: 0.8, y: 0.37}
+      border: {x: 0, y: 1, z: 0, w: 12}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d22134b47381344a0800000000000000
-      internalID: -6610413202284801491
+      spriteID: 1087279844c9f4ac0800000000000000
+      internalID: -3868701736710277119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fox_jump_2
+      name: eagle_fly_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 0
+        x: 130
+        y: 20
         width: 62
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        height: 24
+      alignment: 9
+      pivot: {x: 0.79, y: 0.5}
+      border: {x: 0, y: 1, z: 0, w: 6}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 356e56b0bf09db100800000000000000
-      internalID: 125415772538660435
+      spriteID: c4990db7e142cb1e0800000000000000
+      internalID: -2180828406209275572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle_fly_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 15
+        width: 61
+        height: 26
+      alignment: 9
+      pivot: {x: 0.81, y: 0.71}
+      border: {x: 0, y: 9, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64eb858a857233b0800000000000000
+      internalID: -5534231754278443924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle_fly_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2
+        width: 61
+        height: 39
+      alignment: 9
+      pivot: {x: 0.82, y: 0.83}
+      border: {x: 0, y: 23, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81cc6b8e94a0ba370800000000000000
+      internalID: 8334766847932419096
       vertices: []
       indices: 
       edges: []
@@ -188,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ada3133d52330042a82f78f0c4c4e8e
+    spriteID: ec514a040c92d5e4bb7625b95df3d461
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fox_jump_0: 8524565058863128530
-      fox_jump_1: -6610413202284801491
-      fox_jump_2: 125415772538660435
+      eagle_fly_0: -5607358702324942356
+      eagle_fly_1: -3868701736710277119
+      eagle_fly_2: -2180828406209275572
+      eagle_fly_3: -5534231754278443924
+      eagle_fly_4: 8334766847932419096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
