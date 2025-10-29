@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 98effb00e20118ac38d42406581ebdfd
+guid: 86ffe5565d97ab0489de5727f5ebe78c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8524565058863128530
-    second: fox_jump_0
-  - first:
-      213: -6610413202284801491
-    second: fox_jump_1
-  - first:
-      213: 125415772538660435
-    second: fox_jump_2
+      213: -2987140676844089321
+    second: icon-deer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,67 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fox_jump_0
+      name: icon-deer_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 18
         y: 0
-        width: 62
-        height: 42
+        width: 186
+        height: 208
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2df5e3681c65d4670800000000000000
-      internalID: 8524565058863128530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fox_jump_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 11
-        width: 63
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d22134b47381344a0800000000000000
-      internalID: -6610413202284801491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fox_jump_2
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 0
-        width: 62
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 356e56b0bf09db100800000000000000
-      internalID: 125415772538660435
+      spriteID: 7109696816b8b86d0800000000000000
+      internalID: -2987140676844089321
       vertices: []
       indices: 
       edges: []
@@ -188,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ada3133d52330042a82f78f0c4c4e8e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fox_jump_0: 8524565058863128530
-      fox_jump_1: -6610413202284801491
-      fox_jump_2: 125415772538660435
+      icon-deer_0: -2987140676844089321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
