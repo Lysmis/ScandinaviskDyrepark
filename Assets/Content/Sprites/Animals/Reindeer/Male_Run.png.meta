@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: e1745225a9296324b99e99338356f8fa
+guid: be98ff7107e40824a88dc13abf3fc710
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5364509946788923640
-    second: Male_Rudolf_Run_0
+      213: -4750308943313943645
+    second: Male_Run_0
   - first:
-      213: 6201285584739552082
-    second: Male_Rudolf_Run_1
+      213: 3863476784828189774
+    second: Male_Run_1
   - first:
-      213: 8410362076264573194
-    second: Male_Rudolf_Run_2
+      213: -5464162310384784585
+    second: Male_Run_2
   - first:
-      213: 1817071648886661866
-    second: Male_Rudolf_Run_3
+      213: 8577542540849004367
+    second: Male_Run_3
   - first:
-      213: 419787537072257078
-    second: Male_Rudolf_Run_4
+      213: 1696221857577070672
+    second: Male_Run_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +99,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -125,111 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Male_Rudolf_Run_0
+      name: Male_Run_0
       rect:
         serializedVersion: 2
         x: 7
-        y: 9
-        width: 49
-        height: 48
+        y: 0
+        width: 48
+        height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f8476ccf51927a40800000000000000
-      internalID: 5364509946788923640
+      spriteID: 3a3496c2f23831eb0800000000000000
+      internalID: -4750308943313943645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Male_Rudolf_Run_1
+      name: Male_Run_1
       rect:
         serializedVersion: 2
         x: 73
         y: 0
-        width: 49
-        height: 50
+        width: 48
+        height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25bc62d22646f0650800000000000000
-      internalID: 6201285584739552082
+      spriteID: e4c07ad8aa3dd9530800000000000000
+      internalID: 3863476784828189774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Male_Rudolf_Run_2
+      name: Male_Run_2
       rect:
         serializedVersion: 2
         x: 139
         y: 0
-        width: 43
-        height: 47
+        width: 42
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a09aa249fbb97b470800000000000000
-      internalID: 8410362076264573194
+      spriteID: 73bef6e34556b24b0800000000000000
+      internalID: -5464162310384784585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Male_Rudolf_Run_3
+      name: Male_Run_3
       rect:
         serializedVersion: 2
         x: 203
         y: 0
         width: 40
-        height: 54
+        height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae2a2539909873910800000000000000
-      internalID: 1817071648886661866
+      spriteID: f4f3b11ce7d890770800000000000000
+      internalID: 8577542540849004367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Male_Rudolf_Run_4
+      name: Male_Run_4
       rect:
         serializedVersion: 2
-        x: 258
+        x: 259
         y: 0
-        width: 46
-        height: 59
+        width: 44
+        height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 638f3547a8263d500800000000000000
-      internalID: 419787537072257078
+      spriteID: 0507221eac03a8710800000000000000
+      internalID: 1696221857577070672
       vertices: []
       indices: 
       edges: []
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2bc2711c3d833c9428a9da1d2c7944c9
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Male_Rudolf_Run_0: 5364509946788923640
-      Male_Rudolf_Run_1: 6201285584739552082
-      Male_Rudolf_Run_2: 8410362076264573194
-      Male_Rudolf_Run_3: 1817071648886661866
-      Male_Rudolf_Run_4: 419787537072257078
+      Male_Run_0: -4750308943313943645
+      Male_Run_1: 3863476784828189774
+      Male_Run_2: -5464162310384784585
+      Male_Run_3: 8577542540849004367
+      Male_Run_4: 1696221857577070672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: be98ff7107e40824a88dc13abf3fc710
+guid: 422c6cdf99181794c98e372a4b84d8f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4750308943313943645
-    second: Male_Run_0
+      213: -3014305175352203594
+    second: Male_Jump_0
   - first:
-      213: 3863476784828189774
-    second: Male_Run_1
+      213: 7283123881604925471
+    second: Male_Jump_1
   - first:
-      213: -5464162310384784585
-    second: Male_Run_2
+      213: -9130424192330756601
+    second: Male_Jump_2
   - first:
-      213: 8577542540849004367
-    second: Male_Run_3
+      213: -2149802429928068241
+    second: Male_Jump_3
   - first:
-      213: 1696221857577070672
-    second: Male_Run_4
+      213: -3532770196074204192
+    second: Male_Jump_4
+  - first:
+      213: -1855713084577579414
+    second: Male_Jump_5
+  - first:
+      213: -4729303822763190716
+    second: Male_Jump_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,111 +131,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Male_Run_0
+      name: Male_Jump_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 16
-        width: 52
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a3496c2f23831eb0800000000000000
-      internalID: -4750308943313943645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Male_Run_1
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 6
-        width: 50
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4c07ad8aa3dd9530800000000000000
-      internalID: 3863476784828189774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Male_Run_2
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 6
+        x: 10
+        y: 0
         width: 42
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 73bef6e34556b24b0800000000000000
-      internalID: -5464162310384784585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Male_Run_3
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 6
-        width: 39
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4f3b11ce7d890770800000000000000
-      internalID: 8577542540849004367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Male_Run_4
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 6
-        width: 46
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0507221eac03a8710800000000000000
-      internalID: 1696221857577070672
+      spriteID: 6b6a28ad9690b26d0800000000000000
+      internalID: -3014305175352203594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18c93a259ad21560800000000000000
+      internalID: 7283123881604925471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e0e7772973a4180800000000000000
+      internalID: -9130424192330756601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6badd2841e5a22e0800000000000000
+      internalID: -2149802429928068241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e3f8ed593419fec0800000000000000
+      internalID: -3532770196074204192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 0
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e75b418ce2f36e0800000000000000
+      internalID: -1855713084577579414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 6
+        width: 1
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4469d49ea332e5eb0800000000000000
+      internalID: -4729303822763190716
       vertices: []
       indices: 
       edges: []
@@ -238,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 88b83debc3bdc914ebd326b45e7b37d4
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Male_Run_0: -4750308943313943645
-      Male_Run_1: 3863476784828189774
-      Male_Run_2: -5464162310384784585
-      Male_Run_3: 8577542540849004367
-      Male_Run_4: 1696221857577070672
+      Male_Jump_0: -3014305175352203594
+      Male_Jump_1: 7283123881604925471
+      Male_Jump_2: -9130424192330756601
+      Male_Jump_3: -2149802429928068241
+      Male_Jump_4: -3532770196074204192
+      Male_Jump_5: -1855713084577579414
+      Male_Jump_6: -4729303822763190716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
