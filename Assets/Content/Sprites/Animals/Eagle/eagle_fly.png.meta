@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 1c404ef447653dc43be093087a184694
+guid: 5e18bebbe1de8db43aaf023a327d905f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2579957754792524931
-    second: orig_0
+      213: -5607358702324942356
+    second: eagle_fly_0
+  - first:
+      213: -3868701736710277119
+    second: eagle_fly_1
+  - first:
+      213: -2180828406209275572
+    second: eagle_fly_2
+  - first:
+      213: -5534231754278443924
+    second: eagle_fly_3
+  - first:
+      213: 8334766847932419096
+    second: eagle_fly_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +58,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,7 +109,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +122,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: orig_0
+      name: eagle_fly_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 576
-        height: 324
+        x: 1
+        y: 19
+        width: 63
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d73c31a5716223cd0800000000000000
-      internalID: -2579957754792524931
+      spriteID: ce9f9b328f8ae22b0800000000000000
+      internalID: -5607358702324942356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle_fly_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 20
+        width: 63
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1087279844c9f4ac0800000000000000
+      internalID: -3868701736710277119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle_fly_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 21
+        width: 63
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4990db7e142cb1e0800000000000000
+      internalID: -2180828406209275572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle_fly_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 14
+        width: 63
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64eb858a857233b0800000000000000
+      internalID: -5534231754278443924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eagle_fly_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1
+        width: 63
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81cc6b8e94a0ba370800000000000000
+      internalID: 8334766847932419096
       vertices: []
       indices: 
       edges: []
@@ -164,7 +264,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +274,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      orig_0: -2579957754792524931
+      eagle_fly_0: -5607358702324942356
+      eagle_fly_1: -3868701736710277119
+      eagle_fly_2: -2180828406209275572
+      eagle_fly_3: -5534231754278443924
+      eagle_fly_4: 8334766847932419096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
