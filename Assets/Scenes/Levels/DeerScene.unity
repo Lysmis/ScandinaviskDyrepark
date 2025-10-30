@@ -12251,11 +12251,11 @@ PrefabInstance:
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: runSound
       value: 
-      objectReference: {fileID: 8300000, guid: 2b21155d855eb324caf8ea961f43873c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: jumpSound
       value: 
-      objectReference: {fileID: 8300000, guid: ed37e05267b110d45908c8077c5564e3, type: 3}
+      objectReference: {fileID: 8300000, guid: 234b1a4b1ca230847a8472956c4a7817, type: 3}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: soundStart
       value: 5.82
