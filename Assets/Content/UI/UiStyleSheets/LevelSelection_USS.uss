@@ -126,31 +126,45 @@
 
 #VisualElement > #ButtonContainer > #DeerLevelButton > .unity-text-element {
     top: auto;
-    padding-top: 3%;
+    padding-top: 4%;
+    font-size: 20%;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
 }
 
 #VisualElement > #ButtonContainer > #FoxLevelButton > .unity-text-element {
     top: auto;
-    padding-top: 3%;
+    padding-top: 4%;
+    font-size: 20%;
 }
 
 #VisualElement > #ButtonContainer > #EagleLevelButton > .unity-text-element {
     top: auto;
-    padding-top: 3%;
+    padding-top: 4%;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
+    font-size: 20%;
+    min-width: 0;
+    max-width: 80%;
+    width: 100%;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
 }
 
 #VisualElement > #ButtonContainer > #WolfLevelButton > .unity-text-element {
     top: auto;
-    padding-top: 3%;
+    padding-top: 4%;
+    font-size: 20%;
 }
 
 #VisualElement > #ButtonContainer > #FerretLevelButton > .unity-text-element {
     top: auto;
-    padding-top: 3%;
+    padding-top: 4%;
+    font-size: 20%;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
 }
 
 #VisualElement > #ButtonContainer > #BearLevelButton > .unity-text-element {

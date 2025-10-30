@@ -188,34 +188,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
-      propertyPath: runSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 2b21155d855eb324caf8ea961f43873c, type: 3}
-    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ed37e05267b110d45908c8077c5564e3, type: 3}
-    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
-      propertyPath: soundStart
-      value: 5.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
-      propertyPath: timeRemaining
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
-      propertyPath: backgroundEndX
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
-      propertyPath: loopBackground
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
-      propertyPath: soundEffectLength
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4419635000876087249, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
       propertyPath: m_Size.x
       value: 0.6875
@@ -373,6 +345,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5712975969796829391, guid: a6fd9f7b50b05bd45ad470b83bc51816, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 70659e309969a124c81f311b1a6cb1a3, type: 3}
+    - target: {fileID: 5712975969796829391, guid: a6fd9f7b50b05bd45ad470b83bc51816, type: 3}
       propertyPath: timeRemaining
       value: 30
       objectReference: {fileID: 0}
@@ -382,6 +358,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5749530776686601737, guid: a6fd9f7b50b05bd45ad470b83bc51816, type: 3}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: runSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b21155d855eb324caf8ea961f43873c, type: 3}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ed37e05267b110d45908c8077c5564e3, type: 3}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: soundStart
+      value: 5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: timeRemaining
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: backgroundEndX
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: loopBackground
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
+      propertyPath: soundEffectLength
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
