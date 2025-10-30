@@ -216,7 +216,83 @@ PrefabInstance:
       propertyPath: soundEffectLength
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 75088900581095345, guid: a6fd9f7b50b05bd45ad470b83bc51816, type: 3}
+    - target: {fileID: 4419635000876087249, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419635000876087249, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456114171311530263, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ed37e05267b110d45908c8077c5564e3, type: 3}
+    - target: {fileID: 4456114171311530263, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: timeRemaining
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988472364566584606, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812346661959494317, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: m_Name
+      value: Fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328591327520056937, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
