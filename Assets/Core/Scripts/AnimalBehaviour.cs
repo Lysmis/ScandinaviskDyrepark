@@ -16,8 +16,8 @@ public class AnimalBehaviour : MonoBehaviour
     private bool animalSceneLoaded = false;
 
     [Header("SFX")]
-    [SerializeField] private AudioClip jumpSound;
-    [SerializeField] private AudioClip runSound;
+    [SerializeField] public AudioClip jumpSound;
+    [SerializeField] public AudioClip runSound;
 
     //The jumping heigth - is public so it can bechanged in Unity
     [SerializeField, Tooltip("Jump heigth or fly heigth for birds")]

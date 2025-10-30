@@ -225,6 +225,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4456114171311530263, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ed37e05267b110d45908c8077c5564e3, type: 3}
+    - target: {fileID: 4456114171311530263, guid: ba7937cf0a0e453458b13e514eae0688, type: 3}
       propertyPath: timeRemaining
       value: 30
       objectReference: {fileID: 0}
