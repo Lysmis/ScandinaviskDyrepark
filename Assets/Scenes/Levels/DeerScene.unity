@@ -1800,7 +1800,7 @@ Transform:
   m_GameObject: {fileID: 124353710}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 500, y: -3.02, z: 0}
+  m_LocalPosition: {x: 300, y: -3.02, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1858,7 +1858,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 2000, y: 2.4375}
+  m_Size: {x: 1200, y: 2.4375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6852,7 +6852,7 @@ Transform:
   m_GameObject: {fileID: 610483158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 500, y: -0.5, z: 0}
+  m_LocalPosition: {x: 300, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6910,7 +6910,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1000, y: 9.5}
+  m_Size: {x: 600, y: 9.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11977,7 +11977,7 @@ Transform:
   m_GameObject: {fileID: 1266634886}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 500, y: -0.72, z: 0}
+  m_LocalPosition: {x: 300, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12035,7 +12035,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1000, y: 10.125}
+  m_Size: {x: 600, y: 10.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -12528,7 +12528,7 @@ Transform:
   m_GameObject: {fileID: 1375259432}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 986.96, y: 0, z: 0}
+  m_LocalPosition: {x: 587.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16153,7 +16153,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 13
       m_TileObjectToInstantiateIndex: 65535
@@ -16240,8 +16240,8 @@ Tilemap:
     m_Data: {fileID: 21300096, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300094, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1236855252, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 23
     m_Data: {fileID: 21300160, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   - m_RefCount: 13
@@ -16268,8 +16268,8 @@ Tilemap:
     m_Data: {fileID: 21300066, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   - m_RefCount: 17
     m_Data: {fileID: 109800182, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1236855252, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 270
     m_Data:
@@ -16572,7 +16572,7 @@ Transform:
   m_GameObject: {fileID: 1540066799}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 500, y: 0.5, z: 0}
+  m_LocalPosition: {x: 300, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16630,7 +16630,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1000, y: 10}
+  m_Size: {x: 600, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18883,7 +18883,7 @@ Transform:
   m_GameObject: {fileID: 1866524250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 500, y: -0.02, z: 0}
+  m_LocalPosition: {x: 300, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18941,7 +18941,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1000, y: 10.125}
+  m_Size: {x: 600, y: 10.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
