@@ -108,6 +108,7 @@
     width: 51%;
     margin-right: 6%;
     margin-top: 0%;
+    top: 3%;
 }
 
 #VisualElement > #ButtonContainer > #FoxLevelButton > .unity-button__image {
