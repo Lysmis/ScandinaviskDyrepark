@@ -157,6 +157,11 @@ MonoBehaviour:
   polarBearLevelName: PolarBearScene
   wolfLevelName: WolfScene
   UILevelName: HUD
+  UIDeerLevelName: Deer
+  UIFoxLevelName: Fox
+  UIEagleLevelName: HUD
+  UIWolfLevelName: 
+  UIFerretLevelName: 
   unappliedButtonOpacity: 0.1
   lockedButtonOpacity: 0.3
   bearPassword: 

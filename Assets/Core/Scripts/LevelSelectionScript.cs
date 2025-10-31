@@ -23,6 +23,11 @@ public class LevelSelectionScript : MonoBehaviour
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string polarBearLevelName;
     [SerializeField, Tooltip("The name of the scene that should be used. Make sure to  type it exactly as it is shown in the project window in the unity editor")] private string wolfLevelName;
     [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UILevelName;
+    [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UIDeerLevelName;
+    [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UIFoxLevelName;
+    [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UIEagleLevelName;
+    [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UIWolfLevelName;
+    [SerializeField, Tooltip("The name of the scene used for UI/HUD on the chosen level")] string UIFerretLevelName;
     [SerializeField, Tooltip("The opacity of buttons with no referenced scene"), Range(0, 1)] private float unappliedButtonOpacity = 0.1f;
     [SerializeField, Tooltip("The opacity of buttons with a scene, but not yet unlocked by the player"), Range(0, 1)] private float lockedButtonOpacity = 0.3f;
     [Header("Passwords")]
@@ -110,7 +115,7 @@ public class LevelSelectionScript : MonoBehaviour
         if (deerLevelName != string.Empty)
         {
             SceneManager.LoadSceneAsync(deerLevelName, LoadSceneMode.Additive);
-            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UIDeerLevelName, LoadSceneMode.Additive);
             UnloadLevelSelectionScene();
         }
     }
@@ -122,7 +127,7 @@ public class LevelSelectionScript : MonoBehaviour
         if (eagleLevelName != string.Empty)
         {
             SceneManager.LoadSceneAsync(eagleLevelName, LoadSceneMode.Additive);
-            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UIEagleLevelName, LoadSceneMode.Additive);
             UnloadLevelSelectionScene();
         }
     }
@@ -135,7 +140,7 @@ public class LevelSelectionScript : MonoBehaviour
         if (ferretLevelName != string.Empty)
         {
             SceneManager.LoadSceneAsync(ferretLevelName, LoadSceneMode.Additive);
-            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UIFerretLevelName, LoadSceneMode.Additive);
             UnloadLevelSelectionScene();
         }
     }
@@ -148,7 +153,7 @@ public class LevelSelectionScript : MonoBehaviour
         if (foxLevelName != string.Empty)
         {
             SceneManager.LoadSceneAsync(foxLevelName, LoadSceneMode.Additive);
-            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UIFoxLevelName, LoadSceneMode.Additive);
             UnloadLevelSelectionScene();
         }
     }
@@ -172,7 +177,7 @@ public class LevelSelectionScript : MonoBehaviour
         if (wolfLevelName != string.Empty)
         {
             SceneManager.LoadSceneAsync(wolfLevelName, LoadSceneMode.Additive);
-            SceneManager.LoadSceneAsync(UILevelName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(UIWolfLevelName, LoadSceneMode.Additive);
             UnloadLevelSelectionScene();
         }
     }
