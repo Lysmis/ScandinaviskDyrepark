@@ -1644,12 +1644,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6797663286151676835, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2048698800}
-    - targetCorrespondingSourceObject: {fileID: 6797663286151676835, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 810672300}
-    - targetCorrespondingSourceObject: {fileID: 6797663286151676835, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1766657073}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b60ccc32d0f22e34b98f1bb2e9c509c7, type: 3}
 --- !u!1001 &335244649
@@ -18329,99 +18323,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7221101378138364943, guid: cb03f7fe9d978444e8e2ec9a4594b3ec, type: 3}
   m_PrefabInstance: {fileID: 780807028}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &810672299
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 810672300}
-  - component: {fileID: 810672302}
-  - component: {fileID: 810672301}
-  m_Layer: 0
-  m_Name: GameOverZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &810672300
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810672299}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 586.9, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1111785261}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &810672301
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810672299}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2, y: 12}
-  m_EdgeRadius: 0
---- !u!114 &810672302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810672299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fcdfa5cd9af7c2408d9bab098cc20ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameOverZone
-  gameOverSceneName: GameOverScene
-  gizmoColor: {r: 1, g: 0, b: 0, a: 0.3}
 --- !u!1001 &818790440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18561,6 +18462,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4632897635966376454, guid: 14120fd35aecddc4fbf74e1379a81fe0, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4855407161456140527, guid: 14120fd35aecddc4fbf74e1379a81fe0, type: 3}
       propertyPath: m_Size.x
       value: 1.90625
@@ -18584,7 +18489,7 @@ PrefabInstance:
     - target: {fileID: 6674580388691154255, guid: 14120fd35aecddc4fbf74e1379a81fe0, type: 3}
       propertyPath: jumpSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 06a5046a5f481654f9f36f3723f2b8e6, type: 3}
     - target: {fileID: 6674580388691154255, guid: 14120fd35aecddc4fbf74e1379a81fe0, type: 3}
       propertyPath: tiltAmount
       value: 5
@@ -18599,7 +18504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6674580388691154255, guid: 14120fd35aecddc4fbf74e1379a81fe0, type: 3}
       propertyPath: loopBackground
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068457271823102601, guid: 9ba7dc1cad5869a4dbeb491349c0118b, type: 3}
       propertyPath: timeRemaining
@@ -29391,6 +29296,99 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &902528952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902528953}
+  - component: {fileID: 902528955}
+  - component: {fileID: 902528954}
+  m_Layer: 0
+  m_Name: "GameOverZone M\xE5l"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &902528953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902528952}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 586.82, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &902528954
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902528952}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2, y: 12}
+  m_EdgeRadius: 0
+--- !u!114 &902528955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902528952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcdfa5cd9af7c2408d9bab098cc20ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverZone
+  gameOverSceneName: GameOverScene
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.3}
 --- !u!4 &903109676 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4496851595509967726, guid: 37cd4515dca38ac43a06d2756bb9217a, type: 3}
@@ -87602,7 +87600,7 @@ GameObject:
   - component: {fileID: 1766657075}
   - component: {fileID: 1766657074}
   m_Layer: 0
-  m_Name: GameOverZone (1)
+  m_Name: GameOverZone Bund
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87617,11 +87615,11 @@ Transform:
   m_GameObject: {fileID: 1766657072}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 288.1, y: -7, z: 0}
+  m_LocalPosition: {x: 288.1, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1111785261}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1766657074
 BoxCollider2D:
@@ -186323,6 +186321,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 334463334}
+  - {fileID: 902528953}
+  - {fileID: 1766657073}
   - {fileID: 839134842}
   - {fileID: 981417963}
   - {fileID: 780807028}
