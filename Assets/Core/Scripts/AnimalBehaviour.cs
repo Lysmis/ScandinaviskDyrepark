@@ -291,13 +291,9 @@ public class AnimalBehaviour : MonoBehaviour
             //Enables jumping animation precondition
             animator.SetBool("canJump", true);
             animator.ResetTrigger("Jump");
-        }
-
-        // Spil løbelyd, men kun hvis vi rent faktisk HAR noget at spille
-        if (SoundManager.instance != null && runSound != null)
-        {
             SoundManager.instance.PlaySound(runSound);
         }
+
 
     }
 
