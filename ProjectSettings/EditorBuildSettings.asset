@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/BootStrapScene.unity
     guid: 13a365756fb9f7240ba6315b53b75208
   - enabled: 1
-    path: Assets/Scenes/HUD.unity
+    path: Assets/Scenes/HUDs/HUDEagle.unity
     guid: 8074f24c2a72e3c498760a982dc33d1e
   - enabled: 1
     path: Assets/Scenes/QuizScene.unity
@@ -44,6 +44,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/WolfScene.unity
     guid: 96fcdc34ed668b948908366f69ea805c
+  - enabled: 1
+    path: Assets/Scenes/HUDs/HUDDeer.unity
+    guid: 1bf0f0103e67fab45b5bab63056e3aad
+  - enabled: 1
+    path: Assets/Scenes/HUDs/HUDWolf.unity
+    guid: b1346a222786c464591807b60c371566
+  - enabled: 1
+    path: Assets/Scenes/HUDs/HUDFerret.unity
+    guid: 65431a3dcfb9048438d47847ac814a89
+  - enabled: 1
+    path: Assets/Scenes/HUDs/HUDFox.unity
+    guid: eb2f744a466456840841a9a0b9ae75e0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
