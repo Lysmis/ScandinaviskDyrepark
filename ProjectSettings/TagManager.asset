@@ -9,7 +9,6 @@ TagManager:
   - Collectible
   - Ground
   - Obstacle
-  - HUDdeer
   layers:
   - Default
   - TransparentFX
