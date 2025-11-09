@@ -15,7 +15,8 @@ MonoBehaviour:
   Language: 2
   Difficulty: 0
   Questions:
-  - question: 'Welche Farbe kann ein Damhirsch nicht haben?
+  - associatedMap: 0
+    question: 'Welche Farbe kann ein Damhirsch nicht haben?
 
 '
     answers:
@@ -25,23 +26,133 @@ MonoBehaviour:
     correctAnswer: 1
     picture: {fileID: 0}
     displayBoth: 0
-  - question: "Was glaubst du, macht der Braunb\xE4r im Winter?\r\n\r\n"
-    answers:
-      option1: "F\xE4hrt Ski "
-      option2: "Baut Schneem\xE4nner "
-      option3: "Schnarcht und schl\xE4ft den ganzen Winter lang"
-    correctAnswer: 2
-    picture: {fileID: 0}
-    displayBoth: 0
-  - question: 'Was ist das Lieblingsessen des Wolfs?
+  - associatedMap: 0
+    question: 'Was frisst ein Damhirsch?
 
       
 
 '
     answers:
-      option1: "Kuchen von Rotk\xE4ppchen "
-      option2: "Gro\xDFe, schwere Elefanten "
-      option3: Ein leckeres Lammkeule
+      option1: Fleisch und Fisch
+      option2: "Gras und Bl\xE4tter "
+      option3: Kuchen
+    correctAnswer: 1
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 0
+    question: Was hat der Damhirsch auf dem Kopf?
+    answers:
+      option1: Einen Hut
+      option2: 'Ein Geweih '
+      option3: "Gro\xDFe Ohren"
+    correctAnswer: 1
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 1
+    question: Welche Farbe hat der Fuchs normalerweise?
+    answers:
+      option1: Rot
+      option2: Schwarz
+      option3: "Gr\xFCn"
+    correctAnswer: 0
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 1
+    question: Wo wohnt der Fuchs am liebsten?
+    answers:
+      option1: Im Meer
+      option2: 'Im Wald '
+      option3: "In der W\xFCste"
+    correctAnswer: 1
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 1
+    question: Was frisst der Fuchs gerne?
+    answers:
+      option1: Kuchen
+      option2: "M\xE4use"
+      option3: Blumen
+    correctAnswer: 1
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 2
+    question: Was frisst ein Seeadler am liebsten?
+    answers:
+      option1: Fisch
+      option2: Kuchen
+      option3: Mais
+    correctAnswer: 0
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 2
+    question: Welche Aussicht mag der Seeadler am liebsten?
+    answers:
+      option1: Meerblick
+      option2: Direkt neben der Nachbarhecke
+      option3: Stadtblick
+    correctAnswer: 0
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 2
+    question: Wie sieht der Schwanz des Seeadlers aus?
+    answers:
+      option1: Blau mit Streifen
+      option2: "Ganz wei\xDF "
+      option3: Regenbogenfarben
+    correctAnswer: 1
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 3
+    question: Was sagt ein Wolf?
+    answers:
+      option1: "M\xE4\xE4\xE4\xE4h"
+      option2: Wuff
+      option3: Auuuuuu!
     correctAnswer: 2
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 3
+    question: Was isst der Wolf gerne?
+    answers:
+      option1: Kuchen aus der Radtour
+      option2: "Gro\xDFe und starke Elefanten"
+      option3: 'Ein leckeres Lammfilet '
+    correctAnswer: 2
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 3
+    question: "Wie l\xE4uft der Wolf, wenn er mit anderen W\xF6lfen redet?"
+    answers:
+      option1: Er springt
+      option2: 'Er heult '
+      option3: Er tanzt
+    correctAnswer: 2
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 4
+    question: Was hilft dem Rentier, sich warm zu halten?
+    answers:
+      option1: Wasser und Eis
+      option2: Schal
+      option3: 'Dickes Fell und Schneehaare '
+    correctAnswer: 2
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 4
+    question: Was frisst ein Rentier?
+    answers:
+      option1: 'Pflanzen und Gras '
+      option2: "S\xFC\xDFigkeiten und Kuchen"
+      option3: Fleisch
+    correctAnswer: 0
+    picture: {fileID: 0}
+    displayBoth: 0
+  - associatedMap: 4
+    question: "Wof\xFCr benutzt das Rentier seine gro\xDFen Geweihe?"
+    answers:
+      option1: Zum Angeben
+      option2: Zum Fliegen
+      option3: 'Zum Graben im Schnee '
+    correctAnswer: 0
     picture: {fileID: 0}
     displayBoth: 0

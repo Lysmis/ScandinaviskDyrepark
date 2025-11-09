@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: animations
       value: 
       objectReference: {fileID: 11400000, guid: 31ddda8e3323cca45b0614ddd6d9d9df, type: 2}
+    - target: {fileID: -3716716054708741472, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
+      propertyPath: associatedMap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2383886569871659290, guid: a7f0763bc88ce3f4c82af86417994d7c, type: 3}
       propertyPath: m_Name
       value: Fox

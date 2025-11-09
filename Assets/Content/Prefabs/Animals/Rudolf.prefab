@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: tiltAmount
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2266506269142893892, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: associatedMap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6448516944705159457, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Name
       value: Rudolf
@@ -67,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 7934511614879349933, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1855713084577579414, guid: 422c6cdf99181794c98e372a4b84d8f3, type: 3}
+      objectReference: {fileID: -3014032807230809831, guid: c87d66e9069b38b498a92792f76f8f24, type: 3}
     - target: {fileID: 7934511614879349933, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
