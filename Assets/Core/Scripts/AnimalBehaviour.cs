@@ -95,6 +95,7 @@ public class AnimalBehaviour : MonoBehaviour
     //Bool to show wether a HUDManager has ben sucesfully added/defined
     private bool hudAdded = false;
 
+    [SerializeField, Tooltip("Map that this animal belongs to")] private MapAssociation associatedMap;
     #endregion
 
 
@@ -168,9 +169,14 @@ public class AnimalBehaviour : MonoBehaviour
     protected virtual void OnEnable()
     {
 
+        QuizMemory quizMemory = Resources.Load<QuizMemory>("QuizMemory_SO");
+
+        quizMemory.CurrentMap = associatedMap; //Den del her
+        quizMemory.previousQuestions.Clear();
+
         animalSceneLoaded = true;
 
-        Resources.Load<QuizMemory>("QuizMemory_SO").CorrectAnswer += AddTime;
+        quizMemory.CorrectAnswer += AddTime;
 
         inputActions.FindActionMap("Player").Enable();
 
@@ -181,6 +187,7 @@ public class AnimalBehaviour : MonoBehaviour
         jumpInput.performed += ctx => isJumping = true;
 
     }
+
 
     protected virtual void OnDisable()
     {
