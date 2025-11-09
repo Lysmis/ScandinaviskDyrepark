@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: tiltAmount
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2266506269142893892, guid: b344f8f9be00ced469b839f96caec932, type: 3}
+      propertyPath: associatedMap
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6448516944705159457, guid: b344f8f9be00ced469b839f96caec932, type: 3}
       propertyPath: m_Name
       value: Eagle
