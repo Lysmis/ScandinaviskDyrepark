@@ -17187,7 +17187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3451d31fcf38a4e9de0bbde40b4029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxTilemap
-  ParallaxAmountX: 0.03
+  ParallaxAmountX: 0
   ParallaxAmountY: 0
   loop: 0
   camStartPos: {x: 0, y: 0}
