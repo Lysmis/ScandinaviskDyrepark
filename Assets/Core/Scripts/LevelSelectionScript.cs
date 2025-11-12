@@ -68,7 +68,7 @@ public class LevelSelectionScript : MonoBehaviour
         passWordTextField.textEdition.placeholder = languageStrings.GetString("PasswordTextInput");
 
 
-        DisableButtons(new Button[] { bearLevelButton, eagleLevelButton, ferretLevelButton, foxLevelButton, polarBearLevelButton, wolfLevelButton });
+       // DisableButtons(new Button[] { bearLevelButton, eagleLevelButton, ferretLevelButton, foxLevelButton, polarBearLevelButton, wolfLevelButton });
 
 
         //Actions added to buttons
