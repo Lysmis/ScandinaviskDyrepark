@@ -367,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4843251847232952677, guid: 362aa93072c8cff4882e7e57284475a9, type: 3}
       propertyPath: timeReward
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4843251847232952677, guid: 362aa93072c8cff4882e7e57284475a9, type: 3}
       propertyPath: trueAnswer

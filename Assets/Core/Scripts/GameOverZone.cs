@@ -16,9 +16,9 @@ public class GameOverZone2D : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("💀 Game Over triggered by 2D collider 💀");
-            SceneManager.LoadSceneAsync(gameOverSceneName, LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync("HUD");
             SceneManager.UnloadSceneAsync(gameObject.scene);
+            SceneManager.LoadSceneAsync(gameOverSceneName, LoadSceneMode.Additive);
         }
     }
 
